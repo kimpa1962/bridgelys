@@ -59,6 +59,7 @@ export default function Home() {
             Documentation
           </a>
         </div>
+        <div className="bg-blue-500 text-white p-10">Ser hur detta ser ut</div>
       </main>
     </div>
   );
