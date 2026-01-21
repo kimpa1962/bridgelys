@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image"; // Glöm inte denna för SVG:n!
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,22 +19,37 @@ export default function Navbar() {
   return (
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20 items-center">
+        <div className="flex justify-between h-24 items-center"> {/* Höjde höjden till 24 för att ge plats åt slogan */}
           
-          {/* LOGO */}
+          {/* LOGOTYP & SLOGAN */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-black text-blue-900 tracking-tighter">
-              BRIDGELY S
+            <Link href="/" className="flex flex-col group">
+              {/* Din SVG-logotyp */}
+              <Image 
+                src="/bridgelys_logotyp.svg" 
+                alt="Bridgelys Logotyp" 
+                width={180} 
+                height={45} 
+                priority
+                className="h-auto w-auto"
+              />
+              {/* Slogan: Arial / Grön */}
+              <span 
+                className="text-[14px] text-brand-green mt-1 font-normal leading-none"
+                style={{ fontFamily: 'Arial, sans-serif' }}
+              >
+                Brobyggaren mellan behov och kod.
+              </span>
             </Link>
           </div>
 
           {/* DESKTOP MENU */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium">Hem</Link>
+            <Link href="/" className="text-gray-600 hover:text-brand-navy font-medium transition-colors">Hem</Link>
             
             {/* DROPDOWN CONTAINER */}
             <div className="relative group">
-              <button className="text-gray-600 group-hover:text-blue-600 font-medium flex items-center gap-1 py-8">
+              <button className="text-gray-600 group-hover:text-brand-navy font-medium flex items-center gap-1 py-8 transition-colors">
                 Våra tjänster
                 <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
@@ -46,7 +62,7 @@ export default function Navbar() {
                   <Link 
                     key={index} 
                     href={t.href} 
-                    className="block px-6 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors font-medium"
+                    className="block px-6 py-3 text-sm text-gray-700 hover:bg-slate-50 hover:text-brand-green transition-colors font-medium"
                   >
                     {t.namn}
                   </Link>
@@ -54,10 +70,10 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link href="/om-oss" className="text-gray-600 hover:text-blue-600 font-medium">Om oss</Link>
-            <Link href="/kontakt" className="text-gray-600 hover:text-blue-600 font-medium">Kontakt</Link>
+            <Link href="/om-oss" className="text-gray-600 hover:text-brand-navy font-medium transition-colors">Om oss</Link>
+            <Link href="/kontakt" className="text-gray-600 hover:text-brand-navy font-medium transition-colors">Kontakt</Link>
             
-            <Link href="/natverk" className="bg-blue-600 text-white px-5 py-2.5 rounded-full font-bold hover:bg-blue-700 transition shadow-md hover:shadow-lg">
+            <Link href="/natverk" className="bg-brand-navy text-white px-5 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition shadow-md hover:shadow-lg">
               Bli en del av nätverket
             </Link>
           </div>
@@ -66,7 +82,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-gray-600"
+              className="p-2 text-brand-navy"
             >
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
@@ -80,12 +96,12 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-6 space-y-1">
           <Link href="/" className="block p-3 text-gray-900 font-medium border-b border-gray-50">Hem</Link>
-          <div className="p-3 text-xs font-bold text-blue-600 uppercase tracking-wider mt-2">Våra tjänster</div>
+          <div className="p-3 text-xs font-bold text-brand-green uppercase tracking-wider mt-2">Våra tjänster</div>
           {tjanster.map((t, index) => (
             <Link 
               key={index} 
               href={t.href} 
-              className="block pl-6 p-3 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition"
+              className="block pl-6 p-3 text-gray-600 hover:text-brand-green hover:bg-gray-50 rounded-lg transition"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t.namn}
@@ -94,6 +110,7 @@ export default function Navbar() {
           <div className="pt-4 space-y-2">
             <Link href="/om-oss" className="block p-3 text-gray-900 font-medium">Om oss</Link>
             <Link href="/kontakt" className="block p-3 text-gray-900 font-medium">Kontakt</Link>
+            <Link href="/natverk" className="block p-3 bg-brand-navy text-white text-center rounded-lg font-bold">Bli en del av nätverket</Link>
           </div>
         </div>
       )}

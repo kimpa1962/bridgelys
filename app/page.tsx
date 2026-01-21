@@ -9,7 +9,7 @@ export default function Home() {
       <section className="relative py-20 lg:py-32 overflow-hidden bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-5xl lg:text-7xl font-extrabold text-slate-900 leading-tight mb-6">
+            <h1>
               Rätt expertis. <span className="text-blue-600">On demand.</span>
             </h1>
             <p className="text-xl text-slate-600 mb-10 leading-relaxed">
