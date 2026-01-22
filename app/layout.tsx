@@ -1,23 +1,21 @@
-import type { Metadata } from "next";
-import { Inter, Roboto_Serif } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 
-// Konfigurera Inter för brödtext (sans-serif)
+// Vi laddar Inter för brödtext
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-inter", // Detta matchar namnet i din globals.css
 });
 
-// Konfigurera Roboto Serif för rubriker (serif)
-const robotoSerif = Roboto_Serif({
+// Vi laddar Montserrat för rubriker
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-roboto-serif",
+  variable: "--font-montserrat", // Detta matchar namnet i din globals.css
 });
 
-export const metadata: Metadata = {
-  title: "Din Webbplats",
-  description: "Beskrivning av din webbplats",
+export const metadata = {
+  title: "Bridgelys - Brobyggaren mellan behov och kod",
+  description: "Webbkonsult nischad inom upphandling, projektledning och tillgänglighet.",
 };
 
 export default function RootLayout({
@@ -26,8 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="sv" className={`${inter.variable} ${robotoSerif.variable}`}>
-      <body className="antialiased">
+    // Vi lägger till font-variablerna i html-taggen så de blir tillgängliga i hela projektet
+    <html lang="sv" className={`${inter.variable} ${montserrat.variable}`}>
+      <body className="font-sans antialiased bg-white text-slate-900">
         {children}
       </body>
     </html>
