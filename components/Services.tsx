@@ -4,31 +4,37 @@ import { ShoppingCart, Layout, ShieldCheck, Search, GraduationCap, Code } from '
 export default function Services() {
   const services = [
     { 
+      alink: "/tjanster/upphandlingar",
       title: "Upphandlingar", 
       icon: <ShoppingCart className="w-8 h-8" />, 
       desc: "Hjälp att formulera kravställning så att du faktiskt får det du betalar för och undviker tekniska låsningar." 
     },
     { 
+      alink: "/tjanster/projektledning",
       title: "Projektledning", 
       icon: <Layout className="w-8 h-8" />, 
       desc: "Bryggan mellan ledning och utveckling som håller tidsplan, budget och kvalitet genom hela processen." 
     },
     { 
+      alink: "/tjanster/tillganglighet",
       title: "Tillgänglighet", 
       icon: <ShieldCheck className="w-8 h-8" />, 
       desc: "Säkerställer att din webb följer lagkrav (WCAG) och är inkluderande för alla dina besökare." 
     },
     { 
+      alink: "/tjanster/seo",
       title: "SEO-strategi", 
       icon: <Search className="w-8 h-8" />, 
       desc: "Strategisk synlighet som gör att rätt kunder hittar till din lösning utan onödiga annonskostnader." 
     },
     { 
+      alink: "/tjanster/utbildningar",
       title: "Utbildningar", 
       icon: <GraduationCap className="w-8 h-8" />, 
       desc: "Vi lär din organisation att förstå och förvalta tekniken på egen hand för långsiktig självständighet." 
     },
     { 
+      alink: "/tjanster/webbutveckling",
       title: "Webbutveckling", 
       icon: <Code className="w-8 h-8" />, 
       desc: "Modern och skalbar kod genom mitt nätverk av seniora frilansutvecklare och specialister." 
@@ -50,17 +56,17 @@ export default function Services() {
         {/* Grid-systemet för rutorna */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
+           
             <div 
               key={index} 
-              className="group p-10 bg-white border border-slate-100 rounded-3xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden"
-            >
+              className="group p-10 bg-white border border-slate-100 rounded-3xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
               {/* En liten visuell detalj: en grön linje som dyker upp vid hover */}
               <div className="absolute top-0 left-0 w-full h-1 bg-brand-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-              
+              <a href={service.alink}> 
               <div className="text-brand-green mb-6 inline-block p-4 bg-brand-green/10 rounded-2xl group-hover:bg-brand-green group-hover:text-white transition-colors duration-300">
                 {service.icon}
               </div>
-              
+             
               <h3 className="font-display text-2xl font-bold text-brand-navy mb-4">
                 {service.title}
               </h3>
@@ -68,7 +74,9 @@ export default function Services() {
               <p className="font-sans text-slate-600 leading-relaxed">
                 {service.desc}
               </p>
+               </a>
             </div>
+           
           ))}
         </div>
       </div>
