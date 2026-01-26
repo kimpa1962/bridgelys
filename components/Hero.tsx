@@ -43,14 +43,19 @@ export default function Hero() {
 
           {/* Knappar */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            {/* Mjuk rullning till tjänsterna */}
             <a
               href="#tjanster"
               className="w-full sm:w-auto bg-brand-green hover:scale-105 hover:shadow-[0_0_20px_rgba(2,172,167,0.4)] text-brand-navy font-bold px-10 py-5 rounded-full transition-all text-lg cursor-pointer text-center"
             >
               Utforska våra tjänster
             </a>
-            <Link href="/om-oss" className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white font-bold px-10 py-5 rounded-full transition-all text-lg cursor-pointer text-center">
-              Om Bridgelys
+
+            <Link
+              href="/om-oss"
+              className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white font-bold px-10 py-5 rounded-full transition-all text-lg cursor-pointer text-center"
+            >
+              Om oss
             </Link>
           </div>
           

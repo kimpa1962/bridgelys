@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
+import Link from 'next/link';
 import { CheckCircle2, Award, Users, BookOpen } from 'lucide-react';
 
 export default function OmOss() {
@@ -146,10 +147,11 @@ export default function OmOss() {
             Oavsett om det handlar om en teknisk upphandling, en tillgänglighetsrevision eller att ta ett helhetsgrepp om din webbplattform, finns jag här som din strategiska partner.
           </p>
 
-
-          <button className="bg-brand-navy text-white font-bold px-12 py-5 rounded-full hover:bg-brand-navy/90 transition-all shadow-lg">
+         
+          <Link
+              href="/kontakt" className="bg-brand-navy text-white font-bold px-12 py-5 rounded-full hover:bg-brand-navy/90 transition-all shadow-lg">
             Kontakta mig för ett förutsättningslöst möte
-          </button>
+          </Link> 
         </div>
       </section>
     </main>

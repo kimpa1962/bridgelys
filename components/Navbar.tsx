@@ -73,7 +73,7 @@ export default function Navbar() {
             <Link href="/om-oss" className="text-gray-600 hover:text-brand-navy font-medium transition-colors">Om oss</Link>
             <Link href="/kontakt" className="text-gray-600 hover:text-brand-navy font-medium transition-colors">Kontakt</Link>
             
-            <Link href="/natverk" className="bg-brand-navy text-white px-5 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition shadow-md hover:shadow-lg">
+            <Link href="/bli-partner" className="bg-brand-navy text-white px-5 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition shadow-md hover:shadow-lg">
               Bli en del av nätverket
             </Link>
           </div>
@@ -110,7 +110,7 @@ export default function Navbar() {
           <div className="pt-4 space-y-2">
             <Link href="/om-oss" className="block p-3 text-gray-900 font-medium">Om oss</Link>
             <Link href="/kontakt" className="block p-3 text-gray-900 font-medium">Kontakt</Link>
-            <Link href="/natverk" className="block p-3 bg-brand-navy text-white text-center rounded-lg font-bold">Bli en del av nätverket</Link>
+            <Link href="/bli-parner" className="block p-3 bg-brand-navy text-white text-center rounded-lg font-bold">Bli en del av nätverket</Link>
           </div>
         </div>
       )}
