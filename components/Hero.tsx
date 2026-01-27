@@ -52,7 +52,7 @@ export default function Hero() {
             </a>
 
             <Link
-              href="/om-oss"
+              href="/about-us"
               className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white font-bold px-10 py-5 rounded-full transition-all text-lg cursor-pointer text-center"
             >
               Om oss

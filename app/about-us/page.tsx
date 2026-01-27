@@ -149,7 +149,7 @@ export default function OmOss() {
 
          
           <Link
-              href="/kontakt" className="bg-brand-navy text-white font-bold px-12 py-5 rounded-full hover:bg-brand-navy/90 transition-all shadow-lg">
+              href="/contact" className="bg-brand-navy text-white font-bold px-12 py-5 rounded-full hover:bg-brand-navy/90 transition-all shadow-lg">
             Kontakta mig för ett förutsättningslöst möte
           </Link> 
         </div>

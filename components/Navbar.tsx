@@ -8,12 +8,12 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const tjanster = [
-    { namn: "Upphandlingar", href: "/tjanster/upphandlingar" },
-    { namn: "Projektledning", href: "/tjanster/projektledning" },
-    { namn: "Tillgänglighet", href: "/tjanster/tillganglighet" },
-    { namn: "SEO", href: "/tjanster/seo" },
-    { namn: "Utbildningar", href: "/tjanster/utbildningar" },
-    { namn: "Webbutveckling", href: "/tjanster/webbutveckling" },
+    { namn: "Upphandlingar", href: "/services/procurement" },
+    { namn: "Projektledning", href: "/services/project-management" },
+    { namn: "Tillgänglighet", href: "/services/accessibility" },
+    { namn: "SEO", href: "/services/seo" },
+    { namn: "Utbildningar", href: "/services/educations" },
+    { namn: "Webbutveckling", href: "/services/web-development" },
   ];
 
   return (
@@ -70,10 +70,10 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link href="/om-oss" className="text-gray-600 hover:text-brand-navy font-medium transition-colors">Om oss</Link>
-            <Link href="/kontakt" className="text-gray-600 hover:text-brand-navy font-medium transition-colors">Kontakt</Link>
+            <Link href="/about-us" className="text-gray-600 hover:text-brand-navy font-medium transition-colors">Om oss</Link>
+            <Link href="/contact" className="text-gray-600 hover:text-brand-navy font-medium transition-colors">Kontakt</Link>
             
-            <Link href="/bli-partner" className="bg-brand-navy text-white px-5 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition shadow-md hover:shadow-lg">
+            <Link href="/join-network" className="bg-brand-navy text-white px-5 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition shadow-md hover:shadow-lg">
               Bli en del av nätverket
             </Link>
           </div>
@@ -108,9 +108,9 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="pt-4 space-y-2">
-            <Link href="/om-oss" className="block p-3 text-gray-900 font-medium">Om oss</Link>
-            <Link href="/kontakt" className="block p-3 text-gray-900 font-medium">Kontakt</Link>
-            <Link href="/bli-parner" className="block p-3 bg-brand-navy text-white text-center rounded-lg font-bold">Bli en del av nätverket</Link>
+            <Link href="/about-us" className="block p-3 text-gray-900 font-medium">Om oss</Link>
+            <Link href="/contact" className="block p-3 text-gray-900 font-medium">Kontakt</Link>
+            <Link href="/join-network" className="block p-3 bg-brand-navy text-white text-center rounded-lg font-bold">Bli en del av nätverket</Link>
           </div>
         </div>
       )}

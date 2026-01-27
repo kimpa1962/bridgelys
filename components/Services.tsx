@@ -4,37 +4,37 @@ import { ShoppingCart, Layout, ShieldCheck, Search, GraduationCap, Code } from '
 export default function Services() {
   const services = [
     { 
-      alink: "/tjanster/upphandlingar",
+      alink: "/services/procurement",
       title: "Upphandlingar", 
       icon: <ShoppingCart className="w-8 h-8" />, 
       desc: "Hjälp att formulera kravställning så att du faktiskt får det du betalar för och undviker tekniska låsningar." 
     },
     { 
-      alink: "/tjanster/projektledning",
+      alink: "/services/project-management",
       title: "Projektledning", 
       icon: <Layout className="w-8 h-8" />, 
       desc: "Bryggan mellan ledning och utveckling som håller tidsplan, budget och kvalitet genom hela processen." 
     },
     { 
-      alink: "/tjanster/tillganglighet",
+      alink: "/services/accessibility",
       title: "Tillgänglighet", 
       icon: <ShieldCheck className="w-8 h-8" />, 
       desc: "Säkerställer att din webb följer lagkrav (WCAG) och är inkluderande för alla dina besökare." 
     },
     { 
-      alink: "/tjanster/seo",
+      alink: "/services/seo",
       title: "SEO-strategi", 
       icon: <Search className="w-8 h-8" />, 
       desc: "Strategisk synlighet som gör att rätt kunder hittar till din lösning utan onödiga annonskostnader." 
     },
     { 
-      alink: "/tjanster/utbildningar",
+      alink: "/services/educations",
       title: "Utbildningar", 
       icon: <GraduationCap className="w-8 h-8" />, 
       desc: "Vi lär din organisation att förstå och förvalta tekniken på egen hand för långsiktig självständighet." 
     },
     { 
-      alink: "/tjanster/webbutveckling",
+      alink: "/services/web-development",
       title: "Webbutveckling", 
       icon: <Code className="w-8 h-8" />, 
       desc: "Modern och skalbar kod genom mitt nätverk av seniora frilansutvecklare och specialister." 
