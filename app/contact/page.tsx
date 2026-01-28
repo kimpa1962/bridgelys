@@ -1,7 +1,6 @@
 "use client"; // Detta krävs för att använda useState och ReCAPTCHA
 
 import React, { useState, useRef } from 'react';
-import Navbar from '@/components/Navbar';
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Kontakt() {
@@ -56,8 +55,7 @@ export default function Kontakt() {
 
   return (
     <main className="min-h-screen bg-white">
-      <Navbar />
-      
+        
       <section className="bg-brand-navy pt-32 pb-16 text-white text-center">
         <div className="container mx-auto px-6">
           <h1 className="font-display text-4xl md:text-5xl font-bold mb-4">

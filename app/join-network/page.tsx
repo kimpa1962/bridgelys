@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useRef } from 'react';
-import Navbar from '@/components/Navbar';
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function BliPartner() {
@@ -46,7 +45,6 @@ export default function BliPartner() {
 
   return (
     <main className="min-h-screen bg-white">
-      <Navbar />
       
       <section className="bg-brand-navy pt-32 pb-16 text-white text-center">
         <div className="container mx-auto px-6">

@@ -1,16 +1,16 @@
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-// Vi laddar Inter för brödtext
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter", // Detta matchar namnet i din globals.css
+  variable: "--font-inter",
 });
 
-// Vi laddar Montserrat för rubriker
 const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-montserrat", // Detta matchar namnet i din globals.css
+  variable: "--font-montserrat",
 });
 
 export const metadata = {
@@ -24,10 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // Vi lägger till font-variablerna i html-taggen så de blir tillgängliga i hela projektet
     <html lang="sv" className={`${inter.variable} ${montserrat.variable}`}>
       <body className="font-sans antialiased bg-white text-slate-900">
+        <Navbar /> {/* Läggs till här */}
+        
         {children}
+        
+        <Footer /> {/* Läggs till här */}
       </body>
     </html>
   );

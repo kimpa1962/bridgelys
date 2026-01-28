@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle2, Award, Users, BookOpen } from 'lucide-react';
@@ -7,8 +6,7 @@ import { CheckCircle2, Award, Users, BookOpen } from 'lucide-react';
 export default function OmOss() {
   return (
     <main className="min-h-screen bg-white">
-      <Navbar />
-      
+         
       {/* Header - Fokus på erfarenhet */}
       <section className="bg-brand-navy pt-32 pb-20">
         <div className="container mx-auto px-6 text-center">
