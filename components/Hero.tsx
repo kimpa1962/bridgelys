@@ -25,9 +25,22 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto">
           
           {/* Liten label högst upp */}
-          <span className="inline-block py-1 px-4 rounded-full bg-brand-green text-brand-navy font-bold text-xs mb-8 tracking-[0.2em] uppercase">
-            Brobyggaren mellan behov och kod
-          </span>
+<div className="flex flex-col items-center mb-8">
+  {/* WCAG-säkrad badge */}
+  <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-slate-900/80 backdrop-blur-lg border border-white/10 rounded-full mb-6 shadow-2xl" aria-hidden="true">
+    <span className="relative flex h-3 w-3">
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
+      <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-green"></span>
+    </span>
+    
+    <p className="text-white text-sm md:text-base font-medium tracking-wide">
+      När du behöver någon som pratar både{" "}
+      {/* Vi använder en lite ljusare grön eller vit med understrykning för kontrast */}
+      <span className="text-[#40FFFA] font-bold">människa</span> och{" "}
+      <span className="text-[#40FFFA] font-bold">utvecklare</span>.
+    </p>
+  </div>
+</div>
           
           {/* Huvudrubrik med Montserrat (font-display) */}
           <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight mb-8">

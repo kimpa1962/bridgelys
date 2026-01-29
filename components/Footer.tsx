@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -45,11 +46,13 @@ export default function Footer() {
             <ul className="space-y-2 text-slate-600">
               <li className="font-medium">Stockholm / Johanneshov</li>
               <li className="font-medium">Kim Vági / VD Bridgelys AB</li>
-              <li>
-                <a href="mailto:hello@bridgelys.se" className="hover:text-brand-green transition-colors font-medium">
-                  hello@bridgelys.se
-                </a>
-              </li>
+              <Link 
+  href="/contact" 
+  className="group flex items-center gap-2 text-slate-400 hover:text-brand-green transition-colors"
+>
+  <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
+  <span>Kontakta mig</span>
+</Link>
             </ul>
           </div>
         </div>
