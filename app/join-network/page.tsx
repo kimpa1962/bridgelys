@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react'; // Lagt till useEffect
 import ReCAPTCHA from "react-google-recaptcha";
 import { Users, Handshake, MessageSquare, Briefcase } from 'lucide-react';
 
@@ -13,8 +13,27 @@ export default function JoinNetworkPage() {
     message: ''
   });
 
+  // Ny state för att hålla koll på kakor
+  const [hasConsent, setHasConsent] = useState(false);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const recaptchaRef = useRef<ReCAPTCHA>(null);
+
+  // Kontrollera samtycke vid sidladdning och lyssna på uppdateringar
+  useEffect(() => {
+    // 1. Kolla om samtycke redan finns lagrat
+    const consent = localStorage.getItem('bridgelys-cookie-consent') === 'true';
+    setHasConsent(consent);
+
+    // 2. Lyssna på eventet från CookieBanner om användaren godkänner medan de är på sidan
+    const handleConsentChange = () => {
+      setHasConsent(true);
+    };
+
+    window.addEventListener('cookie-consent-updated', handleConsentChange);
+    
+    // Städa upp eventlyssnaren när komponenten tas bort
+    return () => window.removeEventListener('cookie-consent-updated', handleConsentChange);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -22,6 +41,13 @@ export default function JoinNetworkPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Säkerhetskoll om samtycke saknas
+    if (!hasConsent) {
+      alert("Du behöver godkänna kakor för att kunna skicka formuläret (för spam-skydd).");
+      return;
+    }
+
     setStatus('loading');
 
     const token = await recaptchaRef.current?.getValue();
@@ -117,7 +143,6 @@ export default function JoinNetworkPage() {
                 </p>
               </div>
 
-              {/* Kompetensområden / Footer text */}
               <div className="flex items-start gap-4 pt-4">
                 <div className="bg-brand-navy/10 p-3 rounded-lg">
                   <Briefcase className="text-brand-navy w-6 h-6" />
@@ -193,8 +218,22 @@ export default function JoinNetworkPage() {
                   ></textarea>
                 </div>
 
-                <div className="flex justify-start py-2">
-                  <ReCAPTCHA ref={recaptchaRef} sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""} />
+                {/* VILLKORLIG RENDERING AV RECAPTCHA */}
+                <div className="flex flex-col justify-start py-2">
+                  {hasConsent ? (
+                    <ReCAPTCHA 
+                      ref={recaptchaRef} 
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""} 
+                    />
+                  ) : (
+                    <div className="bg-slate-100 p-4 rounded-xl border border-slate-200 text-sm text-slate-600 text-left">
+                      <p>
+                        För att skydda formuläret mot spam behöver du {" "}
+                        <span className="font-bold text-brand-navy">godkänna kakor</span>. 
+                        Klicka på "Acceptera" i bannern längst ner på sidan för att fortsätta.
+                      </p>
+                    </div>
+                  )}
                 </div>
 
                 {status === 'error' && (
