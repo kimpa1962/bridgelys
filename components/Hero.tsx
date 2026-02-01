@@ -33,12 +33,15 @@ export default function Hero() {
       <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-green"></span>
     </span>
     
-    <p className="text-white text-sm md:text-base font-medium tracking-wide">
-      När du behöver någon som pratar både{" "}
-      {/* Vi använder en lite ljusare grön eller vit med understrykning för kontrast */}
-      <span className="text-[#40FFFA] font-bold">människa</span> och{" "}
-      <span className="text-[#40FFFA] font-bold">utvecklare</span>.
-    </p>
+              {/* Vi använder mt-12 för extra avstånd och mb-6 för luft neråt */}
+              <div className="mt-12 mb-6 inline-flex items-center rounded-full bg-[var(--color-brand-dark)] px-6 py-2 shadow-lg border border-[var(--color-brand-green)]/20">
+                <p className="text-white text-sm md:text-base font-medium tracking-wide">
+                  När du behöver någon som pratar både{" "}
+                  <span className="text-[var(--color-brand-green)] font-bold">människa</span> och{" "}
+                  <span className="text-[var(--color-brand-green)] font-bold">utvecklare</span>.
+                </p>
+              </div>
+
   </div>
 </div>
           
