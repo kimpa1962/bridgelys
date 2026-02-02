@@ -2,7 +2,8 @@ export const dynamic = 'force-dynamic';
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Vi lägger till en fallback för API-nyckeln så att bygget på Vercel inte kraschar
+const resend = new Resend(process.env.RESEND_API_KEY || 're_123');
 
 export async function POST(req: Request) {
   try {
@@ -12,9 +13,9 @@ export async function POST(req: Request) {
       email, 
       message, 
       gRecaptchaToken, 
-      role,      // Specifikt för partner
-      linkedin,  // Specifikt för partner
-      type       // Skickas från frontend för att skilja formulären åt
+      role,      
+      linkedin,  
+      type       
     } = body;
 
     // 1. Verifiera ReCaptcha
@@ -29,23 +30,26 @@ export async function POST(req: Request) {
     });
 
     const recaptchaJson = await recaptchaRes.json();
+    
+    // Om reCaptcha misslyckas (t.ex. vid fel secret key eller ogiltig token)
     if (!recaptchaJson.success) {
+      console.error("ReCaptcha Error:", recaptchaJson);
       return NextResponse.json({ error: "Säkerhetskontroll misslyckades" }, { status: 400 });
     }
 
     // 2. Skicka e-post baserat på typ
     if (type === 'partner') {
-      // --- LOGIK FÖR PARTNER-FORMULÄR ---
       
-      // Mail till dig själv
+      // Mail TILL dig själv (Skickas från hello@, tas emot av kim@)
       await resend.emails.send({
         from: 'Bridgelys Nätverk <hello@bridgelys.se>',
-        to: 'hello@bridgelys.se',
+        to: 'kim@bridgelys.se',
+        replyTo: email, // Gör att du kan svara direkt till partnern
         subject: `Ny nätverkspartner: ${name} (${role})`,
         text: `Namn: ${name}\nRoll: ${role}\nE-post: ${email}\nLinkedIn: ${linkedin || 'Ej angiven'}\n\nErfarenhet:\n${message}`,
       });
 
-      // Bekräftelse till partnern
+      // Bekräftelse TILL partnern (Skickas från hello@)
       await resend.emails.send({
         from: 'Kim på Bridgelys <hello@bridgelys.se>',
         to: email,
@@ -61,17 +65,17 @@ export async function POST(req: Request) {
       });
 
     } else {
-      // --- LOGIK FÖR VANLIGT KONTAKTFORMULÄR ---
       
-      // Mail till dig själv
+      // Mail TILL dig själv vid vanlig kontakt
       await resend.emails.send({
         from: 'Bridgelys Kontakt <hello@bridgelys.se>',
-        to: 'hello@bridgelys.se',
+        to: 'kim@bridgelys.se',
+        replyTo: email,
         subject: `Nytt meddelande från ${name}`,
         text: `Namn: ${name}\nE-post: ${email}\n\nMeddelande:\n${message}`,
       });
 
-      // Enkel bekräftelse till avsändaren
+      // Enkel bekräftelse TILL avsändaren
       await resend.emails.send({
         from: 'Bridgelys <hello@bridgelys.se>',
         to: email,
