@@ -42,7 +42,7 @@ export async function POST(req: Request) {
       
       // Mail TILL dig själv (Skickas från hello@, tas emot av kim@)
       await resend.emails.send({
-        from: 'Nätverksformulär-webb <hello@bridgelys.se>',
+        from: 'Nätverksformulär-webb <info@send.bridgelys.se>',
         to: 'kim@bridgelys.se',
         replyTo: email, // Gör att du kan svara direkt till partnern
         subject: `Ny nätverkspartner: ${name} (${role})`,
@@ -51,7 +51,7 @@ export async function POST(req: Request) {
 
       // Bekräftelse TILL partnern (Skickas från hello@)
       await resend.emails.send({
-        from: 'Kim på Bridgelys <hello@bridgelys.se>',
+        from: 'Kim på Bridgelys <info@send.bridgelys.se>',
         to: email,
         replyTo: 'hello@bridgelys.se',
         subject: 'Kul att du vill bli en del av nätverket!',
@@ -69,7 +69,7 @@ export async function POST(req: Request) {
       
       // Mail TILL dig själv vid vanlig kontakt
       await resend.emails.send({
-        from: 'Bridgelys Kontakt <hello@bridgelys.se>',
+        from: 'Bridgelys Kontakt <info@send.bridgelys.se>',
         to: 'kim@bridgelys.se',
         replyTo: email,
         subject: `Nytt meddelande från ${name}`,
@@ -78,7 +78,7 @@ export async function POST(req: Request) {
 
       // Enkel bekräftelse TILL avsändaren
       await resend.emails.send({
-        from: 'Bridgelys <hello@bridgelys.se>',
+        from: 'Bridgelys <info@send.bridgelys.se>',
         to: email,
         replyTo: 'hello@bridgelys.se',
         subject: 'Tack för ditt meddelande',
