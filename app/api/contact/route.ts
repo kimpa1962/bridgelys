@@ -42,7 +42,7 @@ export async function POST(req: Request) {
       
       // Mail TILL dig själv (Skickas från hello@, tas emot av kim@)
       await resend.emails.send({
-        from: 'Bridgelys Nätverk <hello@bridgelys.se>',
+        from: 'Nätverksformulär-webb <hello@bridgelys.se>',
         to: 'kim@bridgelys.se',
         replyTo: email, // Gör att du kan svara direkt till partnern
         subject: `Ny nätverkspartner: ${name} (${role})`,
@@ -53,6 +53,7 @@ export async function POST(req: Request) {
       await resend.emails.send({
         from: 'Kim på Bridgelys <hello@bridgelys.se>',
         to: email,
+        replyTo: 'hello@bridgelys.se',
         subject: 'Kul att du vill bli en del av nätverket!',
         html: `
           <div style="font-family: sans-serif; max-width: 600px; color: #334155;">
@@ -79,6 +80,7 @@ export async function POST(req: Request) {
       await resend.emails.send({
         from: 'Bridgelys <hello@bridgelys.se>',
         to: email,
+        replyTo: 'hello@bridgelys.se',
         subject: 'Tack för ditt meddelande',
         text: `Hej ${name},\n\nTack för att du hörde av dig! Jag har tagit emot ditt meddelande och återkommer till dig så snart jag kan.\n\nMed vänlig hälsning,\nKim Vági`,
       });
