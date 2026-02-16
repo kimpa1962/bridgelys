@@ -23,22 +23,22 @@ export default function Navbar() {
           
           {/* LOGOTYP & SLOGAN */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex flex-col group">
+            <Link href="/" className="flex flex-col group w-[180px]">
               {/* Din SVG-logotyp */}
               <Image 
-                src="/bridgelys_logotyp.svg" 
+                src="/bridgelys_logo-vector.svg" 
                 alt="Bridgelys Logotyp" 
                 width={180} 
                 height={45} 
                 priority
-                className="h-auto w-auto"
+                className="h-auto w-full"
               />
               {/* Slogan: Arial / Grön */}
               <span 
-                className="text-[14px] text-brand-green mt-1 font-normal leading-none"
+                className="text-[14px] text-brand-green mt-1 font-normal leading-none text-right"
                 style={{ fontFamily: 'Arial, sans-serif' }}
               >
-                Brobyggaren mellan behov och kod.
+                HUMAN IT
               </span>
             </Link>
           </div>

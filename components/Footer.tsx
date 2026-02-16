@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="text-left">
             <div className="mb-6">
               <Image 
-                src="/bridgelys_logotyp.svg" 
+                src="/bridgelys_logo-vector.svg" 
                 alt="Bridgelys Logotyp" 
                 width={150} 
                 height={32} 
