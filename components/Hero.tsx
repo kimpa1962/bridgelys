@@ -23,7 +23,7 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto">
           
           {/* Badge med minimalt avstånd */}
-          <div className="flex flex-col items-center mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+{/*           <div className="flex flex-col items-center mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
             <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-brand-dark/80 backdrop-blur-lg border border-white/10 rounded-full mb-2 shadow-2xl" aria-hidden="true">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
@@ -36,7 +36,7 @@ export default function Hero() {
                 <span className="text-brand-green font-bold">utvecklare</span>.
               </p>
             </div>
-          </div>
+          </div> */}
           
           {/* Huvudrubrik - Minskad mb-4 för att tajta till det */}
           <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight mb-4 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200">
