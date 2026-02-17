@@ -40,8 +40,8 @@ export default function Hero() {
           
           {/* Huvudrubrik - Minskad mb-4 för att tajta till det */}
           <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight mb-4 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200">
-            Bygger framtiden – <br />
-            <span className="text-brand-green underline decoration-brand-green/30">en bro i tagen.</span>
+            En webbyrå med – <br />
+            <span className="text-brand-green underline decoration-brand-green/30">fokus på Människan.</span>
           </h1>
 
           {/* Beskrivning - Minskad mb-8 */}
