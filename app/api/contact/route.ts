@@ -2,7 +2,6 @@ export const dynamic = 'force-dynamic';
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-// Vi lägger till en fallback för API-nyckeln så att bygget på Vercel inte kraschar
 const resend = new Resend(process.env.RESEND_API_KEY || 're_123');
 
 export async function POST(req: Request) {
@@ -18,7 +17,6 @@ export async function POST(req: Request) {
       type       
     } = body;
 
-    // 1. Verifiera ReCaptcha
     if (!gRecaptchaToken) {
       return NextResponse.json({ error: "Säkerhetskontroll saknas (Token missing)" }, { status: 400 });
     }
@@ -31,27 +29,23 @@ export async function POST(req: Request) {
 
     const recaptchaJson = await recaptchaRes.json();
     
-    // Om reCaptcha misslyckas (t.ex. vid fel secret key eller ogiltig token)
     if (!recaptchaJson.success) {
       console.error("ReCaptcha Error:", recaptchaJson);
       return NextResponse.json({ error: "Säkerhetskontroll misslyckades" }, { status: 400 });
     }
 
-    // 2. Skicka e-post baserat på typ
     if (type === 'partner') {
       
-      // Mail TILL dig själv (Skickas från hello@, tas emot av kim@)
       await resend.emails.send({
-        from: 'Nätverksformulär-webb <info@send.bridgelys.se>',
+        from: 'Nätverksformulär-webb <hello@bridgelys.se>',
         to: 'kim@bridgelys.se',
-        replyTo: email, // Gör att du kan svara direkt till partnern
+        replyTo: email,
         subject: `Ny nätverkspartner: ${name} (${role})`,
         text: `Namn: ${name}\nRoll: ${role}\nE-post: ${email}\nLinkedIn: ${linkedin || 'Ej angiven'}\n\nErfarenhet:\n${message}`,
       });
 
-      // Bekräftelse TILL partnern (Skickas från hello@)
       await resend.emails.send({
-        from: 'Kim på Bridgelys <info@send.bridgelys.se>',
+        from: 'Kim på Bridgelys <hello@bridgelys.se>',
         to: email,
         replyTo: 'hello@bridgelys.se',
         subject: 'Kul att du vill bli en del av nätverket!',
@@ -67,18 +61,16 @@ export async function POST(req: Request) {
 
     } else {
       
-      // Mail TILL dig själv vid vanlig kontakt
       await resend.emails.send({
-        from: 'Bridgelys Kontakt <info@send.bridgelys.se>',
+        from: 'Bridgelys Kontakt <hello@bridgelys.se>',
         to: 'kim@bridgelys.se',
         replyTo: email,
         subject: `Nytt meddelande från ${name}`,
         text: `Namn: ${name}\nE-post: ${email}\n\nMeddelande:\n${message}`,
       });
 
-      // Enkel bekräftelse TILL avsändaren
       await resend.emails.send({
-        from: 'Bridgelys <info@send.bridgelys.se>',
+        from: 'Bridgelys <hello@bridgelys.se>',
         to: email,
         replyTo: 'hello@bridgelys.se',
         subject: 'Tack för ditt meddelande',
