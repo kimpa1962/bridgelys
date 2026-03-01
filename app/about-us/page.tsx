@@ -10,6 +10,7 @@ export default function OmOss() {
       {/* Header - Fokus på erfarenhet */}
       <section className="bg-brand-navy pt-32 pb-20">
         <div className="container mx-auto px-6 text-center">
+          
           <span className="text-brand-green font-bold tracking-widest uppercase text-sm mb-4 block">
             Sedan 1997
           </span>
@@ -139,7 +140,7 @@ export default function OmOss() {
       <section className="py-24 bg-white border-t border-slate-100 text-center">
         <div className="container mx-auto px-6 max-w-3xl">
           <h3 className="font-display text-2xl md:text-3xl font-bold text-brand-navy mb-6">
-            Låt oss bygga nästa bro tillsammans
+             Kontakta mig för ett förutsättningslöst möte
           </h3>
           <p className="text-slate-600 text-lg mb-10 leading-relaxed">
             Oavsett om det handlar om en teknisk upphandling, en tillgänglighetsrevision eller att ta ett helhetsgrepp om din webbplattform, finns jag här som din strategiska partner.
@@ -148,7 +149,7 @@ export default function OmOss() {
          
           <Link
               href="/contact" className="bg-brand-navy text-white font-bold px-12 py-5 rounded-full hover:bg-brand-navy/90 transition-all shadow-lg">
-            Kontakta mig för ett förutsättningslöst möte
+            Kontakta mig
           </Link> 
         </div>
       </section>

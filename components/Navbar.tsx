@@ -38,7 +38,7 @@ export default function Navbar() {
                 className="text-[14px] text-brand-green mt-1 font-normal leading-none text-right"
                 style={{ fontFamily: 'Arial, sans-serif' }}
               >
-                HUMAN IT
+                HUMAN IT&nbsp;
               </span>
             </Link>
           </div>
@@ -70,7 +70,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link href="/about-us" className="text-gray-600 hover:text-brand-navy font-medium transition-colors">Om oss</Link>
+            <Link href="/about-us" className="text-gray-600 hover:text-brand-navy font-medium transition-colors">Om Bridgelys</Link>
             <Link href="/contact" className="text-gray-600 hover:text-brand-navy font-medium transition-colors">Kontakt</Link>
             
             <Link href="/join-network" className="bg-brand-navy text-white px-5 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition shadow-md hover:shadow-lg">

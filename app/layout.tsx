@@ -15,8 +15,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Bridgelys - Brobyggaren mellan behov och kod",
-  description: "Webbkonsult nischad inom upphandling, projektledning och tillgänglighet.",
+  title: "Bridgelys - IT på ren svenska",
+  description: "Webbkonsult nischad inom upphandling, projektledning, tillgänglighet och SEO.",
 };
 
 export default function RootLayout({
