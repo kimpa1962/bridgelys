@@ -25,8 +25,8 @@ html {
 /* 2. Koppla dina typsnitt och färger till Tailwinds tema-motor */
 @theme {
 
-  --color-brand-green: #02ACA7;
-  --color-brand-navy: #003C71;
-  --color-brand-dark: #00284d;
+  --color-brand-green: var(--color-brand-green);
+  --color-brand-navy: var(--color-brand-navy);
+  --color-brand-dark: var(--color-brand-dark);
 
 }

@@ -35,7 +35,7 @@ export default function Navbar() {
               />
               {/* Slogan: Arial / Grön */}
               <span 
-                className="text-[14px]  mt-1 font-normal leading-none text-right"
+                className="text-[14px] color-brand-dark mt-1 font-normal leading-none text-right"
                 style={{ fontFamily: 'Arial, sans-serif' }}
               >
                 HUMAN IT&nbsp;
