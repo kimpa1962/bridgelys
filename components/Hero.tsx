@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-brand-navy/60 z-10" />
         <Image 
-          src="/bridge-hero.jpg" 
+          src="/hero-background.jpg" 
           alt="Modern bro" 
           fill
           priority
