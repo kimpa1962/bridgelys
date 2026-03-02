@@ -39,7 +39,7 @@ export default function Values() {
                   <div className="mt-1 text-brand-green">{item.icon}</div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">{item.title}</h4>
-                    <p className="text-slate-400">{item.text}</p>
+                    <p>{item.text}</p>
                   </div>
                 </div>
               ))}
