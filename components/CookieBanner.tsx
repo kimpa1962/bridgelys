@@ -134,7 +134,7 @@ export default function CookieBanner() {
             </h3>
           </div>
 
-          <p id="cookie-desc" className="text-sm text-slate-600 mb-4 leading-relaxed">
+          <p id="cookie-desc" className="text-sm text-slate-800 mb-4 leading-relaxed">
             Hej! Jag använder kakor för att webbplatsen ska fungera säkert och
             för att jag ska kunna se besöksstatistik. Inget säljs vidare och inga
             personuppgifter sparas.
@@ -235,7 +235,7 @@ export default function CookieBanner() {
             </button>
           </div>
 
-          <p className="text-[10px] text-center text-slate-400 mt-4 leading-tight">
+          <p className="text-[12px] text-center text-slate-800 mt-4 leading-tight">
             Genom att godkänna hjälper du en frilansare att förstå sin trafik bättre.
             Tack!
           </p>
