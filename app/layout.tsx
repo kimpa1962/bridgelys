@@ -1,39 +1,55 @@
+import type { Metadata } from "next";
+import React from "react";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-});
-
-export const metadata = {
+export const metadata: Metadata = {
   title: "Bridgelys - IT på ren svenska",
-  description: "Webbkonsult nischad inom upphandling, projektledning, tillgänglighet och SEO.",
+  description:
+    "Webbkonsult nischad inom upphandling, projektledning, tillgänglighet och SEO.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="sv" className={`${inter.variable} ${montserrat.variable}`}>
-      <body className="font-sans antialiased bg-white text-slate-900">
-        <Navbar /> {/* Läggs till här */}
-        
-        {children}
-        
-        <Footer /> {/* Läggs till här */}
+    <html
+      lang="sv"
+      className={`${inter.variable} ${montserrat.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="min-h-screen font-sans antialiased bg-white text-slate-900">
+        {/* Skip link */}
+        <a
+          href="#main-content"
+          className="
+            sr-only focus:not-sr-only
+            fixed top-4 left-4 z-[9999]
+            rounded-lg bg-white px-4 py-3
+            text-slate-900 shadow-lg
+          "
+        >
+          Hoppa till innehåll
+        </a>
 
-        <CookieBanner/>
+        <header>
+          <Navbar />
+        </header>
+
+        <main id="main-content" tabIndex={-1}>
+          {children}
+        </main>
+
+        <footer>
+          <Footer />
+        </footer>
+
+        <CookieBanner />
       </body>
     </html>
   );

@@ -1,32 +1,63 @@
 @import "tailwindcss";
-/* Lägger in en mjuk rullning på alla scroll länkar */
+
+/* Smooth scroll (ta bort ev. scroll-smooth i layout.tsx) */
 html {
   scroll-behavior: smooth;
 }
 
-/* 1. Definiera dina färger som variabler */
+/* Design tokens */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --brand-green: #02ACA7; 
-  --brand-navy: #003C71;
-  /* Dina märkesfärger */
-  --color-brand-green: #02ACA7;
-  --color-brand-navy: #003C71;
-  --color-brand-dark: #00284d;
+  --foreground: #0f172a;
 
-  /* Typsnitt */
+  /* Brand */
+  --color-brand-navy: #003c71; /* primary navy */
+  --color-brand-dark: #00284d; /* deep navy */
+
+  /* Accent */
+  --color-brand-green: #0ea5a4; /* teal (för ljus bakgrund/UI) */
+  --color-brand-green-on-dark: #2dd4bf; /* ljusare teal (för mörka ytor/hero) */
+
+  /* Dekor */
+  --color-brand-mint: #02aca7;
+
+  /* Text helpers */
+  --color-text-on-dark: #f8fafc;
+  --color-text-muted-on-dark: #e2e8f0;
+
+  /* Fonts */
   --font-display: "Montserrat", sans-serif;
   --font-sans: "Inter", sans-serif;
   --font-logo: "Bahnschrift", "Arial", sans-serif;
-
 }
 
-/* 2. Koppla dina typsnitt och färger till Tailwinds tema-motor */
+/* Tailwind v4 theme mapping */
 @theme {
-
-  --color-brand-green: var(--color-brand-green);
   --color-brand-navy: var(--color-brand-navy);
   --color-brand-dark: var(--color-brand-dark);
 
+  --color-brand-green: var(--color-brand-green);
+  --color-brand-green-on-dark: var(--color-brand-green-on-dark);
+
+  --color-brand-mint: var(--color-brand-mint);
+
+  --color-text-on-dark: var(--color-text-on-dark);
+  --color-text-muted-on-dark: var(--color-text-muted-on-dark);
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-logo: var(--font-logo);
+}
+
+/* A11y: tydlig fokusmarkering */
+:where(a, button, input, select, textarea, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 3px solid var(--color-brand-green-on-dark);
+  outline-offset: 3px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
