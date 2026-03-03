@@ -59,11 +59,10 @@ export default function Navbar() {
           <Link
             href="/"
             className="flex flex-col group w-[180px] rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
-            aria-label="Gå till startsidan"
           >
             <Image
               src="/bridgelys_logo-vector.svg"
-              alt="Bridgelys logotyp"
+              alt="Bridgelys — gå till startsidan"
               width={180}
               height={45}
               priority

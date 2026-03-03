@@ -73,7 +73,6 @@ export default function Services() {
                   hover:shadow-2xl hover:-translate-y-2
                   focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2
                 "
-                aria-label={`${s.title} – läs mer`}
               >
                 {/* Hover/focus-linje */}
                 <div
