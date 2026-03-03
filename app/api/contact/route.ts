@@ -1,90 +1,164 @@
-export const dynamic = 'force-dynamic';
-import { Resend } from 'resend';
-import { NextResponse } from 'next/server';
+// app/api/contact/route.ts
+export const dynamic = "force-dynamic";
 
-const resend = new Resend(process.env.RESEND_API_KEY || 're_123');
+import { Resend } from "resend";
+import { NextResponse } from "next/server";
+
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
+
+function badRequest(code: string, userMessage: string) {
+  return NextResponse.json({ code, userMessage }, { status: 400 });
+}
+
+function serverError(code: string, userMessage: string) {
+  return NextResponse.json({ code, userMessage }, { status: 500 });
+}
+
+function isNonEmptyString(v: unknown): v is string {
+  return typeof v === "string" && v.trim().length > 0;
+}
+
+function clamp(s: string, max: number) {
+  const t = s.trim();
+  return t.length > max ? t.slice(0, max) : t;
+}
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
-    const { 
-      name, 
-      email, 
-      message, 
-      gRecaptchaToken, 
-      role,      
-      linkedin,  
-      type       
-    } = body;
-
-    if (!gRecaptchaToken) {
-      return NextResponse.json({ error: "Säkerhetskontroll saknas (Token missing)" }, { status: 400 });
+    if (!RESEND_API_KEY) {
+      return serverError(
+        "CONFIG_RESEND_MISSING",
+        "Formuläret är tillfälligt otillgängligt. Maila hello@bridgelys.se."
+      );
     }
+    if (!RECAPTCHA_SECRET_KEY) {
+      return serverError(
+        "CONFIG_RECAPTCHA_MISSING",
+        "Formuläret är tillfälligt otillgängligt. Maila hello@bridgelys.se."
+      );
+    }
+
+    const body = await req.json();
+
+    const {
+      name,
+      email,
+      message,
+      gRecaptchaToken,
+      role,
+      linkedin,
+      type,
+    } = body ?? {};
+
+    if (!isNonEmptyString(gRecaptchaToken)) {
+      return badRequest(
+        "MISSING_TOKEN",
+        "Säkerhetskontroll saknas. Ladda om sidan och försök igen."
+      );
+    }
+
+    if (!isNonEmptyString(name) || !isNonEmptyString(email) || !isNonEmptyString(message)) {
+      return badRequest(
+        "VALIDATION_FAILED",
+        "Fyll i alla obligatoriska fält och försök igen."
+      );
+    }
+
+    // Trim + rimliga maxlängder
+    const safeName = clamp(name, 120);
+    const safeEmail = clamp(email, 254);
+    const safeMessage = clamp(message, 8000);
+    const safeRole = isNonEmptyString(role) ? clamp(role, 120) : "";
+    const safeLinkedIn = isNonEmptyString(linkedin) ? clamp(linkedin, 500) : "";
+
+    // Verify reCAPTCHA
+    const verifyBody = new URLSearchParams({
+      secret: RECAPTCHA_SECRET_KEY,
+      response: gRecaptchaToken,
+    });
 
     const recaptchaRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${gRecaptchaToken}`,
+      body: verifyBody.toString(),
     });
 
-    const recaptchaJson = await recaptchaRes.json();
-    
-    if (!recaptchaJson.success) {
+    const recaptchaJson = await recaptchaRes.json().catch(() => null);
+
+    if (!recaptchaJson?.success) {
       console.error("ReCaptcha Error:", recaptchaJson);
-      return NextResponse.json({ error: "Säkerhetskontroll misslyckades" }, { status: 400 });
+      return badRequest(
+        "RECAPTCHA_FAILED",
+        "Säkerhetskontrollen misslyckades. Försök igen."
+      );
     }
 
-    if (type === 'partner') {
-      
+    const resend = new Resend(RESEND_API_KEY);
+
+    if (type === "partner") {
+      // Mail till dig
       await resend.emails.send({
-        from: 'Nätverksformulär-webb <hello@bridgelys.se>',
-        to: 'kim@bridgelys.se',
-        replyTo: email,
-        subject: `Ny nätverkspartner: ${name} (${role})`,
-        text: `Namn: ${name}\nRoll: ${role}\nE-post: ${email}\nLinkedIn: ${linkedin || 'Ej angiven'}\n\nErfarenhet:\n${message}`,
+        from: "Nätverksformulär-webb <hello@bridgelys.se>",
+        to: "kim@bridgelys.se",
+        replyTo: safeEmail,
+        subject: `Ny nätverkspartner: ${safeName}${safeRole ? ` (${safeRole})` : ""}`,
+        text:
+          `Namn: ${safeName}\n` +
+          (safeRole ? `Roll: ${safeRole}\n` : "") +
+          `E-post: ${safeEmail}\n` +
+          `LinkedIn: ${safeLinkedIn || "Ej angiven"}\n\n` +
+          `Erfarenhet:\n${safeMessage}`,
       });
 
+      // Autoreply
       await resend.emails.send({
-        from: 'Kim på Bridgelys <hello@bridgelys.se>',
-        to: email,
-        replyTo: 'hello@bridgelys.se',
-        subject: 'Kul att du vill bli en del av nätverket!',
+        from: "Kim på Bridgelys <hello@bridgelys.se>",
+        to: safeEmail,
+        replyTo: "hello@bridgelys.se",
+        subject: "Kul att du vill bli en del av nätverket!",
         html: `
           <div style="font-family: sans-serif; max-width: 600px; color: #334155;">
-            <h2 style="color: #0F172A;">Hej ${name}!</h2>
+            <h2 style="color: #0F172A;">Hej ${safeName}!</h2>
             <p>Stort tack för din intresseanmälan. Det är alltid kul att komma i kontakt med andra skickliga frilansare.</p>
-            <p>Jag har tagit emot dina uppgifter som <strong>${role}</strong> och återkommer så snart jag kan.</p>
+            ${
+              safeRole
+                ? `<p>Jag har tagit emot dina uppgifter som <strong>${safeRole}</strong> och återkommer så snart jag kan.</p>`
+                : `<p>Jag har tagit emot din intresseanmälan och återkommer så snart jag kan.</p>`
+            }
             <p style="margin-top: 20px;">Hörs snart!<br /><strong>Kim Vági</strong><br />Bridgelys</p>
           </div>
         `,
       });
-
     } else {
-      
+      // Mail till dig
       await resend.emails.send({
-        from: 'Bridgelys Kontakt <hello@bridgelys.se>',
-        to: 'kim@bridgelys.se',
-        replyTo: email,
-        subject: `Nytt meddelande från ${name}`,
-        text: `Namn: ${name}\nE-post: ${email}\n\nMeddelande:\n${message}`,
+        from: "Bridgelys Kontakt <hello@bridgelys.se>",
+        to: "kim@bridgelys.se",
+        replyTo: safeEmail,
+        subject: `Nytt meddelande från ${safeName}`,
+        text: `Namn: ${safeName}\nE-post: ${safeEmail}\n\nMeddelande:\n${safeMessage}`,
       });
 
+      // Autoreply
       await resend.emails.send({
-        from: 'Bridgelys <hello@bridgelys.se>',
-        to: email,
-        replyTo: 'hello@bridgelys.se',
-        subject: 'Tack för ditt meddelande',
-        text: `Hej ${name},\n\nTack för att du hörde av dig! Jag har tagit emot ditt meddelande och återkommer till dig så snart jag kan.\n\nMed vänlig hälsning,\nKim Vági`,
+        from: "Bridgelys <hello@bridgelys.se>",
+        to: safeEmail,
+        replyTo: "hello@bridgelys.se",
+        subject: "Tack för ditt meddelande",
+        text:
+          `Hej ${safeName},\n\n` +
+          `Tack för att du hörde av dig! Jag har tagit emot ditt meddelande och återkommer till dig så snart jag kan.\n\n` +
+          `Med vänlig hälsning,\nKim Vági`,
       });
     }
 
     return NextResponse.json({ success: true });
-
   } catch (error: any) {
-    console.error("Resend API Error:", error);
-    return NextResponse.json(
-      { error: error.message || "Ett oväntat fel uppstod på servern." }, 
-      { status: 500 }
+    console.error("Contact API Error:", error);
+    return serverError(
+      "SERVER_ERROR",
+      "Ett oväntat fel uppstod. Prova igen eller maila hello@bridgelys.se."
     );
   }
 }
