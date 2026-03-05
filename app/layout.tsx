@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="#main-content"
           className="
             sr-only focus:not-sr-only
-            fixed top-4 left-4 z-[9999]
+            fixed top-4 left-4 z-9999
             rounded-lg bg-white px-4 py-3
             text-slate-900 shadow-lg
           "
