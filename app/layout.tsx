@@ -3,6 +3,9 @@ import React from "react";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 
+// 1. Importera komponenten från det nya biblioteket
+import { GoogleAnalytics } from '@next/third-parties/google';
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
@@ -17,6 +20,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // Hämtar ditt mät-ID från .env.local
+  const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-6MH33N8M4V";
+
   return (
     <html
       lang="sv"
@@ -29,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="#main-content"
           className="
             sr-only focus:not-sr-only
-            fixed top-4 left-4 z-[9999]
+            fixed top-4 left-4 z-9999
             rounded-lg bg-white px-4 py-3
             text-slate-900 shadow-lg
           "
@@ -50,6 +56,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </footer>
 
         <CookieBanner />
+
+        {/* 2. Google Analytics komponenten läggs här */}
+        <GoogleAnalytics gaId={gaId} />
       </body>
     </html>
   );
