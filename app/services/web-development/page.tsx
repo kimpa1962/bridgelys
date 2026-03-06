@@ -6,7 +6,7 @@ import { ArrowRight, Code2, Cpu, Layout } from 'lucide-react';
 export default function WebDevPage() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="pt-32 pb-16 bg-brand-navy text-white text-center">
+      <section className="pt-24 pb-16 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6">
           <h1 className="font-display text-4xl md:text-6xl font-bold mb-4 text-brand-green">Webbutveckling</h1>
           <p className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto uppercase tracking-widest">Modern teknik, hållbara resultat</p>

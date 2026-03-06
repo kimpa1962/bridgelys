@@ -1,16 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, Award, Users, BookOpen } from "lucide-react";
+import { CheckCircle2, Award, Users, BookOpen, Rocket, Building2 } from "lucide-react";
 
 export default function OmOss() {
   const points = [
-    "Systemägande & Drift",
     "Strategisk Upphandling",
+    "Offentlig Sektor & Kommun",
+    "Systemägande & Drift",
     "Tillgänglighet (WCAG)",
-    "SEO & Trafikanalys",
-    "Projektledning",
-    "Full-stack utveckling",
+    "Full-stack (från C++ till React)",
+    "Pedagogiskt Ledarskap",
   ];
 
   const networkTags = [
@@ -22,24 +22,23 @@ export default function OmOss() {
 
   return (
     <>
-      {/* Header - Fokus på erfarenhet */}
-      <section className="bg-brand-navy pt-32 pb-20" aria-labelledby="about-title">
+      {/* Header - Fokus på den mänskliga länken */}
+      <section className="bg-brand-navy pt-24 pb-20" aria-labelledby="about-title">
         <div className="container mx-auto px-6 text-center">
           <span className="text-brand-green-on-dark font-bold tracking-widest uppercase text-sm mb-4 block">
-            Sedan 1997
+            Sedan webbens barndom
           </span>
 
           <h1
             id="about-title"
             className="font-display text-4xl md:text-6xl font-bold text-white mb-6"
           >
-            Människan bakom <span className="text-brand-green-on-dark">bryggan</span>
+            Pionjär med fokus på <span className="text-brand-green-on-dark">människan</span>
           </h1>
 
           <p className="text-slate-200 text-xl max-w-3xl mx-auto font-sans leading-relaxed">
-            Jag är en senior full-stack utvecklare och systemägare som drivs av att göra
-            teknik begriplig. Med över 25 års erfarenhet hjälper jag företag att navigera
-            mellan komplex kod och faktiska affärsmål.
+            Jag fungerar som den strategiska bryggan mellan komplex teknik, 
+            politiskt styrda verksamheter och slutanvändarens faktiska behov.
           </p>
         </div>
       </section>
@@ -48,20 +47,20 @@ export default function OmOss() {
       <section className="py-24" aria-labelledby="journey-title">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
-            {/* Bild & Erfarenhets-badge */}
+            {/* Ny kollage-bild */}
             <div className="lg:w-1/2 relative">
-              <div className="aspect-[4/5] relative rounded-3xl overflow-hidden shadow-2xl bg-slate-100">
+              <div className="aspect-square relative rounded-3xl overflow-hidden shadow-2xl bg-slate-100 border border-slate-200">
                 <Image
-                  src="/bridge-hero.jpg"
-                  alt="CV Kim Vági, grundare av Bridgelys"
+                  src="/kimpa-cv-images.png"
+                  alt="Kollage över Kim Vágis erfarenhet: från kod till pedagogik"
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  priority={false}
+                  priority={true}
                 />
               </div>
 
-              <div className="absolute -bottom-6 -right-6 bg-brand-green-on-dark p-8 rounded-2xl shadow-xl">
+              <div className="absolute -bottom-6 -right-6 bg-brand-green-on-dark p-8 rounded-2xl shadow-xl hidden md:block">
                 <p className="text-brand-navy font-bold text-3xl leading-none">25+</p>
                 <p className="text-brand-navy/90 text-xs uppercase tracking-tighter font-bold mt-1">
                   Års expertis
@@ -69,26 +68,31 @@ export default function OmOss() {
               </div>
             </div>
 
-            {/* Textinnehåll */}
+            {/* Uppdaterat Textinnehåll */}
             <div className="lg:w-1/2">
               <h2
                 id="journey-title"
                 className="font-display text-3xl md:text-4xl font-bold text-brand-navy mb-6"
               >
-                En digital resa från Perl till Next.js
+                Från C++ till Stockholms första mobila IT-projekt
               </h2>
 
               <p className="text-slate-600 text-lg mb-6 leading-relaxed">
-                Jag började min resa i webbens barndom, en tid då jag kodade i C++, Perl och
-                Java innan dagens ramverk ens var påtänkta. Denna djupa tekniska grund har
-                gett mig en unik förståelse för hur system faktiskt fungerar under huven.
+                Jag började min resa i webbens barndom, en tid då jag kodade i <strong>C++, Perl och Java</strong>. 
+                Denna djupa tekniska grund har gett mig en unik förståelse för hur system faktiskt fungerar under huven, 
+                långt innan dagens moderna ramverk existerade.
+              </p>
+
+              <p className="text-slate-600 text-lg mb-6 leading-relaxed">
+                Min erfarenhet från <strong>offentlig sektor inom Stockholms stad</strong> är omfattande. 
+                Som webbutvecklare var jag med och drev stadens <strong>första mobila IT-projekt</strong>. 
+                Genom arbete med upphandlingar, miljöprojekt och vid näringslivskontoret har jag fått en djup insikt 
+                i de processer och kravställningar som styr stora, samhällsviktiga organisationer.
               </p>
 
               <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-                Som tidigare <strong>lärare vid Yrkeshögskolan</strong> och systemägare för
-                stora mediehus, har jag tränat upp förmågan att vara pedagogisk och social
-                – att fungera som den mänskliga länken mellan komplexa IT-system och
-                slutanvändarens behov.
+                Som tidigare <strong>lärare vid Yrkeshögskolan</strong> och systemägare för stora mediehus, 
+                är min största styrka förmågan att vara pedagogisk och social – att göra det komplexa begripligt.
               </p>
 
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4" aria-label="Kompetensområden">
@@ -107,91 +111,67 @@ export default function OmOss() {
         </div>
       </section>
 
-      {/* Tre pelare */}
+      {/* Tre pelare - Uppdaterade med dina nya erfarenheter */}
       <section className="py-20 bg-slate-50" aria-labelledby="pillars-title">
         <div className="container mx-auto px-6">
-          <h2 id="pillars-title" className="sr-only">
-            Tre pelare
-          </h2>
+          <h2 id="pillars-title" className="sr-only">Mina styrkor</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="text-center">
-            <div className="w-16 h-16 bg-brand-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <BookOpen
-                  className="w-8 h-8 text-brand-green-on-dark"
-                  strokeWidth={2.5}
-                  aria-hidden="true"
-                />
-            </div>
+              <div className="w-16 h-16 bg-brand-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Building2 className="w-8 h-8 text-brand-green-on-dark" strokeWidth={2.5} />
+              </div>
               <h3 className="font-display text-xl font-bold text-brand-navy mb-4">
-                Pedagogiskt fokus
+                Offentlig sektor-expertis
               </h3>
               <p className="text-slate-700 italic">
-                &quot;Jag pratar klarspråk och anpassar budskapet efter mottagaren, från ledningsgrupp till tekniker.&quot;
-              </p>
-            </div>
-
-            <div className="text-center">
-            <div className="w-16 h-16 bg-brand-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-              <Award
-                className="w-8 h-8 text-brand-green-on-dark"
-                strokeWidth={2.5}
-                aria-hidden="true"
-              />
-            </div>
-              <h3 className="font-display text-xl font-bold text-brand-navy mb-4">
-                Oberoende rådgivare
-              </h3>
-              <p className="text-slate-700 italic">
-                &quot;Jag sitter på din sida av bordet och ser till att tekniska beslut faktiskt gynnar din affär.&quot;
+                &quot;Jag förstår kraven bakom kommunala upphandlingar och politiskt styrda projekt.&quot;
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-brand-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Users
-                  className="w-8 h-8 text-brand-green-on-dark"
-                  strokeWidth={2.5}
-                  aria-hidden="true"
-                />
+                <Rocket className="w-8 h-8 text-brand-green-on-dark" strokeWidth={2.5} />
               </div>
               <h3 className="font-display text-xl font-bold text-brand-navy mb-4">
-                Nätverkets kraft
+                Teknisk pionjär
               </h3>
               <p className="text-slate-700 italic">
-                &quot;Som din kontaktperson skalar jag upp projektet med handplockade seniora specialister vid behov.&quot;
+                &quot;Från de första mobila lösningarna till dagens moderna webb – jag har sett resan inifrån.&quot;
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-brand-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <BookOpen className="w-8 h-8 text-brand-green-on-dark" strokeWidth={2.5} />
+              </div>
+              <h3 className="font-display text-xl font-bold text-brand-navy mb-4">
+                Pedagogisk brygga
+              </h3>
+              <p className="text-slate-700 italic">
+                &quot;Min bakgrund som lärare gör att jag kan översätta teknik till affärsnytta för alla led.&quot;
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sektion: Nätverket */}
+      {/* Sektion: Nätverket - Behålls då det förstärker din roll som kontaktpunkt */}
       <section className="py-24 bg-brand-navy text-white overflow-hidden relative" aria-labelledby="network-title">
-        <div
-          className="absolute top-0 right-0 w-64 h-64 bg-brand-green-on-dark/10 rounded-full blur-3xl -mr-32 -mt-32"
-          aria-hidden="true"
-        />
-
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 id="network-title" className="font-display text-3xl md:text-4xl font-bold mb-8">
-              En person, ett helt{" "}
+              En specialist, ett helt{" "}
               <span className="text-brand-green-on-dark">nätverk av kraft</span>
             </h2>
 
             <p className="font-sans text-xl md:text-2xl leading-relaxed text-slate-200 mb-8">
-              Som din huvudkonsult är jag din enda kontaktpunkt, men bakom kulisserna
-              samarbetar jag med ett handplockat nätverk av seniora webbutvecklare,
-              designers och SEO-specialister.
+              Som din huvudkonsult är jag din enda kontaktpunkt. Min breda bakgrund gör att jag 
+              kan leda projekt genom alla faser, från grafisk form och databasarkitektur till 
+              slutlig leverans.
             </p>
 
-            <p className="font-sans text-lg text-slate-300 leading-relaxed">
-              Det gör att Bridgelys kan leverera samma kraft som en stor byrå, men med den
-              personliga kontakten och flexibiliteten hos en nischad konsult.
-            </p>
-
-            <div className="flex flex-wrap justify-center gap-4 mt-12" aria-label="Kompetens i nätverket">
+            <div className="flex flex-wrap justify-center gap-4 mt-12">
               {networkTags.map((tag) => (
                 <span
                   key={tag}
@@ -206,25 +186,18 @@ export default function OmOss() {
       </section>
 
       {/* Slutord / CTA */}
-      <section className="py-24 bg-white border-t border-slate-100 text-center" aria-labelledby="cta-title">
+      <section className="py-24 bg-white border-t border-slate-100 text-center">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2
-            id="cta-title"
-            className="font-display text-2xl md:text-3xl font-bold text-brand-navy mb-6"
-          >
-            Kontakta mig för ett förutsättningslöst möte
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-brand-navy mb-6">
+            Låt oss bygga nästa brygga tillsammans
           </h2>
-
           <p className="text-slate-600 text-lg mb-10 leading-relaxed">
-            Oavsett om det handlar om en teknisk upphandling, en tillgänglighetsrevision
-            eller att ta ett helhetsgrepp om din webbplattform, finns jag här som din
-            strategiska partner.
+            Oavsett om det gäller en tillgänglighetsrevision, en strategisk upphandling 
+            eller utveckling av en ny plattform, tar jag med mig 25 års erfarenhet till bordet.
           </p>
-
           <Link
             href="/contact"
-            className="bg-brand-navy text-white font-bold px-12 py-5 rounded-full hover:bg-brand-navy/90 transition-all shadow-lg
-                       focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
+            className="bg-brand-navy text-white font-bold px-12 py-5 rounded-full hover:bg-brand-navy/90 transition-all shadow-lg"
           >
             Kontakta mig
           </Link>

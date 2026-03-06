@@ -7,7 +7,7 @@ export default function ProcurementPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero-sektion */}
-      <section className="pt-32 pb-16 bg-brand-navy text-white text-center">
+      <section className="pt-24 pb-16 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6">
           <h1 className="font-display text-4xl md:text-6xl font-bold mb-4 text-brand-green text-left md:text-center">
            Upphandlingar

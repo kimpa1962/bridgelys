@@ -108,7 +108,7 @@ export default function Kontakt() {
 
   return (
     <>
-      <section className="bg-brand-navy pt-18 pb-16 text-white text-center" aria-labelledby="contact-title">
+      <section className="bg-brand-navy pt-24 pb-16 text-white text-center" aria-labelledby="contact-title">
         <div className="container mx-auto px-6">
           <h1 id="contact-title" className="font-display text-4xl md:text-5xl font-bold mb-4">
             Starta en <span className="text-brand-green-on-dark">konversation</span>

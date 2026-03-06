@@ -129,7 +129,7 @@ export default function JoinNetworkPage() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-brand-navy pt-28 pb-20 text-white text-center">
+      <section className="bg-brand-navy pt-24 pb-20 text-white text-center">
         <div className="container mx-auto px-6">
           <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">
             Bli en del av{" "}
