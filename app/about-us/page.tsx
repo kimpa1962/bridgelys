@@ -97,24 +97,27 @@ export default function OmOss() {
                 <Building2 className="w-8 h-8 text-brand-green-on-dark" aria-hidden="true" />
               </div>
               <h3 className="font-display text-xl font-bold text-brand-navy mb-4">Offentlig sektor-expertis</h3>
+              <p className="text-slate-700 italic">"Jag förstår kraven bakom kommunala upphandlingar och politiskt styrda projekt."</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-brand-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <Rocket className="w-8 h-8 text-brand-green-on-dark" aria-hidden="true" />
               </div>
               <h3 className="font-display text-xl font-bold text-brand-navy mb-4">Teknisk pionjär</h3>
+              <p className="text-slate-700 italic">"Från de första mobila lösningarna till dagens moderna webb – jag har sett resan inifrån."</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-brand-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <BookOpen className="w-8 h-8 text-brand-green-on-dark" aria-hidden="true" />
               </div>
               <h3 className="font-display text-xl font-bold text-brand-navy mb-4">Pedagogisk brygga</h3>
+              <p className="text-slate-700 italic">"Min bakgrund som lärare gör att jag kan översätta teknik till affärsnytta för alla led."</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sektion: Nätverket */}
+      {/* Nätverket */}
       <section className="py-24 bg-brand-navy text-white overflow-hidden relative" aria-labelledby="network-title">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
