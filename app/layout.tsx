@@ -57,7 +57,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <CookieBanner />
 
-        {/* 2. Google Analytics komponenten läggs här */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
+    `,
+          }}
+        />
         <GoogleAnalytics gaId={gaId} />
       </body>
     </html>
