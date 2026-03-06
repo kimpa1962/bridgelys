@@ -38,18 +38,32 @@ export default function OmOss() {
         </div>
       </section>
 
+      {/* Responsiv mobilbild - Visas endast på mobila enheter */}
+      <section className="block lg:hidden py-8 px-6 bg-white">
+        <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+          <Image
+            src="/kimpa-cv-images.png"
+            alt="Kim Vági - teknisk och pedagogisk expertis"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+        </div>
+      </section>
+
       {/* Story & Vision */}
       <section className="py-24" aria-labelledby="journey-title">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-1/2 relative">
+            {/* Desktop bild - Dold på mobil */}
+            <div className="hidden lg:block lg:w-1/2 relative">
               <div className="aspect-square relative rounded-3xl overflow-hidden shadow-2xl bg-slate-100 border border-slate-200">
                 <Image
                   src="/kimpa-cv-images.png"
                   alt="Kollage över Kim Vágis tekniska och pedagogiska resa"
                   fill
                   className="object-cover"
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  sizes="50vw"
                   priority={true}
                 />
               </div>
