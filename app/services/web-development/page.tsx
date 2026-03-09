@@ -25,7 +25,7 @@ export default function WebDevPage() {
                 <div className="flex items-center gap-3 font-semibold text-brand-navy"><Layout className="text-brand-green" /> Responsiv design</div>
               </div>
             </div>
-            <div className="md:w-1/2 relative h-[500px] w-full rounded-[3rem] overflow-hidden shadow-2xl">
+            <div className="md:w-1/2 relative h-125 w-full rounded-[3rem] overflow-hidden shadow-2xl">
               <Image src="/webdev-img.jpg" alt="Webbutveckling" fill className="object-cover" />
             </div>
           </div>
@@ -36,7 +36,7 @@ export default function WebDevPage() {
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="bg-brand-navy p-12 rounded-[3rem] text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Redo att bygga något nytt?</h3>
-            <p className="text-slate-400 mb-8 max-w-lg mx-auto italic">"Vi omsätter era affärsbehov till teknisk verklighet."</p>
+            <p className="text-slate-400 mb-8 max-w-lg mx-auto italic">&quot;Vi omsätter era affärsbehov till teknisk verklighet.&quot;</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-brand-green text-brand-navy px-10 py-4 rounded-full font-bold hover:scale-105 transition-all">
               Diskutera ert projekt <ArrowRight className="w-5 h-5" />
             </Link>

@@ -27,7 +27,7 @@ export default function AccessibilityPage() {
                 ))}
               </div>
             </div>
-            <div className="md:w-1/2 relative h-[500px] w-full rounded-[3rem] overflow-hidden shadow-2xl">
+            <div className="md:w-1/2 relative h-125 w-full rounded-[3rem] overflow-hidden shadow-2xl">
               <Image src="/accessibility-img.jpg" alt="Tillgänglighet" fill className="object-cover" />
             </div>
           </div>
@@ -38,7 +38,7 @@ export default function AccessibilityPage() {
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="bg-brand-navy p-12 rounded-[3rem] text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Behöver ni säkra er tillgänglighet?</h3>
-            <p className="text-slate-400 mb-8 max-w-lg mx-auto italic">"Digital inkludering är en förutsättning för en modern verksamhet."</p>
+            <p className="text-slate-400 mb-8 max-w-lg mx-auto italic">&quot;Digital inkludering är en förutsättning för en modern verksamhet.&quot;</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-brand-green text-brand-navy px-10 py-4 rounded-full font-bold hover:scale-105 transition-all">
               Boka rådgivning <ArrowRight className="w-5 h-5" />
             </Link>

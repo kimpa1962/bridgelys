@@ -46,7 +46,7 @@ export default function ProjectManagementPage() {
               </div>
             </div>
 
-            <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl">
+            <div className="relative h-125 rounded-[3rem] overflow-hidden shadow-2xl">
               <Image 
                 src="/project-management-2.jpg"  
                 alt="projektledning och teamarbete"

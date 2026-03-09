@@ -92,6 +92,24 @@ export default function Footer() {
                   <span>Kontakta mig</span>
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/kim-vagi-3a8a7055act"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 text-slate-600 hover:text-brand-green transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
+                >
+                  <Image
+                    src="/linkedin.svg"
+                    alt=""
+                    width={16}
+                    height={16}
+                    aria-hidden="true"
+                    className="w-4 h-4 group-hover:scale-110 transition-transform"
+                  />
+                  <span>LinkedIn</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

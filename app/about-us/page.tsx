@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, Award, Users, BookOpen, Rocket, Building2 } from "lucide-react";
+import { CheckCircle2, BookOpen, Rocket, Building2 } from "lucide-react";
 
 export default function OmOss() {
   const points = [
@@ -40,7 +40,7 @@ export default function OmOss() {
 
       {/* Responsiv mobilbild - Visas endast på mobila enheter */}
       <section className="block lg:hidden py-8 px-6 bg-white">
-        <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+        <div className="relative aspect-16/10 w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200">
           <Image
             src="/kimpa-cv-images.png"
             alt="Kim Vági - teknisk och pedagogisk expertis"
@@ -59,8 +59,8 @@ export default function OmOss() {
             <div className="hidden lg:block lg:w-1/2 relative">
               <div className="aspect-square relative rounded-3xl overflow-hidden shadow-2xl bg-slate-100 border border-slate-200">
                 <Image
-                  src="/kimpa-cv-images.png"
-                  alt="Kollage över Kim Vágis tekniska och pedagogiska resa"
+                  src="/teaching.jpg"
+                  alt="Teacher and student with cellphone"
                   fill
                   className="object-cover"
                   sizes="50vw"
@@ -71,27 +71,24 @@ export default function OmOss() {
 
             <div className="lg:w-1/2">
               <h2 id="journey-title" className="font-display text-3xl md:text-4xl font-bold text-brand-navy mb-6">
-                Från C++ till Next.js och mobila IT-projekt
+                Från Perl till Next.js och mobila IT-projekt
               </h2>
               <p className="text-slate-600 text-lg mb-6 leading-relaxed">
-                Jag började min resa i webbens barndom, en tid då jag kodade i <strong>C++, Perl och Java</strong>. 
-                Denna djupa tekniska grund har gett mig en unik förståelse för hur system faktiskt fungerar under huven, 
-                långt innan dagens moderna ramverk existerade.
+                Jag började min resa i webbens barndom, en tid då jag kodade i <strong>Perl, C++ och Java</strong>, designade databaser och lärde mig SQL. Denna djupa tekniska grund har gett mig en unik förståelse för hur system faktiskt fungerar under huven, långt innan dagens moderna ramverk existerade.
+
               </p>
               <p className="text-slate-600 text-lg mb-6 leading-relaxed">
-                Min erfarenhet från <strong>offentlig sektor inom Stockholms stad</strong> är omfattande. 
-                Som webbutvecklare var jag med och drev mobila IT-projekt. Genom arbete med upphandlingar, 
-                miljöprojekt och vid näringslivskontoret har jag fått en djup insikt i de processer och 
-                kravställningar som styr stora, samhällsviktiga organisationer.
+Jag har erfarenhet från <strong>stora företag, offentlig sektor</strong> och mindre familjeägda verksamheter. Som projektledare var jag med och drev mobila IT-projekt. Genom arbete med upphandlingar, EU-projekt och miljöprojekt har jag fått en djup insikt i de processer och kravställningar som styr stora, samhällsviktiga organisationer.
+
               </p>
               <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-                Som tidigare <strong>lärare vid Yrkeshögskolan</strong> och systemägare för stora mediehus, 
-                är min största styrka förmågan att vara pedagogisk och social – att göra det komplexa begripligt.
+                Som tidigare <strong>lärare vid Yrkeshögskolan</strong> och systemägare för mediehus, 
+                är min största styrka förmågan att vara pedagogisk och social &ndash; att göra det komplexa begripligt.
               </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4" aria-label="Kompetensområden">
                 {points.map((point) => (
                   <li key={point} className="flex items-center gap-3 text-brand-navy font-semibold bg-slate-50 p-3 rounded-xl border border-slate-100">
-                    <CheckCircle2 className="text-brand-green w-5 h-5 flex-shrink-0" aria-hidden="true" />
+                    <CheckCircle2 className="text-brand-green w-5 h-5 shrink-0" aria-hidden="true" />
                     <span className="text-sm">{point}</span>
                   </li>
                 ))}
@@ -111,21 +108,21 @@ export default function OmOss() {
                 <Building2 className="w-8 h-8 text-brand-green-on-dark" aria-hidden="true" />
               </div>
               <h3 className="font-display text-xl font-bold text-brand-navy mb-4">Offentlig sektor-expertis</h3>
-              <p className="text-slate-700 italic">"Jag förstår kraven bakom kommunala upphandlingar och politiskt styrda projekt."</p>
+              <p className="text-slate-700 italic">&quot;Jag förstår kraven bakom kommunala upphandlingar och politiskt styrda projekt.&quot;</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-brand-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <Rocket className="w-8 h-8 text-brand-green-on-dark" aria-hidden="true" />
               </div>
               <h3 className="font-display text-xl font-bold text-brand-navy mb-4">Teknisk pionjär</h3>
-              <p className="text-slate-700 italic">"Från de första mobila lösningarna till dagens moderna webb – jag har sett resan inifrån."</p>
+              <p className="text-slate-700 italic">&quot;Från de första mobila lösningarna till dagens moderna webb &ndash; jag har sett resan inifrån.&quot;</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-brand-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <BookOpen className="w-8 h-8 text-brand-green-on-dark" aria-hidden="true" />
               </div>
               <h3 className="font-display text-xl font-bold text-brand-navy mb-4">Pedagogisk brygga</h3>
-              <p className="text-slate-700 italic">"Min bakgrund som lärare gör att jag kan översätta teknik till affärsnytta för alla led."</p>
+              <p className="text-slate-700 italic">&quot;Min bakgrund som lärare gör att jag kan översätta teknik till affärsnytta för alla led.&quot;</p>
             </div>
           </div>
         </div>

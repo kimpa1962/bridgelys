@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Search, BarChart, MousePointer2, Globe } from 'lucide-react';
+import { ArrowRight, Search, BarChart, MousePointer2 } from 'lucide-react';
 
 export default function SeoPage() {
   return (
@@ -49,7 +49,7 @@ export default function SeoPage() {
               </div>
             </div>
 
-            <div className="md:w-1/2 relative h-[500px] w-full rounded-[3rem] overflow-hidden shadow-2xl">
+            <div className="md:w-1/2 relative h-125 w-full rounded-[3rem] overflow-hidden shadow-2xl">
               <Image 
                 src="/SEO-Work2.png" 
                 alt="Digital analys och SEO-optimering"
