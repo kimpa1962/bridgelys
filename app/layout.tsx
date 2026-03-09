@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Hoppa till innehåll
         </a>
 
-        <header>
+        <header className="sticky top-0 z-50">
           <Navbar />
         </header>
 

@@ -42,8 +42,8 @@ export default function OmOss() {
       <section className="block lg:hidden py-8 px-6 bg-white">
         <div className="relative aspect-16/10 w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200">
           <Image
-            src="/kimpa-cv-images.png"
-            alt="Kim Vági - teknisk och pedagogisk expertis"
+            src="/teaching.jpg"
+            alt="Teacher and student with cellphone"
             fill
             className="object-cover"
             sizes="100vw"
