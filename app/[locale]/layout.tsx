@@ -70,7 +70,7 @@ export default async function LocaleLayout({
             `,
           }}
         />
-        <GoogleAnalytics gaId={gaId} />
+{gaId && <GoogleAnalytics gaId={gaId} />}
       </NextIntlClientProvider>
     </>
   );
