@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import {Link} from "@/i18n/navigation";
 import {
   ShoppingCart,
   Layout,
@@ -8,45 +8,43 @@ import {
   GraduationCap,
   Code,
 } from "lucide-react";
+import {useTranslations} from "next-intl";
+import {useLocale} from "next-intl";
 
 export default function Services() {
+  const t = useTranslations("servicesSection");
+  const locale = useLocale();
   const services = [
     {
-      href: "/services/procurement",
-      title: "Upphandlingar",
-      Icon: ShoppingCart,
-      desc: "Hjälp att formulera kravställning så att du faktiskt får det du betalar för och undviker tekniska låsningar.",
+      key: "procurement",
+      href: `/${locale}/services/procurement`,
+      Icon: ShoppingCart
     },
     {
-      href: "/services/project-management",
-      title: "Projektledning",
-      Icon: Layout,
-      desc: "Bryggan mellan ledning och utveckling som håller tidsplan, budget och kvalitet genom hela processen.",
+      key: "projectManagement",
+      href: `/${locale}/services/project-management`,
+      Icon: Layout
     },
     {
-      href: "/services/accessibility",
-      title: "Tillgänglighet",
-      Icon: ShieldCheck,
-      desc: "Säkerställer att din webb följer lagkrav (WCAG) och är inkluderande för alla dina besökare.",
+      key: "accessibility",
+      href: `/${locale}/services/accessibility`,
+      Icon: ShieldCheck
     },
     {
-      href: "/services/seo",
-      title: "SEO-strategi",
-      Icon: Search,
-      desc: "Strategisk synlighet som gör att rätt kunder hittar till din lösning utan onödiga annonskostnader.",
+      key: "seo",
+      href: `/${locale}/services/seo`,
+      Icon: Search
     },
     {
-      href: "/services/educations",
-      title: "Utbildningar",
-      Icon: GraduationCap,
-      desc: "Vi lär din organisation att förstå och förvalta tekniken på egen hand för långsiktig självständighet.",
+      key: "educations",
+      href: `/${locale}/services/educations`,
+      Icon: GraduationCap
     },
     {
-      href: "/services/web-development",
-      title: "Webbutveckling",
-      Icon: Code,
-      desc: "Modern och skalbar kod genom mitt nätverk av seniora frilansutvecklare och specialister.",
-    },
+      key: "webDevelopment",
+      href: `/${locale}/services/web-development`,
+      Icon: Code
+    }
   ];
 
   return (
@@ -57,7 +55,7 @@ export default function Services() {
             id="services-title"
             className="font-display text-3xl md:text-5xl font-bold text-brand-navy mb-4"
           >
-            Specialistområden
+            {t("title")}
           </h2>
           <div className="w-24 h-1.5 bg-brand-green mx-auto rounded-full" aria-hidden="true" />
         </div>
@@ -85,10 +83,10 @@ export default function Services() {
                 </div>
 
                 <h3 className="font-display text-2xl font-bold text-brand-navy mb-4">
-                  {s.title}
+                  {t(`items.${s.key}.title`)}
                 </h3>
 
-                <p className="font-sans text-slate-600 leading-relaxed">{s.desc}</p>
+                <p className="font-sans text-slate-600 leading-relaxed">{t(`items.${s.key}.desc`)}</p>
               </Link>
             </li>
           ))}

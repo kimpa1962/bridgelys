@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Our services",
+    "about": "About Bridgelys",
+    "contact": "Contact",
+    "join": "Join the network"
+  },
+  "services": {
+    "procurement": "Procurement",
+    "projectManagement": "Project management",
+    "accessibility": "Accessibility",
+    "seo": "SEO",
+    "educations": "Training",
+    "webDevelopment": "Web development"
+  },
+  "hero": {
+    "title1": "The web agency with –",
+    "title2": "focus on people.",
+    "text": "We translate your business goals into technical solutions in plain language. Expert support in procurement, project management and web development.",
+    "ctaServices": "Explore our services",
+    "ctaAbout": "About us"
+  },
+  "servicesSection": {
+    "title": "Areas of expertise",
+    "items": {
+      "procurement": {
+        "title": "Procurement",
+        "desc": "Support in defining requirements so you actually get what you pay for and avoid technical lock-in."
+      },
+      "projectManagement": {
+        "title": "Project management",
+        "desc": "The bridge between leadership and development, keeping timeline, budget and quality on track throughout the process."
+      },
+      "accessibility": {
+        "title": "Accessibility",
+        "desc": "Ensures your website meets legal requirements (WCAG) and is inclusive for all visitors."
+      },
+      "seo": {
+        "title": "SEO strategy",
+        "desc": "Strategic visibility that helps the right customers find your solution without unnecessary advertising costs."
+      },
+      "educations": {
+        "title": "Training",
+        "desc": "We help your organization understand and manage the technology independently for long-term self-sufficiency."
+      },
+      "webDevelopment": {
+        "title": "Web development",
+        "desc": "Modern and scalable code through my network of senior freelance developers and specialists."
+      }
+    }
+  },
+  "values": {
+    "title1": "We prioritize",
+    "title2": "impact",
+    "title3": "over complexity",
+    "intro": "For us, it is not about building the most advanced technology, but about building the right solution for your needs. We believe in long-term relationships where we take responsibility for the whole.",
+    "quote": "Bridgelys was born from the idea that technical projects do not fail because of bad code, but because of poor communication.",
+    "quoteBy": "— A core principle of Bridgelys",
+    "items": {
+      "independent": {
+        "title": "Independent advice",
+        "text": "With experience as a system owner, I make sure we always navigate independently of vendor promises. I sit on your side of the table."
+      },
+      "clarity": {
+        "title": "Clarity",
+        "text": "Technology is only a tool. As your advisor, I speak plainly and make sure everyone in the project understands the goal."
+      },
+      "network": {
+        "title": "The power of the network",
+        "text": "As your lead consultant, I am your personal point of contact, but through our network of senior specialists we can scale for all types of projects."
+      }
+    }
+  },
+  "footer": {
+    "description": "We build bridges between business needs and technical excellence through senior expertise.",
+    "org": "Company reg.number:",
+    "vat": "VAT number:",
+    "insurance": "Liability insured and registered for F-tax",
+    "navigation": "Navigation",
+    "start": "Home",
+    "about": "About us",
+    "contact": "Contact",
+    "partner": "Become a partner",
+    "contactTitle": "Contact",
+    "location": "Stockholm / Sweden",
+    "ceo": "Kim Vági / CEO Bridgelys AB",
+    "contactMe": "Contact me",
+    "rights": "All rights reserved."
+  }
+}

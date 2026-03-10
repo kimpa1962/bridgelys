@@ -1,10 +1,24 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import Link from "next/link";
+import {Link} from "@/i18n/navigation";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+
 
 export default function Navbar() {
+  const t = useTranslations("nav");
+  const ts = useTranslations("services");
+  const locale = useLocale();
+  const otherLocale = locale === "sv" ? "en" : "sv";
+  const otherFlag = locale === "sv" ? "🇬🇧" : "🇸🇪";
+  const otherLabel = locale === "sv" ? "Switch to English" : "Byt till svenska";
+
+  const switchHref =
+    typeof window !== "undefined"
+      ? window.location.pathname.replace(`/${locale}`, `/${otherLocale}`)
+      : `/${otherLocale}`;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
@@ -14,12 +28,12 @@ export default function Navbar() {
   const servicesMenuRef = useRef<HTMLDivElement | null>(null);
 
   const tjanster = [
-    { namn: "Upphandlingar", href: "/services/procurement" },
-    { namn: "Projektledning", href: "/services/project-management" },
-    { namn: "Tillgänglighet", href: "/services/accessibility" },
-    { namn: "SEO", href: "/services/seo" },
-    { namn: "Utbildningar", href: "/services/educations" },
-    { namn: "Webbutveckling", href: "/services/web-development" },
+    { namn: ts("procurement"), href: `/${locale}/services/procurement` },
+    { namn: ts("projectManagement"), href: `/${locale}/services/project-management` },
+    { namn: ts("accessibility"), href: `/${locale}/services/accessibility` },
+    { namn: ts("seo"), href: `/${locale}/services/seo` },
+    { namn: ts("educations"), href: `/${locale}/services/educations` },
+    { namn: ts("webDevelopment"), href: `/${locale}/services/web-development` },
   ];
 
   // ESC stänger menyer
@@ -52,15 +66,15 @@ export default function Navbar() {
   }, [isServicesOpen]);
 
   return (
-      <nav
+    <nav
       className="border-b border-slate-100 bg-white/80 backdrop-blur-md shadow-sm"
       aria-label="Huvudmeny"
->
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-24 items-center">
           {/* LOGO */}
           <Link
-            href="/"
+            href={`/${locale}`}
             className="flex flex-col group w-45 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
           >
             <Image
@@ -82,10 +96,10 @@ export default function Navbar() {
           {/* DESKTOP */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
-              href="/"
+              href={`/${locale}`}
               className="text-slate-700 hover:text-brand-navy font-medium transition-colors rounded-md px-1 py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
             >
-              Hem
+              {t("home")}
             </Link>
 
             {/* DROPDOWN */}
@@ -103,7 +117,7 @@ export default function Navbar() {
                 onClick={() => setIsServicesOpen((v) => !v)}
                 className="text-slate-700 hover:text-brand-navy font-medium flex items-center gap-1 py-8 transition-colors rounded-md px-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
               >
-                Våra tjänster
+                {t("services")}
                 <svg
                   className={`w-4 h-4 transition-transform ${isServicesOpen ? "rotate-180" : ""}`}
                   fill="none"
@@ -141,24 +155,39 @@ export default function Navbar() {
             </div>
 
             <Link
-              href="/about-us"
+              href={`/${locale}/about-us`}
               className="text-slate-700 hover:text-brand-navy font-medium transition-colors rounded-md px-1 py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
             >
-              Om Bridgelys
+              {t("about")}
             </Link>
 
             <Link
-              href="/contact"
+              href={`/${locale}/contact`}
               className="text-slate-700 hover:text-brand-navy font-medium transition-colors rounded-md px-1 py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
             >
-              Kontakt
+              {t("contact")}
             </Link>
-
             <Link
-              href="/join-network"
+              href={switchHref}
+              hrefLang={otherLocale}
+              lang={otherLocale}
+              aria-label={otherLabel}
+              title={otherLabel}
+              className="text-slate-700 hover:text-brand-navy font-medium transition-colors rounded-md px-1 py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
+            >
+              <Image
+                src={locale === "sv" ? "/flags/gb.svg" : "/flags/se.svg"}
+                alt={locale === "sv" ? "English" : "Svenska"}
+                width={32}
+                height={20}
+                className="rounded-sm"
+              />
+            </Link>
+            <Link
+              href={`/${locale}/join-network`}
               className="bg-brand-navy text-white px-5 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition shadow-md hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
             >
-              Bli en del av nätverket
+              {t("join")}
             </Link>
           </div>
 
@@ -198,11 +227,11 @@ export default function Navbar() {
           className="block p-3 text-slate-900 font-medium border-b border-slate-50 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-inset"
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          Hem
+          {t("home")}
         </Link>
 
         <div className="p-3 text-xs font-bold text-brand-green uppercase tracking-wider mt-2">
-          Våra tjänster
+          {t("services")}
         </div>
 
         {tjanster.map((t) => (
@@ -222,21 +251,38 @@ export default function Navbar() {
             className="block p-3 text-slate-900 font-medium rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-inset"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Om oss
+            {t("about")}
           </Link>
           <Link
             href="/contact"
             className="block p-3 text-slate-900 font-medium rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-inset"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Kontakt
+            {t("contact")}
+          </Link>
+          <Link
+            href={switchHref}
+            hrefLang={otherLocale}
+            lang={otherLocale}
+            aria-label={otherLabel}
+            title={otherLabel}
+            className="block p-3 text-slate-900 font-medium rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-inset"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <Image
+              src={locale === "sv" ? "/flags/gb.svg" : "/flags/se.svg"}
+              alt={locale === "sv" ? "English" : "Svenska"}
+              width={32}
+              height={20}
+              className="rounded-sm"
+            />
           </Link>
           <Link
             href="/join-network"
             className="block p-3 bg-brand-navy text-white text-center rounded-lg font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Bli en del av nätverket
+            {t("join")}
           </Link>
         </div>
       </div>

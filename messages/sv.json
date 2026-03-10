@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Hem",
+    "services": "Våra tjänster",
+    "about": "Om Bridgelys",
+    "contact": "Kontakt",
+    "join": "Bli en del av nätverket"
+  },
+  "services": {
+    "procurement": "Upphandlingar",
+    "projectManagement": "Projektledning",
+    "accessibility": "Tillgänglighet",
+    "seo": "SEO",
+    "educations": "Utbildningar",
+    "webDevelopment": "Webbutveckling"
+  },
+  "hero": {
+    "title1": "Webbyrån med –",
+    "title2": "fokus på Människan.",
+    "text": "Vi översätter dina affärsmål till tekniska lösningar på ren svenska. Expertstöd vid upphandling, projektledning och webbutveckling.",
+    "ctaServices": "Utforska våra tjänster",
+    "ctaAbout": "Om oss"
+  },
+  "servicesSection": {
+    "title": "Specialistområden",
+    "items": {
+      "procurement": {
+        "title": "Upphandlingar",
+        "desc": "Hjälp att formulera kravställning så att du faktiskt får det du betalar för och undviker tekniska låsningar."
+      },
+      "projectManagement": {
+        "title": "Projektledning",
+        "desc": "Bryggan mellan ledning och utveckling som håller tidsplan, budget och kvalitet genom hela processen."
+      },
+      "accessibility": {
+        "title": "Tillgänglighet",
+        "desc": "Säkerställer att din webb följer lagkrav (WCAG) och är inkluderande för alla dina besökare."
+      },
+      "seo": {
+        "title": "SEO-strategi",
+        "desc": "Strategisk synlighet som gör att rätt kunder hittar till din lösning utan onödiga annonskostnader."
+      },
+      "educations": {
+        "title": "Utbildningar",
+        "desc": "Vi lär din organisation att förstå och förvalta tekniken på egen hand för långsiktig självständighet."
+      },
+      "webDevelopment": {
+        "title": "Webbutveckling",
+        "desc": "Modern och skalbar kod genom mitt nätverk av seniora frilansutvecklare och specialister."
+      }
+    }
+  },
+  "values": {
+    "title1": "Vi prioriterar",
+    "title2": "effekt",
+    "title3": "framför komplexitet",
+    "intro": "För oss handlar det inte om att bygga den mest avancerade tekniken, utan om att bygga den rätta lösningen för dina behov. Vi tror på långsiktiga relationer där vi tar ansvar för helheten.",
+    "quote": "Bridgelys föddes ur idén att tekniska projekt inte misslyckas på grund av dålig kod, utan på grund av bristande kommunikation.",
+    "quoteBy": "— Grundprincip för Bridgelys",
+    "items": {
+      "independent": {
+        "title": "Oberoende rådgivning",
+        "text": "Med erfarenhet som systemägare ser jag till att vi alltid navigerar oberoende av leverantörslöften. Jag sitter på er sida av bordet."
+      },
+      "clarity": {
+        "title": "Begriplighet",
+        "text": "Teknik är bara ett verktyg. Som er rådgivare pratar jag klarspråk och ser till att alla i projektet förstår målet."
+      },
+      "network": {
+        "title": "Nätverkets kraft",
+        "text": "Som er huvudkonsult är jag er personliga kontakt, men genom vårt nätverk av seniora specialister kan vi skala upp för alla typer av projekt."
+      }
+    }
+  },
+  "footer": {
+    "description": "Vi bygger broar mellan affärsbehov och teknisk excellens genom senior expertis.",
+    "org": "Org.nr:",
+    "insurance": "Innehar ansvarsförsäkring och F-skatt",
+    "navigation": "Navigation",
+    "start": "Start",
+    "about": "Om oss",
+    "contact": "Kontakt",
+    "partner": "Bli partner",
+    "contactTitle": "Kontakt",
+    "location": "Stockholm",
+    "ceo": "Kim Vági / VD Bridgelys AB",
+    "contactMe": "Kontakta mig",
+    "rights": "Alla rättigheter förbehållna."
+  }
+}
