@@ -12,18 +12,14 @@ export const metadata: Metadata = {
     "Webbkonsult nischad inom upphandling, projektledning, tillgänglighet och SEO.",
 };
 
-export default async function RootLayout({
-  children,
-  params
+export default function RootLayout({
+  children
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-
   return (
     <html
-      lang={locale}
+      lang="sv"
       className={`${inter.variable} ${montserrat.variable}`}
       suppressHydrationWarning
     >

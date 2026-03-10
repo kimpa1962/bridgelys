@@ -86,5 +86,162 @@
     "ceo": "Kim Vági / VD Bridgelys AB",
     "contactMe": "Kontakta mig",
     "rights": "Alla rättigheter förbehållna."
+  },
+  "aboutUs": {
+  "header": {
+    "eyebrow": "Sedan webbens barndom",
+    "title": "Pionjär med fokus på <highlight>människan</highlight>",
+    "description": "Jag fungerar som den strategiska bryggan mellan komplex teknik, politiskt styrda verksamheter och slutanvändarens faktiska behov."
+  },
+  "imageAlt": "Lärare och student med mobiltelefon",
+  "journey": {
+    "title": "Från Perl till Next.js och mobila IT-projekt",
+    "paragraph1": "Jag började min resa i webbens barndom, en tid då jag kodade i <strong>Perl, C++ och Java</strong>, designade databaser och lärde mig SQL. Denna djupa tekniska grund har gett mig en unik förståelse för hur system faktiskt fungerar under huven, långt innan dagens moderna ramverk existerade.",
+    "paragraph2": "Jag har erfarenhet från <strong>stora företag, offentlig sektor</strong> och mindre familjeägda verksamheter. Som projektledare var jag med och drev mobila IT-projekt. Genom arbete med upphandlingar, EU-projekt och miljöprojekt har jag fått en djup insikt i de processer och kravställningar som styr stora, samhällsviktiga organisationer.",
+    "paragraph3": "Som tidigare <strong>lärare vid Yrkeshögskolan</strong> och systemägare för mediehus, är min största styrka förmågan att vara pedagogisk och social – att göra det komplexa begripligt."
+  },
+  "pointsAriaLabel": "Kompetensområden",
+  "points": [
+    "Strategisk Upphandling",
+    "Offentlig Sektor & Kommun",
+    "Systemägande & Drift",
+    "Tillgänglighet (WCAG)",
+    "Full-stack (från C++ till Next.js)",
+    "Pedagogiskt Ledarskap"
+  ],
+  "pillars": {
+    "srTitle": "Mina styrkor",
+    "public": {
+      "title": "Offentlig sektor-expertis",
+      "text": "Jag förstår kraven bakom kommunala upphandlingar och politiskt styrda projekt."
+    },
+    "tech": {
+      "title": "Teknisk pionjär",
+      "text": "Från de första mobila lösningarna till dagens moderna webb – jag har sett resan inifrån."
+    },
+    "bridge": {
+      "title": "Pedagogisk brygga",
+      "text": "Min bakgrund som lärare gör att jag kan översätta teknik till affärsnytta för alla led."
+    }
+  },
+  "network": {
+    "title": "En specialist, ett helt <highlight>nätverk av kraft</highlight>",
+    "description": "Som din huvudkonsult är jag din enda kontaktpunkt. Min breda bakgrund gör att jag kan leda projekt genom alla faser, från grafisk form och databasarkitektur till slutlig leverans."
+  },
+  "networkTags": [
+    "Senior Design",
+    "Expert Utveckling",
+    "Strategisk SEO",
+    "Projektledning"
+  ],
+  "cta": {
+    "title": "Låt oss bygga nästa brygga tillsammans",
+    "description": "Oavsett om det gäller en tillgänglighetsrevision, en strategisk upphandling eller utveckling av en ny plattform, tar jag med mig 25 års erfarenhet till bordet.",
+    "button": "Kontakta mig"
   }
+},
+"contactPage": {
+  "hero": {
+    "title": "Starta en <highlight>konversation</highlight>",
+    "description": "Fyll i formuläret nedan så återkopplar jag till dig inom kort."
+  },
+  "form": {
+    "srTitle": "Kontaktformulär",
+    "requiredHint": "Alla fält markerade som obligatoriska måste fyllas i.",
+    "name": "Namn",
+    "company": "Företag",
+    "email": "E-post",
+    "message": "Meddelande",
+    "namePlaceholder": "Ditt namn",
+    "companyPlaceholder": "Företagsnamn",
+    "emailPlaceholder": "din.mejl@foretag.se",
+    "messagePlaceholder": "Skriv ditt meddelande här..."
+  },
+  "status": {
+    "sending": "Skickar...",
+    "submit": "Skicka förfrågan",
+    "successTitle": "Tack för ditt meddelande!",
+    "successText": "Jag har tagit emot din förfrågan och återkopplar så snart jag kan.",
+    "sendAnother": "Skicka ett till meddelande",
+    "genericError": "Något gick tyvärr fel.",
+    "fallbackError": "Något gick tyvärr fel. Prova igen eller maila direkt till hello@bridgelys.se."
+  },
+  "captcha": {
+    "consentRequired": "För att skicka formuläret behöver du godkänna nödvändiga kakor (för reCAPTCHA).",
+    "confirmHuman": "Vänligen bekräfta att du inte är en robot.",
+    "disabledTitle": "reCAPTCHA är avstängt tills nödvändiga kakor godkänns.",
+    "disabledText": "Använd cookie-banner längst ner och godkänn nödvändiga kakor, försök sedan igen.",
+    "errorHelp": "Öppna cookie-banner längst ner och välj <save> Spara mina val </save> eller <accept> Acceptera alla </accept>, och försök igen."
+  },
+  "contactAlt": {
+    "prefix": "Alternativ: maila",
+    "email": "hello@bridgelys.se"
+  },
+  "seo": {
+    "title": "Kontakt | Bridgelys",
+    "description": "Kontakta Bridgelys för hjälp med upphandling, projektledning, tillgänglighet, SEO och webbutveckling."
+  }
+},
+"joinNetworkPage": {
+  "hero": {
+    "title": "Bli en del av <highlight>nätverket</highlight>",
+    "description": "Jag letar ständigt efter skickliga frilansare som vill samarbeta i utmanande projekt."
+  },
+  "intro": {
+    "title": "Registrera ditt intresse",
+    "description": "Skriv några rader om din erfarenhet och dina främsta kompetensområden.",
+    "quote": "Att registrera sig är helt kostnadsfritt och innebär inga bindningskrav.",
+    "longTermTitle": "Långsiktiga samarbeten",
+    "longTermText": "Jag tror på kraften i att bygga relationer som gynnar både konsulter och kunder."
+  },
+  "form": {
+    "name": "Namn",
+    "email": "E-post",
+    "role": "Specialområde",
+    "linkedin": "LinkedIn-profil",
+    "message": "Kort om din erfarenhet",
+    "rolePlaceholder": "Välj område..."
+  },
+  "roles": {
+    "frontend": "Frontend-utvecklare",
+    "backend": "Backend-utvecklare",
+    "fullstack": "Fullstack-utvecklare",
+    "uxui": "UX/UI-designer",
+    "seo": "SEO-specialist",
+    "pm": "Projektledare"
+  },
+  "status": {
+    "sending": "Skickar...",
+    "submit": "Skicka intresseanmälan",
+    "successTitle": "Tack för din intresseanmälan!",
+    "successText": "Jag återkommer så snart jag kan.",
+    "sendAnother": "Skicka en till",
+    "fallbackError": "Något gick fel. Prova igen eller maila hello@bridgelys.se."
+  },
+  "captcha": {
+    "consentRequired": "För att skicka formuläret behöver du godkänna nödvändiga kakor (reCAPTCHA).",
+    "confirmHuman": "Vänligen bekräfta att du inte är en robot.",
+    "disabledText": "Godkänn nödvändiga kakor för att aktivera reCAPTCHA."
+  },
+  "seo": {
+    "title": "Bli partner | Bridgelys",
+    "description": "Anmäl ditt intresse för att bli en del av Bridgelys nätverk av frilansare och specialister."
+  }
+}, 
+"cookieBanner": {
+  "title": "Kakor & integritet",
+  "description": "Hej! Jag använder kakor för att webbplatsen ska fungera säkert och för att jag ska kunna se besöksstatistik.",
+  "showSettings": "Mina val",
+  "hideSettings": "Dölj inställningar",
+  "necessary": {
+    "title": "Nödvändiga",
+    "description": "Går ej att stänga av."
+  },
+  "analytics": {
+    "title": "Statistik"
+  },
+  "acceptAll": "Acceptera alla",
+  "saveChoices": "Spara mina val",
+  "loadSettingsError": "Kunde inte ladda kak-inställningar"
+}
 }
