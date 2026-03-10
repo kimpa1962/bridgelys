@@ -3,7 +3,7 @@ import {headers} from "next/headers";
 import {NextIntlClientProvider} from "next-intl";
 import {getMessages} from "next-intl/server";
 import {GoogleAnalytics} from "@next/third-parties/google";
-import {useLocale} from "next-intl";
+
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -14,14 +14,15 @@ export default async function LocaleLayout({
   params
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   const messages = await getMessages();
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
   const headersList = await headers();
   const host = headersList.get("host");
   const baseUrl = `https://${host}`;
-  const locale = params.locale;
+ 
 
   return (
     <>
