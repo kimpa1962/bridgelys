@@ -1,0 +1,248 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Our services",
+    "about": "About Bridgelys",
+    "contact": "Contact",
+    "join": "Join the network"
+  },
+  "services": {
+    "procurement": "Procurement",
+    "projectManagement": "Project management",
+    "accessibility": "Accessibility",
+    "seo": "SEO",
+    "educations": "Training",
+    "webDevelopment": "Web development"
+  },
+  "hero": {
+    "title1": "The web agency with –",
+    "title2": "focus on people.",
+    "text": "We translate your business goals into technical solutions in plain language. Expert support in procurement, project management and web development.",
+    "ctaServices": "Explore our services",
+    "ctaAbout": "About us"
+  },
+  "servicesSection": {
+    "title": "Areas of expertise",
+    "items": {
+      "procurement": {
+        "title": "Procurement",
+        "desc": "Support in defining requirements so you actually get what you pay for and avoid technical lock-in."
+      },
+      "projectManagement": {
+        "title": "Project management",
+        "desc": "The bridge between leadership and development, keeping timeline, budget and quality on track throughout the process."
+      },
+      "accessibility": {
+        "title": "Accessibility",
+        "desc": "Ensures your website meets legal requirements (WCAG) and is inclusive for all visitors."
+      },
+      "seo": {
+        "title": "SEO strategy",
+        "desc": "Strategic visibility that helps the right customers find your solution without unnecessary advertising costs."
+      },
+      "educations": {
+        "title": "Training",
+        "desc": "We help your organization understand and manage the technology independently for long-term self-sufficiency."
+      },
+      "webDevelopment": {
+        "title": "Web development",
+        "desc": "Modern and scalable code through my network of senior freelance developers and specialists."
+      }
+    }
+  },
+  "values": {
+    "title1": "We prioritize",
+    "title2": "impact",
+    "title3": "over complexity",
+    "intro": "For us, it is not about building the most advanced technology, but about building the right solution for your needs. We believe in long-term relationships where we take responsibility for the whole.",
+    "quote": "Bridgelys was born from the idea that technical projects do not fail because of bad code, but because of poor communication.",
+    "quoteBy": "— A core principle of Bridgelys",
+    "items": {
+      "independent": {
+        "title": "Independent advice",
+        "text": "With experience as a system owner, I make sure we always navigate independently of vendor promises. I sit on your side of the table."
+      },
+      "clarity": {
+        "title": "Clarity",
+        "text": "Technology is only a tool. As your advisor, I speak plainly and make sure everyone in the project understands the goal."
+      },
+      "network": {
+        "title": "The power of the network",
+        "text": "As your lead consultant, I am your personal point of contact, but through our network of senior specialists we can scale for all types of projects."
+      }
+    }
+  },
+  "footer": {
+    "description": "We build bridges between business needs and technical excellence through senior expertise.",
+    "org": "Company reg.number:",
+    "vat": "VAT number:",
+    "insurance": "Liability insured and registered for F-tax",
+    "navigation": "Navigation",
+    "start": "Home",
+    "about": "About us",
+    "contact": "Contact",
+    "partner": "Become a partner",
+    "contactTitle": "Contact",
+    "location": "Stockholm / Sweden",
+    "ceo": "Kim Vági / CEO Bridgelys AB",
+    "contactMe": "Contact me",
+    "rights": "All rights reserved."
+  },
+ "aboutUs": {
+  "header": {
+    "eyebrow": "Since the early days of the web",
+    "title": "A pioneer with focus on the <highlight>human side</highlight>",
+    "description": "I act as the strategic bridge between complex technology, politically governed organizations, and the actual needs of end users."
+  },
+  "imageAlt": "Teacher and student with cellphone",
+  "journey": {
+    "title": "From Perl to Next.js and mobile IT projects",
+    "paragraph1": "I began my journey in the early days of the web, when I coded in <strong>Perl, C++ and Java</strong>, designed databases, and learned SQL. This deep technical foundation has given me a unique understanding of how systems actually work under the hood, long before today’s modern frameworks existed.",
+    "paragraph2": "I have experience from <strong>large companies, the public sector</strong> and smaller family-owned businesses. As a project manager, I helped lead mobile IT projects. Through work with procurement, EU projects and environmental initiatives, I gained deep insight into the processes and requirements that shape large, socially important organizations.",
+    "paragraph3": "As a former <strong>higher vocational education teacher</strong> and system owner for media houses, my greatest strength is the ability to be pedagogical and social – making the complex understandable."
+  },
+  "pointsAriaLabel": "Areas of expertise",
+  "points": [
+    "Strategic Procurement",
+    "Public Sector & Municipalities",
+    "System Ownership & Operations",
+    "Accessibility (WCAG)",
+    "Full-stack (from C++ to Next.js)",
+    "Educational Leadership"
+  ],
+  "pillars": {
+    "srTitle": "My strengths",
+    "public": {
+      "title": "Public sector expertise",
+      "text": "I understand the requirements behind municipal procurement and politically governed projects."
+    },
+    "tech": {
+      "title": "Technical pioneer",
+      "text": "From the first mobile solutions to today’s modern web – I have seen the journey from the inside."
+    },
+    "bridge": {
+      "title": "Pedagogical bridge",
+      "text": "My background as a teacher allows me to translate technology into business value for every level."
+    }
+  },
+  "network": {
+    "title": "One specialist, a whole <highlight>network of strength</highlight>",
+    "description": "As your lead consultant, I am your single point of contact. My broad background allows me to lead projects through every phase, from graphic design and database architecture to final delivery."
+  },
+  "networkTags": [
+    "Senior Design",
+    "Expert Development",
+    "Strategic SEO",
+    "Project Management"
+  ],
+  "cta": {
+    "title": "Let’s build the next bridge together",
+    "description": "Whether it is an accessibility audit, a strategic procurement process, or the development of a new platform, I bring 25 years of experience to the table.",
+    "button": "Contact me"
+  }
+},
+"contactPage": {
+  "hero": {
+    "title": "Start a <highlight>conversation</highlight>",
+    "description": "Fill in the form below and I will get back to you shortly."
+  },
+  "form": {
+    "srTitle": "Contact form",
+    "requiredHint": "All fields marked as required must be filled in.",
+    "name": "Name",
+    "company": "Company",
+    "email": "Email",
+    "message": "Message",
+    "namePlaceholder": "Your name",
+    "companyPlaceholder": "Company name",
+    "emailPlaceholder": "your.email@company.com",
+    "messagePlaceholder": "Write your message here..."
+  },
+  "status": {
+    "sending": "Sending...",
+    "submit": "Send inquiry",
+    "successTitle": "Thank you for your message!",
+    "successText": "I have received your inquiry and will get back to you as soon as I can.",
+    "sendAnother": "Send another message",
+    "genericError": "Something went wrong.",
+    "fallbackError": "Something went wrong. Please try again or email hello@bridgelys.se directly."
+  },
+  "captcha": {
+    "consentRequired": "To send the form, you need to accept necessary cookies (for reCAPTCHA).",
+    "confirmHuman": "Please confirm that you are not a robot.",
+    "disabledTitle": "reCAPTCHA is disabled until necessary cookies are accepted.",
+    "disabledText": "Use the cookie banner at the bottom and accept necessary cookies, then try again.",
+    "errorHelp": "Open the cookie banner at the bottom and choose <save> Save my choices </save> or <accept> Accept all </accept>, then try again."
+  },
+  "contactAlt": {
+    "prefix": "Alternative: email",
+    "email": "hello@bridgelys.se"
+  },
+  "seo": {
+    "title": "Contact | Bridgelys",
+    "description": "Contact Bridgelys for help with procurement, project management, accessibility, SEO and web development."
+  }
+}, 
+"joinNetworkPage": {
+  "hero": {
+    "title": "Become part of the <highlight>network</highlight>",
+    "description": "I am always looking for skilled freelancers who want to collaborate on challenging projects."
+  },
+  "intro": {
+    "title": "Register your interest",
+    "description": "Write a few lines about your experience and your main areas of expertise.",
+    "quote": "Registering is completely free and does not involve any commitments.",
+    "longTermTitle": "Long-term collaborations",
+    "longTermText": "I believe in the value of building relationships that benefit both consultants and clients."
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "role": "Specialization",
+    "linkedin": "LinkedIn profile",
+    "message": "Briefly about your experience",
+    "rolePlaceholder": "Choose an area..."
+  },
+  "roles": {
+    "frontend": "Frontend developer",
+    "backend": "Backend developer",
+    "fullstack": "Full-stack developer",
+    "uxui": "UX/UI designer",
+    "seo": "SEO specialist",
+    "pm": "Project manager"
+  },
+  "status": {
+    "sending": "Sending...",
+    "submit": "Send application",
+    "successTitle": "Thank you for your application!",
+    "successText": "I will get back to you as soon as I can.",
+    "sendAnother": "Send another one",
+    "fallbackError": "Something went wrong. Please try again or email hello@bridgelys.se."
+  },
+  "captcha": {
+    "consentRequired": "To send the form, you need to accept necessary cookies (reCAPTCHA).",
+    "confirmHuman": "Please confirm that you are not a robot.",
+    "disabledText": "Accept necessary cookies to enable reCAPTCHA."
+  },
+  "seo": {
+    "title": "Join the network | Bridgelys",
+    "description": "Register your interest in joining Bridgelys' network of freelancers and specialists."
+  }
+},
+"cookieBanner": {
+  "title": "Cookies & privacy",
+  "description": "Hi! I use cookies to keep the website working securely and to understand visitor statistics.",
+  "showSettings": "My choices",
+  "hideSettings": "Hide settings",
+  "necessary": {
+    "title": "Necessary",
+    "description": "Cannot be turned off."
+  },
+  "analytics": {
+    "title": "Analytics"
+  },
+  "acceptAll": "Accept all",
+  "saveChoices": "Save my choices",
+  "loadSettingsError": "Could not load cookie settings"
+}
+}

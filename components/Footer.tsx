@@ -1,9 +1,12 @@
 import React from "react";
-import Link from "next/link";
+import {Link} from "@/i18n/navigation";
 import Image from "next/image";
 import { Mail } from "lucide-react";
+import {useTranslations, useLocale} from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+  const locale = useLocale();
   return (
     <div className="bg-white text-slate-900 pt-16 pb-8 border-t border-slate-100">
       <div className="container mx-auto px-6">
@@ -21,36 +24,38 @@ export default function Footer() {
             </div>
 
             <p className="text-slate-600 mb-4 max-w-sm">
-              Vi bygger broar mellan affärsbehov och teknisk excellens genom senior
-              expertis.
+              {t("description")}  
             </p>
 
             <div className="text-sm text-slate-500 space-y-1">
-              <p>Org.nr: 559554-3025</p>
-              <p>Innehar ansvarsförsäkring och F-skatt</p>
+              <p>{t("org")} 559554-3025</p>
+              {locale === "en" && (
+                <p>{t("vat")} SE559554302501</p>
+              )}
+              <p>{t("insurance")}</p>
             </div>
           </div>
 
           {/* Navigation */}
           <nav className="text-left" aria-label="Sidfotsnavigation">
             <h2 className="font-bold mb-4 text-lg text-brand-navy uppercase tracking-wider">
-              Navigation
+             {t("navigation")}
             </h2>
             <ul className="space-y-2 text-slate-600">
               <li>
                 <Link
-                  href="/"
+                  href={`/${locale}`}
                   className="font-medium hover:text-brand-green transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
                 >
-                  Start
+                  {t("start")}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/about-us"
+                  href={`/${locale}/about-us`}
                   className="font-medium hover:text-brand-green transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
                 >
-                  Om oss
+                  {t("about")}
                 </Link>
               </li>
               <li>
@@ -58,15 +63,15 @@ export default function Footer() {
                   href="/contact"
                   className="font-medium hover:text-brand-green transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
                 >
-                  Kontakt
+                  {t("contact")}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/join-network"
+                  href={`/${locale}/join-network`}
                   className="font-medium hover:text-brand-green transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
                 >
-                  Bli partner
+                 {t("partner")}
                 </Link>
               </li>
             </ul>
@@ -75,11 +80,11 @@ export default function Footer() {
           {/* Kontakt */}
           <div className="text-left">
             <h2 className="font-bold mb-4 text-lg text-brand-navy uppercase tracking-wider">
-              Kontakt
+              {t("contactTitle")}
             </h2>
             <ul className="space-y-2 text-slate-600">
-              <li className="font-medium">Stockholm / Johanneshov</li>
-              <li className="font-medium">Kim Vági / VD Bridgelys AB</li>
+              <li className="font-medium">{t("location")}</li>
+              <li className="font-medium">{t("ceo")}</li>
               <li>
                 <Link
                   href="/contact"
@@ -89,7 +94,7 @@ export default function Footer() {
                     className="w-4 h-4 group-hover:scale-110 transition-transform"
                     aria-hidden="true"
                   />
-                  <span>Kontakta mig</span>
+                 <span>{t("contactMe")}</span>
                 </Link>
               </li>
               <li>
@@ -115,7 +120,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-100 pt-8 text-center text-slate-500 text-sm">
-          <p>© {new Date().getFullYear()} Bridgelys AB. Alla rättigheter förbehållna.</p>
+         <p>© {new Date().getFullYear()} Bridgelys AB. {t("rights")}</p>
         </div>
       </div>
     </div>

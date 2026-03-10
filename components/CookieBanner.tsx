@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import {
   Cookie,
   ShieldCheck,
@@ -9,7 +10,6 @@ import {
   ChevronUp,
 } from "lucide-react";
 
-// 1. Fixat "any"-felet genom att använda unknown[] istället
 declare global {
   interface Window {
     gtag: (...args: unknown[]) => void;
@@ -17,6 +17,8 @@ declare global {
 }
 
 export default function CookieBanner() {
+  const t = useTranslations("cookieBanner");
+
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [analyticsEnabled, setAnalyticsEnabled] = useState(true);
@@ -30,39 +32,41 @@ export default function CookieBanner() {
     requestAnimationFrame(() => previouslyFocusedRef.current?.focus());
   }, []);
 
-  const saveConsent = useCallback((allAccepted: boolean) => {
-    const isAnalyticsAccepted = allAccepted ? true : analyticsEnabled;
-    
-    const consentSettings = {
-      necessary: true,
-      analytics: isAnalyticsAccepted,
-      timestamp: new Date().toISOString(),
-    };
+  const saveConsent = useCallback(
+    (allAccepted: boolean) => {
+      const isAnalyticsAccepted = allAccepted ? true : analyticsEnabled;
 
-    localStorage.setItem("bridgelys-cookie-consent", "true");
-    localStorage.setItem(
-      "bridgelys-detailed-consent",
-      JSON.stringify(consentSettings)
-    );
+      const consentSettings = {
+        necessary: true,
+        analytics: isAnalyticsAccepted,
+        timestamp: new Date().toISOString(),
+      };
 
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("consent", "update", {
-        ad_storage: isAnalyticsAccepted ? "granted" : "denied",
-        analytics_storage: isAnalyticsAccepted ? "granted" : "denied",
-        ad_user_data: isAnalyticsAccepted ? "granted" : "denied",
-        ad_personalization: isAnalyticsAccepted ? "granted" : "denied",
-      });
-    }
+      localStorage.setItem("bridgelys-cookie-consent", "true");
+      localStorage.setItem(
+        "bridgelys-detailed-consent",
+        JSON.stringify(consentSettings)
+      );
 
-    window.dispatchEvent(new Event("cookie-consent-updated"));
-    closeAndRestoreFocus();
-  }, [analyticsEnabled, closeAndRestoreFocus]);
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("consent", "update", {
+          ad_storage: isAnalyticsAccepted ? "granted" : "denied",
+          analytics_storage: isAnalyticsAccepted ? "granted" : "denied",
+          ad_user_data: isAnalyticsAccepted ? "granted" : "denied",
+          ad_personalization: isAnalyticsAccepted ? "granted" : "denied",
+        });
+      }
+
+      window.dispatchEvent(new Event("cookie-consent-updated"));
+      closeAndRestoreFocus();
+    },
+    [analyticsEnabled, closeAndRestoreFocus]
+  );
 
   useEffect(() => {
     const consent = localStorage.getItem("bridgelys-cookie-consent");
-    
+
     if (!consent) {
-      // 2. Fixat "setState in effect"-felet genom requestAnimationFrame
       requestAnimationFrame(() => {
         setIsVisible(true);
       });
@@ -76,11 +80,11 @@ export default function CookieBanner() {
             ad_storage: analytics ? "granted" : "denied",
           });
         } catch (e) {
-          console.error("Kunde inte ladda kak-inställningar", e);
+          console.error(t("loadSettingsError"), e);
         }
       }
     }
-  }, []);
+  }, [t]);
 
   useEffect(() => {
     if (!isVisible) return;
@@ -127,7 +131,6 @@ export default function CookieBanner() {
 
   if (!isVisible) return null;
 
-  // Fixat z-index till standard Tailwind (z-50) för att undvika varningar
   return (
     <div className="fixed bottom-6 left-6 right-6 md:left-auto md:right-8 md:max-w-md z-50 animate-in fade-in slide-in-from-bottom-10 duration-700">
       <div
@@ -154,13 +157,12 @@ export default function CookieBanner() {
               tabIndex={-1}
               className="font-bold text-brand-navy text-lg focus:outline-none"
             >
-              Kakor & integritet
+              {t("title")}
             </h3>
           </div>
 
           <p id="cookie-desc" className="text-sm text-slate-800 mb-4 leading-relaxed">
-            Hej! Jag använder kakor för att webbplatsen ska fungera säkert och
-            för att jag ska kunna se besöksstatistik.
+            {t("description")}
           </p>
 
           <button
@@ -173,7 +175,7 @@ export default function CookieBanner() {
             ) : (
               <ChevronDown className="w-4 h-4" />
             )}
-            {showSettings ? "Dölj inställningar" : "Mina val"}
+            {showSettings ? t("hideSettings") : t("showSettings")}
           </button>
 
           {showSettings && (
@@ -182,8 +184,12 @@ export default function CookieBanner() {
                 <div className="flex gap-3">
                   <ShieldCheck className="w-5 h-5 text-slate-400 mt-0.5" />
                   <div>
-                    <p className="text-sm font-bold text-brand-navy">Nödvändiga</p>
-                    <p className="text-xs text-slate-500 italic">Går ej att stänga av.</p>
+                    <p className="text-sm font-bold text-brand-navy">
+                      {t("necessary.title")}
+                    </p>
+                    <p className="text-xs text-slate-500 italic">
+                      {t("necessary.description")}
+                    </p>
                   </div>
                 </div>
                 <div className="h-6 w-10 bg-brand-green rounded-full flex items-center px-1">
@@ -197,7 +203,9 @@ export default function CookieBanner() {
                 <div className="flex gap-3">
                   <BarChart3 className="w-5 h-5 text-slate-400 mt-0.5" />
                   <div>
-                    <p className="text-sm font-bold text-brand-navy">Statistik</p>
+                    <p className="text-sm font-bold text-brand-navy">
+                      {t("analytics.title")}
+                    </p>
                   </div>
                 </div>
                 <button
@@ -225,14 +233,14 @@ export default function CookieBanner() {
               onClick={() => saveConsent(true)}
               className="flex-1 bg-brand-navy text-white text-sm font-bold py-3 rounded-xl hover:shadow-lg transition-all"
             >
-              Acceptera alla
+              {t("acceptAll")}
             </button>
             <button
               type="button"
               onClick={() => saveConsent(false)}
               className="flex-1 bg-white text-brand-navy border border-slate-200 text-sm font-bold py-3 rounded-xl hover:bg-slate-50 transition-all"
             >
-              Spara mina val
+              {t("saveChoices")}
             </button>
           </div>
         </div>

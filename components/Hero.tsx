@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "@/i18n/navigation";
+import {useTranslations} from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("hero");
   return (
     <section
       className="relative min-h-[70vh] flex items-start justify-center overflow-hidden bg-brand-navy text-white"
@@ -28,15 +30,14 @@ export default function Hero() {
             id="hero-title"
             className="font-display text-5xl md:text-7xl font-bold leading-tight mb-4"
           >
-            Webbyrån med – <br />
+            {t("title1")} <br />
             <span className="text-brand-green-on-dark underline decoration-white/20">
-              fokus på Människan.
+              {t("title2")}
             </span>
           </h1>
 
           <p className="font-sans text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-            Vi översätter dina affärsmål till tekniska lösningar på ren svenska.
-            Expertstöd vid upphandling, projektledning och webbutveckling.
+            {t("text")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -48,7 +49,7 @@ export default function Hero() {
                          hover:brightness-105 hover:shadow-[0_22px_55px_rgba(0,0,0,0.26)] transition
                          focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-on-dark focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
             >
-              Utforska våra tjänster
+             {t("ctaServices")}
             </a>
 
             {/* Sekundär knapp (mörk/glasig med vit text) */}
@@ -58,7 +59,7 @@ export default function Hero() {
                          hover:bg-brand-dark/55 transition
                          focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-on-dark focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
             >
-              Om oss
+              {t("ctaAbout")}
             </Link>
           </div>
         </div>
