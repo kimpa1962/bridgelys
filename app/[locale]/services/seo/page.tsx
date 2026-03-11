@@ -48,7 +48,7 @@ export default async function SeoPage() {
     <main className="min-h-screen bg-white">
       <section className="pt-24 pb-16 bg-brand-navy text-white text-center" aria-labelledby="seo-title">
         <div className="container mx-auto px-6">
-          <h1 id="seo-title" className="font-display text-4xl md:text-6xl font-bold mb-4 text-brand-green">
+          <h1 id="seo-title" className="font-display text-4xl md:text-6xl font-bold mb-4 text-brand-green-on-dark">
             {t("hero.title")}
           </h1>
           <p className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto uppercase tracking-widest">
@@ -103,7 +103,7 @@ export default async function SeoPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-brand-green text-brand-navy px-8 py-4 rounded-full font-bold hover:scale-105 transition-all"
+              className="inline-flex items-center gap-2 bg-brand-green-on-dark text-brand-navy px-8 py-4 rounded-full font-bold hover:scale-105 transition-all"
             >
               {t("cta.button")} <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </Link>

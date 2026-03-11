@@ -38,7 +38,7 @@ export default async function AccessibilityPage() {
         <div className="container mx-auto px-6">
           <h1
             id="accessibility-title"
-            className="font-display text-4xl md:text-6xl font-bold mb-4 text-brand-green"
+            className="font-display text-4xl md:text-6xl font-bold mb-4 text-brand-green-on-dark"
           >
             {t("hero.title")}
           </h1>
@@ -90,7 +90,7 @@ export default async function AccessibilityPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-brand-green text-brand-navy px-10 py-4 rounded-full font-bold hover:scale-105 transition-all"
+              className="inline-flex items-center gap-2 bg-brand-green-on-dark text-brand-navy px-10 py-4 rounded-full font-bold hover:scale-105 transition-all"
             >
               {t("cta.button")} <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </Link>

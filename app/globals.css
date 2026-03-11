@@ -26,9 +26,12 @@ html {
   --color-text-muted-on-dark: #e2e8f0;
 
   /* Fonts */
-  --font-display: "Montserrat", sans-serif;
-  --font-sans: "Inter", sans-serif;
-  --font-logo: "Bahnschrift", "Arial", sans-serif;
+/* Fonts */
+/*--font-display: var(--font-montserrat), sans-serif;*/
+
+--font-sans: var(--font-inter), sans-serif;
+--font-slogan: var(--font-fira), sans-serif;
+--font-display: var(--font-lora), serif;
 }
 
 /* Tailwind v4 theme mapping */
@@ -46,7 +49,7 @@ html {
 
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
-  --font-logo: var(--font-logo);
+  --font-slogan: var(--font-slogan);
 }
 
 /* A11y: tydlig fokusmarkering */

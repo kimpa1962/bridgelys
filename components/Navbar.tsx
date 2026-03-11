@@ -78,8 +78,7 @@ export default function Navbar() {
               className="h-auto w-full"
             />
             <span
-              className="mt-1 text-[14px] text-brand-dark font-normal leading-none text-right"
-              style={{ fontFamily: "Arial, sans-serif" }}
+              className="font-slogan mt-1 text-[16px] text-brand-dark font-normal leading-none text-right"
             >
               HUMAN IT&nbsp;
             </span>
