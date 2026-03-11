@@ -64,10 +64,10 @@ export default function Navbar() {
       aria-label="Huvudmeny"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-24 items-center">
+        <div className="relative flex justify-between h-24 items-center">
           <Link
             href="/"
-            className="flex flex-col group w-45 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
+            className="relative z-10 flex flex-col group w-45 max-w-[70vw]  rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
           >
             <Image
               src="/bridgelys_logo-vector.svg"
@@ -177,7 +177,7 @@ export default function Navbar() {
               aria-expanded={isMobileMenuOpen}
               aria-controls={mobileMenuId}
               aria-label={isMobileMenuOpen ? "Stäng meny" : "Öppna meny"}
-              className="p-2 text-brand-navy"
+              className="relative z-10 p-2 text-brand-navy"
             >
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
