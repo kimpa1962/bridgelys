@@ -60,7 +60,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="border-b border-slate-100 bg-white/80 backdrop-blur-md shadow-sm"
+      className="sticky top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-md shadow-sm"
       aria-label="Huvudmeny"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,7 +115,7 @@ export default function Navbar() {
                 ref={servicesMenuRef}
                 role="menu"
                 className={[
-                  "absolute left-0 top-full w-64 bg-white shadow-2xl rounded-xl py-3 border border-slate-100",
+                  "absolute left-0 top-full w-64 bg-white shadow-2xl rounded-xl py-3 border border-slate-100 z-50",
                   isServicesOpen ? "opacity-100 visible" : "opacity-0 invisible",
                 ].join(" ")}
               >
@@ -176,6 +176,7 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen((v) => !v)}
               aria-expanded={isMobileMenuOpen}
               aria-controls={mobileMenuId}
+              aria-label={isMobileMenuOpen ? "Stäng meny" : "Öppna meny"}
               className="p-2 text-brand-navy"
             >
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -188,6 +189,80 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
+        </div>
+      </div>
+
+      <div
+        id={mobileMenuId}
+        className={[
+          "md:hidden border-t border-slate-100 bg-white shadow-sm",
+          isMobileMenuOpen ? "block" : "hidden",
+        ].join(" ")}
+      >
+        <div className="px-4 py-4 space-y-1">
+          <Link
+            href="/"
+            className="block rounded-lg px-3 py-3 text-slate-900 font-medium hover:bg-slate-50"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            {t("home")}
+          </Link>
+
+          <div className="pt-2 pb-1 px-3 text-xs font-bold uppercase tracking-wider text-brand-green">
+            {t("services")}
+          </div>
+
+          {tjanster.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="block rounded-lg px-3 py-3 text-slate-700 hover:bg-slate-50"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {item.namn}
+            </Link>
+          ))}
+
+          <Link
+            href="/about-us"
+            className="block rounded-lg px-3 py-3 text-slate-900 font-medium hover:bg-slate-50"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            {t("about")}
+          </Link>
+
+          <Link
+            href="/contact"
+            className="block rounded-lg px-3 py-3 text-slate-900 font-medium hover:bg-slate-50"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            {t("contact")}
+          </Link>
+
+          <Link
+            href={pathname}
+            locale={otherLocale}
+            aria-label={otherLabel}
+            title={otherLabel}
+            className="block rounded-lg px-3 py-3 hover:bg-slate-50"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <Image
+              src={locale === "sv" ? "/flags/gb.svg" : "/flags/se.svg"}
+              alt={locale === "sv" ? "English" : "Svenska"}
+              width={32}
+              height={20}
+              className="rounded-sm"
+            />
+          </Link>
+
+          <Link
+            href="/join-network"
+            className="mt-2 block rounded-full bg-brand-navy px-5 py-3 text-center font-bold text-white"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            {t("join")}
+          </Link>
         </div>
       </div>
     </nav>
