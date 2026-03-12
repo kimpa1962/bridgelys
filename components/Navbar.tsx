@@ -67,7 +67,7 @@ export default function Navbar() {
         <div className="relative flex justify-between h-24 items-center">
           <Link
             href="/"
-            className="relative z-10 flex flex-col group w-45 max-w-[70vw]  rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
+            className="relative z-10 flex flex-col group w-45 max-w-[70vw] rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
           >
             <Image
               src="/bridgelys_logo-vector.svg"
@@ -77,9 +77,7 @@ export default function Navbar() {
               priority
               className="h-auto w-full"
             />
-            <span
-              className="font-slogan mt-1 text-[16px] text-brand-dark font-normal leading-none text-right"
-            >
+            <span className="font-slogan mt-1 text-[16px] text-brand-dark font-normal leading-none text-right">
               HUMAN IT&nbsp;
             </span>
           </Link>
@@ -207,7 +205,7 @@ export default function Navbar() {
             {t("home")}
           </Link>
 
-          <div className="pt-2 pb-1 px-3 text-xs font-bold uppercase tracking-wider text-brand-green">
+          <div className="pt-3 pb-2 px-3 text-sm font-extrabold uppercase tracking-wider text-brand-navy">
             {t("services")}
           </div>
 
@@ -215,7 +213,7 @@ export default function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="block rounded-lg px-3 py-3 text-slate-700 hover:bg-slate-50"
+              className="block rounded-lg pl-7 pr-3 py-3 text-slate-700 font-medium hover:bg-slate-50"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {item.namn}
