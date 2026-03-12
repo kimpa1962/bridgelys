@@ -208,10 +208,13 @@ export default function CookieBanner() {
                     </p>
                   </div>
                 </div>
+
+                {/* FIX: accessibility label added */}
                 <button
                   type="button"
                   role="switch"
                   aria-checked={analyticsEnabled}
+                  aria-label={t("analytics.title")}
                   onClick={() => setAnalyticsEnabled((v) => !v)}
                   className={`h-6 w-10 rounded-full flex items-center px-1 transition-colors ${
                     analyticsEnabled ? "bg-brand-green" : "bg-slate-300"
