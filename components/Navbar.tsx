@@ -70,7 +70,7 @@ export default function Navbar() {
             className="relative z-10 flex flex-col group w-45 max-w-[70vw] rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
           >
             <Image
-              src="/bridgelys_logo-vector.svg"
+              src="/Bridgelys-logo-web.svg"
               alt="Bridgelys — gå till startsidan"
               width={180}
               height={45}
