@@ -15,8 +15,8 @@ export default function Hero() {
         {/* Lite starkare overlay för stabil kontrast */}
         <div className="absolute inset-0 bg-brand-navy/75 z-10" />
         <Image
-          src="/hero-background.jpg"
-          alt=""
+          src="/Human-it.jpg"
+          alt="Humans in an IT world"
           fill
           priority
           sizes="100vw"

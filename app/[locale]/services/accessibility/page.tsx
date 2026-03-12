@@ -69,7 +69,7 @@ export default async function AccessibilityPage() {
 
             <div className="md:w-1/2 relative h-125 w-full rounded-[3rem] overflow-hidden shadow-2xl">
               <Image
-                src="/accessibility-img.jpg"
+                src="/accessibility-images.jpg"
                 alt={t("imageAlt")}
                 fill
                 className="object-cover"
