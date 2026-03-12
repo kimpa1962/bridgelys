@@ -13,36 +13,36 @@ import {useLocale} from "next-intl";
 
 export default function Services() {
   const t = useTranslations("servicesSection");
-  const locale = useLocale();
+  
   const services = [
     {
       key: "procurement",
-      href: `/${locale}/services/procurement`,
+      href: `/services/procurement`,
       Icon: ShoppingCart
     },
     {
       key: "projectManagement",
-      href: `/${locale}/services/project-management`,
+      href: `/services/project-management`,
       Icon: Layout
     },
     {
       key: "accessibility",
-      href: `/${locale}/services/accessibility`,
+      href: `/services/accessibility`,
       Icon: ShieldCheck
     },
     {
       key: "seo",
-      href: `/${locale}/services/seo`,
+      href: `/services/seo`,
       Icon: Search
     },
     {
       key: "educations",
-      href: `/${locale}/services/educations`,
+      href: `/services/educations`,
       Icon: GraduationCap
     },
     {
       key: "webDevelopment",
-      href: `/${locale}/services/web-development`,
+      href: `/services/web-development`,
       Icon: Code
     }
   ];
