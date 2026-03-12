@@ -113,6 +113,7 @@ export default function Footer() {
                     className="w-4 h-4 group-hover:scale-110 transition-transform"
                   />
                   <span>LinkedIn</span>
+                  <span className="sr-only">(öppnas i ny flik)</span>
                 </a>
               </li>
             </ul>

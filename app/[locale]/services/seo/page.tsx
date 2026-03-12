@@ -45,7 +45,7 @@ export default async function SeoPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       <section className="pt-24 pb-16 bg-brand-navy text-white text-center" aria-labelledby="seo-title">
         <div className="container mx-auto px-6">
           <h1 id="seo-title" className="font-display text-4xl md:text-6xl font-bold mb-4 text-brand-green-on-dark">
@@ -72,7 +72,7 @@ export default async function SeoPage() {
                   <div key={i} className="flex gap-4 p-4 rounded-xl border border-slate-100 bg-slate-50">
                     <div>{item.icon}</div>
                     <div>
-                      <h4 className="font-bold text-brand-navy">{item.title}</h4>
+                      <h3 className="font-bold text-brand-navy">{item.title}</h3>
                       <p className="text-sm text-slate-500">{item.desc}</p>
                     </div>
                   </div>
@@ -110,6 +110,6 @@ export default async function SeoPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

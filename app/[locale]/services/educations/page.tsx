@@ -27,7 +27,7 @@ export default async function TrainingPage() {
   const t = await getTranslations("servicesPages.educations");
 
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       <section className="pt-24 pb-16 bg-brand-navy text-white text-center" aria-labelledby="educations-title">
         <div className="container mx-auto px-6">
           <h1 id="educations-title" className="font-display text-4xl md:text-6xl font-bold mb-4 text-brand-green-on-dark">
@@ -68,7 +68,7 @@ export default async function TrainingPage() {
             <h3 id="educations-cta-title" className="text-2xl md:text-3xl font-bold text-white mb-4">
               {t("cta.title")}
             </h3>
-            <p className="text-slate-400 mb-8 max-w-lg mx-auto italic">
+            <p className="text-slate-300 mb-8 max-w-lg mx-auto italic">
               {t("cta.quote")}
             </p>
             <Link
@@ -80,6 +80,6 @@ export default async function TrainingPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

@@ -46,7 +46,7 @@ export default async function ProjectManagementPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       <section className="pt-24 pb-16 bg-brand-navy text-white text-center" aria-labelledby="pm-title">
         <div className="container mx-auto px-6">
           <h1
@@ -117,6 +117,6 @@ export default async function ProjectManagementPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
