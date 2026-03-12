@@ -44,7 +44,7 @@ export default function Footer() {
             <ul className="space-y-2 text-slate-600">
               <li>
                 <Link
-                  href={`/${locale}`}
+                  href={`/`}
                   className="font-medium hover:text-brand-green transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
                 >
                   {t("start")}
@@ -52,7 +52,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={`/${locale}/about-us`}
+                  href={`/about-us`}
                   className="font-medium hover:text-brand-green transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
                 >
                   {t("about")}
@@ -68,7 +68,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={`/${locale}/join-network`}
+                  href={`/join-network`}
                   className="font-medium hover:text-brand-green transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2"
                 >
                  {t("partner")}
