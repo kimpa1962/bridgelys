@@ -1,13 +1,35 @@
 import React from "react";
-import {headers} from "next/headers";
 import {NextIntlClientProvider} from "next-intl";
 import {getMessages} from "next-intl/server";
 import {GoogleAnalytics} from "@next/third-parties/google";
-
+import type { Metadata } from "next";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  const isSv = locale === "sv";
+
+  return {
+    alternates: {
+      canonical: isSv
+        ? "https://bridgelys.se/sv"
+        : "https://bridgelys.com/en",
+      languages: {
+        sv: "https://bridgelys.se/sv",
+        en: "https://bridgelys.com/en",
+        "x-default": "https://bridgelys.se/sv"
+      }
+    }
+  };
+}
 
 export default async function LocaleLayout({
   children,
@@ -19,16 +41,11 @@ export default async function LocaleLayout({
   const { locale } = await params;
   const messages = await getMessages();
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
-  const headersList = await headers();
-  const host = headersList.get("host");
-  const baseUrl = `https://${host}`;
  
 
   return (
     <>
-<link rel="alternate" hrefLang="sv" href={`${baseUrl}/sv`} />
-<link rel="alternate" hrefLang="en" href={`${baseUrl}/en`} />
-<link rel="alternate" hrefLang="x-default" href={`${baseUrl}/${locale}`} />
+
 
       <NextIntlClientProvider messages={messages}>
         <a

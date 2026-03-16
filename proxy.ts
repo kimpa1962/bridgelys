@@ -5,16 +5,23 @@ import {NextRequest, NextResponse} from "next/server";
 const intlMiddleware = createMiddleware(routing);
 
 export default function middleware(request: NextRequest) {
-  const hostname = request.headers.get("host");
-
+  const hostname = request.headers.get("host") || "";
   const {pathname} = request.nextUrl;
 
-  if (hostname?.includes("bridgelys.com") && pathname === "/") {
-    return NextResponse.redirect(new URL("/en", request.url));
-  }
+  const hasLocalePrefix =
+    pathname === "/sv" ||
+    pathname === "/en" ||
+    pathname.startsWith("/sv/") ||
+    pathname.startsWith("/en/");
 
-  if (hostname?.includes("bridgelys.se") && pathname === "/") {
-    return NextResponse.redirect(new URL("/sv", request.url));
+  if (!hasLocalePrefix) {
+    if (hostname.includes("bridgelys.com")) {
+      return NextResponse.redirect(new URL(`/en${pathname}`, request.url));
+    }
+
+    if (hostname.includes("bridgelys.se")) {
+      return NextResponse.redirect(new URL(`/sv${pathname}`, request.url));
+    }
   }
 
   return intlMiddleware(request);
