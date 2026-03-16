@@ -3,12 +3,13 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Handshake, Briefcase } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 export default function JoinNetworkForm() {
   const t = useTranslations("joinNetworkPage");
+  const locale = useLocale();
 
   const nameId = useId();
   const emailId = useId();
@@ -88,6 +89,7 @@ export default function JoinNetworkForm() {
           ...formData,
           gRecaptchaToken: token,
           type: "partner",
+          locale,
         }),
       });
 

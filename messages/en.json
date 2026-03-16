@@ -245,6 +245,20 @@
     "saveChoices": "Save my choices",
     "loadSettingsError": "Could not load cookie settings"
   },
+  "email": {
+    "contactConfirmation": {
+      "subject": "Thank you for your message",
+      "text": "Hi {name},\n\nThank you for reaching out! I have received your message and will get back to you as soon as I can.\n\nBest regards,\nKim Vági"
+    },
+    "partnerConfirmation": {
+      "subject": "Great to hear you want to join the network!",
+      "heading": "Hi {name}!",
+      "intro": "Thank you for your application. It is always a pleasure to connect with skilled freelancers.",
+      "withRole": "I have received your details as <strong>{role}</strong> and will get back to you as soon as I can.",
+      "withoutRole": "I have received your application and will get back to you as soon as I can.",
+      "signoff": "Talk soon!<br /><strong>Kim Vági</strong><br />Bridgelys"
+    }
+  },
   "servicesPages": {
     "procurement": {
       "hero": {

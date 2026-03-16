@@ -21,6 +21,20 @@
     "ctaServices": "Utforska våra tjänster",
     "ctaAbout": "Om oss"
   },
+  "email": {
+    "contactConfirmation": {
+      "subject": "Tack för ditt meddelande",
+      "text": "Hej {name},\n\nTack för att du hörde av dig! Jag har tagit emot ditt meddelande och återkommer till dig så snart jag kan.\n\nMed vänlig hälsning,\nKim Vági"
+    },
+    "partnerConfirmation": {
+      "subject": "Kul att du vill bli en del av nätverket!",
+      "heading": "Hej {name}!",
+      "intro": "Stort tack för din intresseanmälan. Det är alltid kul att komma i kontakt med andra skickliga frilansare.",
+      "withRole": "Jag har tagit emot dina uppgifter som <strong>{role}</strong> och återkommer så snart jag kan.",
+      "withoutRole": "Jag har tagit emot din intresseanmälan och återkommer så snart jag kan.",
+      "signoff": "Hörs snart!<br /><strong>Kim Vági</strong><br />Bridgelys"
+    }
+  },
   "servicesSection": {
     "title": "Specialistområden",
     "items": {

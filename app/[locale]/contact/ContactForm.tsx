@@ -2,12 +2,13 @@
 
 import React, { useEffect, useId, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 export default function ContactForm() {
   const t = useTranslations("contactPage");
+  const locale = useLocale();
 
   const nameId = useId();
   const companyId = useId();
@@ -79,7 +80,7 @@ export default function ContactForm() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, gRecaptchaToken: token }),
+        body: JSON.stringify({ ...formData, gRecaptchaToken: token, locale }),
       });
 
       const data = await response.json().catch(() => null);

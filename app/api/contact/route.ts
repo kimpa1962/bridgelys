@@ -1,8 +1,9 @@
-// app/api/contact/route.ts
 export const dynamic = "force-dynamic";
 
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+import sv from "@/messages/sv.json";
+import en from "@/messages/en.json";
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
@@ -22,6 +23,10 @@ function isNonEmptyString(v: unknown): v is string {
 function clamp(s: string, max: number) {
   const t = s.trim();
   return t.length > max ? t.slice(0, max) : t;
+}
+
+function replaceVars(template: string, vars: Record<string, string>) {
+  return template.replace(/\{(\w+)\}/g, (_, key) => vars[key] ?? "");
 }
 
 export async function POST(req: Request) {
@@ -49,7 +54,11 @@ export async function POST(req: Request) {
       role,
       linkedin,
       type,
+      locale,
     } = body ?? {};
+
+    const activeLocale = locale === "en" ? "en" : "sv";
+    const messages = activeLocale === "en" ? en : sv;
 
     if (!isNonEmptyString(gRecaptchaToken)) {
       return badRequest(
@@ -65,14 +74,12 @@ export async function POST(req: Request) {
       );
     }
 
-    // Trim + rimliga maxlängder
     const safeName = clamp(name, 120);
     const safeEmail = clamp(email, 254);
     const safeMessage = clamp(message, 8000);
     const safeRole = isNonEmptyString(role) ? clamp(role, 120) : "";
     const safeLinkedIn = isNonEmptyString(linkedin) ? clamp(linkedin, 500) : "";
 
-    // Verify reCAPTCHA
     const verifyBody = new URLSearchParams({
       secret: RECAPTCHA_SECRET_KEY,
       response: gRecaptchaToken,
@@ -97,7 +104,6 @@ export async function POST(req: Request) {
     const resend = new Resend(RESEND_API_KEY);
 
     if (type === "partner") {
-      // Mail till dig
       await resend.emails.send({
         from: "Nätverksformulär-webb <hello@bridgelys.se>",
         to: "kim@bridgelys.se",
@@ -111,27 +117,36 @@ export async function POST(req: Request) {
           `Erfarenhet:\n${safeMessage}`,
       });
 
-      // Autoreply
+      const partnerSubject = messages.email.partnerConfirmation.subject;
+      const partnerHeading = replaceVars(messages.email.partnerConfirmation.heading, {
+        name: safeName,
+      });
+      const partnerIntro = messages.email.partnerConfirmation.intro;
+      const partnerWithRole = replaceVars(messages.email.partnerConfirmation.withRole, {
+        role: safeRole,
+      });
+      const partnerWithoutRole = messages.email.partnerConfirmation.withoutRole;
+      const partnerSignoff = messages.email.partnerConfirmation.signoff;
+
       await resend.emails.send({
         from: "Kim på Bridgelys <hello@bridgelys.se>",
         to: safeEmail,
         replyTo: "hello@bridgelys.se",
-        subject: "Kul att du vill bli en del av nätverket!",
+        subject: partnerSubject,
         html: `
           <div style="font-family: sans-serif; max-width: 600px; color: #334155;">
-            <h2 style="color: #0F172A;">Hej ${safeName}!</h2>
-            <p>Stort tack för din intresseanmälan. Det är alltid kul att komma i kontakt med andra skickliga frilansare.</p>
+            <h2 style="color: #0F172A;">${partnerHeading}</h2>
+            <p>${partnerIntro}</p>
             ${
               safeRole
-                ? `<p>Jag har tagit emot dina uppgifter som <strong>${safeRole}</strong> och återkommer så snart jag kan.</p>`
-                : `<p>Jag har tagit emot din intresseanmälan och återkommer så snart jag kan.</p>`
+                ? `<p>${partnerWithRole}</p>`
+                : `<p>${partnerWithoutRole}</p>`
             }
-            <p style="margin-top: 20px;">Hörs snart!<br /><strong>Kim Vági</strong><br />Bridgelys</p>
+            <p style="margin-top: 20px;">${partnerSignoff}</p>
           </div>
         `,
       });
     } else {
-      // Mail till dig
       await resend.emails.send({
         from: "Bridgelys Kontakt <hello@bridgelys.se>",
         to: "kim@bridgelys.se",
@@ -140,16 +155,17 @@ export async function POST(req: Request) {
         text: `Namn: ${safeName}\nE-post: ${safeEmail}\n\nMeddelande:\n${safeMessage}`,
       });
 
-      // Autoreply
+      const contactSubject = messages.email.contactConfirmation.subject;
+      const contactText = replaceVars(messages.email.contactConfirmation.text, {
+        name: safeName,
+      });
+
       await resend.emails.send({
         from: "Bridgelys <hello@bridgelys.se>",
         to: safeEmail,
         replyTo: "hello@bridgelys.se",
-        subject: "Tack för ditt meddelande",
-        text:
-          `Hej ${safeName},\n\n` +
-          `Tack för att du hörde av dig! Jag har tagit emot ditt meddelande och återkommer till dig så snart jag kan.\n\n` +
-          `Med vänlig hälsning,\nKim Vági`,
+        subject: contactSubject,
+        text: contactText,
       });
     }
 
