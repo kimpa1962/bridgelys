@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://bridgelys.se
+
+# Sitemaps
+Sitemap: https://bridgelys.se/sitemap.xml
