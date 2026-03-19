@@ -6,5 +6,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://bridgelys.se',
       lastModified: new Date(),
     },
+    {
+      url: 'https://bridgelys.se/services/web-development',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://bridgelys.se/services/seo',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://bridgelys.se/services',
+      lastModified: new Date(),
+    },
   ]
 }
