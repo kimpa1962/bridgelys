@@ -118,7 +118,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.brainville.com/Network/PublicProfile/Index/59106?sh=51BCF2E11043D87134C72876941247A2" target="_blank" className="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-offset-2" rel="noopener noreferrer">
+                <a href="https://www.brainville.com/Network/PublicProfile/Index/59106?sh=51BCF2E11043D87134C72876941247A2" target="_blank" className="group inline-flex items-center gap-2 text-slate-600 hover:text-brand-green transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2" rel="noopener noreferrer">
                   <Image
                     src="https://www.brainville.com/Content/Images/SocialMedia/OnLight_Flat.svg"
                     width={20}
