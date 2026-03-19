@@ -16,7 +16,7 @@ const firaSans = Fira_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bridgelys.se"),
-  title: "Bridgelys - IT på ren svenska",
+  title: "Webbutveckling & SEO i Stockholm | Bridgelys",
   description:
     "Webbkonsult nischad inom upphandling, projektledning, tillgänglighet och SEO.",
 };

@@ -31,7 +31,7 @@ export default function Hero() {
             className="font-display text-5xl md:text-7xl font-bold leading-tight mb-4"
           >
             {t("title1")} <br />
-            <span className="text-brand-green-on-dark underline decoration-white/20">
+            <span className="text-brand-green-on-dark underline decoration-white/50">
               {t("title2")}
             </span>
           </h1>
