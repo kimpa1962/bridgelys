@@ -5,29 +5,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = [
     '',
-    '/services/procurement',
-    '/services/project-management',
-    '/services/accessibility',
-    '/services/seo',
-    '/services/educations',
-    '/services/web-development',
     '/about-us',
     '/contact',
-    '/join-network'
+    '/join-network',
+    '/services/accessibility',
+    '/services/educations',
+    '/services/procurement',
+    '/services/project-management',
+    '/services/seo',
+    '/services/web-development',
   ]
 
   const languages = ['sv', 'en']
 
-  const urls = []
-
-  for (const lang of languages) {
-    for (const route of routes) {
-      urls.push({
-        url: `${baseUrl}/${lang}${route}`,
-        lastModified: new Date(),
-      })
-    }
-  }
-
-  return urls
+  return languages.flatMap((lang) =>
+    routes.map((route) => ({
+      url: `${baseUrl}/${lang}${route}`,
+      lastModified: new Date(),
+    }))
+  )
 }
