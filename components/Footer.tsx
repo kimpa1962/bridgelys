@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Mail } from "lucide-react";
 import {useTranslations, useLocale} from "next-intl";
 
+
 export default function Footer() {
   const t = useTranslations("footer");
   const locale = useLocale();
@@ -115,6 +116,17 @@ export default function Footer() {
                   <span>LinkedIn</span>
                   <span className="sr-only">(öppnas i ny flik)</span>
                 </a>
+              </li>
+              <li>
+                <a href="https://www.brainville.com/SE/Brainville1" target="_blank" className="flex items-center gap-2 group" rel="noopener noreferrer">
+                  <Image
+                    src="https://www.brainville.com/Content/Images/SocialMedia/OnLight_Flat.svg"
+                    width={20}
+                    height={20}
+                    alt="Brainville"
+                  /> <span>Brainville</span>
+                </a>
+
               </li>
             </ul>
           </div>
