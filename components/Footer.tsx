@@ -114,17 +114,18 @@ export default function Footer() {
                     className="w-4 h-4 group-hover:scale-110 transition-transform"
                   />
                   <span>LinkedIn</span>
-                  <span className="sr-only">(öppnas i ny flik)</span>
+                  <span className="sr-only">{t('newTab')}</span>
                 </a>
               </li>
               <li>
-                <a href="https://www.brainville.com/Network/PublicProfile/Index/59106?sh=51BCF2E11043D87134C72876941247A2" target="_blank" className="flex items-center gap-2 group" rel="noopener noreferrer">
+                <a href="https://www.brainville.com/Network/PublicProfile/Index/59106?sh=51BCF2E11043D87134C72876941247A2" target="_blank" className="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-offset-2" rel="noopener noreferrer">
                   <Image
                     src="https://www.brainville.com/Content/Images/SocialMedia/OnLight_Flat.svg"
                     width={20}
                     height={20}
-                    alt="Brainville"
-                  /> <span>Brainville</span>
+                    alt=""
+                  /> <span>{t("brainville")}</span>
+                  <span className="sr-only">{t('newTab')}</span>
                 </a>
 
               </li>
