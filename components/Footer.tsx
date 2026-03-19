@@ -118,7 +118,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.brainville.com/SE/Brainville1" target="_blank" className="flex items-center gap-2 group" rel="noopener noreferrer">
+                <a href="https://www.brainville.com/Network/PublicProfile/Index/59106?sh=51BCF2E11043D87134C72876941247A2" target="_blank" className="flex items-center gap-2 group" rel="noopener noreferrer">
                   <Image
                     src="https://www.brainville.com/Content/Images/SocialMedia/OnLight_Flat.svg"
                     width={20}
