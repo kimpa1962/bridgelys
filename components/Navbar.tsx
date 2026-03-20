@@ -144,11 +144,15 @@ export default function Navbar() {
               {t("contact")}
             </Link>
 
-            <Link
-              href={pathname}
-              locale={otherLocale}
+            <a
+              href={`${locale === "sv"
+                  ? `https://bridgelys.com${pathname}`
+                  : `https://bridgelys.se${pathname}`
+                }`}
               aria-label={otherLabel}
               title={otherLabel}
+              className="block rounded-lg px-3 py-3 hover:bg-slate-50"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               <Image
                 src={locale === "sv" ? "/flags/gb.svg" : "/flags/se.svg"}
@@ -157,7 +161,7 @@ export default function Navbar() {
                 height={20}
                 className="rounded-sm"
               />
-            </Link>
+            </a>
 
             <Link
               href="/join-network"
@@ -236,9 +240,11 @@ export default function Navbar() {
             {t("contact")}
           </Link>
 
-          <Link
-            href={pathname}
-            locale={otherLocale}
+          <a
+            href={`${locale === "sv"
+                ? `https://bridgelys.com${pathname}`
+                : `https://bridgelys.se${pathname}`
+              }`}
             aria-label={otherLabel}
             title={otherLabel}
             className="block rounded-lg px-3 py-3 hover:bg-slate-50"
@@ -251,7 +257,7 @@ export default function Navbar() {
               height={20}
               className="rounded-sm"
             />
-          </Link>
+          </a>
 
           <Link
             href="/join-network"
