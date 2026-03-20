@@ -2,7 +2,7 @@ import {getRequestConfig} from "next-intl/server";
 import {headers} from "next/headers";
 
 export default getRequestConfig(async () => {
-  const host = headers().get("host") || "";
+  const host = (await headers()).get("host") || "";
 
   let locale = "sv";
 
