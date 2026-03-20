@@ -10,7 +10,9 @@ export default function middleware(request: NextRequest) {
   // 🔁 Redirect gamla /sv → root (.se)
   if (pathname.startsWith("/sv")) {
     const newPath = pathname.replace(/^\/sv/, "") || "/";
-    return NextResponse.redirect(new URL(newPath, request.url));
+    return NextResponse.redirect(
+      `https://bridgelys.se${newPath}`
+    );
   }
 
   // 🔁 Redirect gamla /en → .com
