@@ -3,19 +3,15 @@ import {NextIntlClientProvider} from "next-intl";
 import {getMessages} from "next-intl/server";
 import {GoogleAnalytics} from "@next/third-parties/google";
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 
-export async function generateMetadata({
-  params
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-
-  const isSv = locale === "sv";
+export async function generateMetadata(): Promise<Metadata> {
+  const host = (await headers()).get("host") || "";
+  const isSv = host.includes("bridgelys.se");
 
   return {
     alternates: {
@@ -41,12 +37,9 @@ export default async function LocaleLayout({
   const { locale } = await params;
   const messages = await getMessages();
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
- 
 
   return (
     <>
-
-
       <NextIntlClientProvider messages={messages}>
         <a
           href="#main-content"
@@ -88,7 +81,7 @@ export default async function LocaleLayout({
             `,
           }}
         />
-{gaId && <GoogleAnalytics gaId={gaId} />}
+        {gaId && <GoogleAnalytics gaId={gaId} />}
       </NextIntlClientProvider>
     </>
   );
