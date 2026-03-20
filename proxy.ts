@@ -8,20 +8,15 @@ export default function middleware(request: NextRequest) {
   const hostname = request.headers.get("host") || "";
   const {pathname} = request.nextUrl;
 
-  const hasLocalePrefix =
-    pathname === "/sv" ||
-    pathname === "/en" ||
-    pathname.startsWith("/sv/") ||
-    pathname.startsWith("/en/");
+  // 🔁 Redirect baserat på domän (ta bort /sv /en i URL)
+  if (hostname.includes("bridgelys.com") && pathname.startsWith("/sv")) {
+    const newPath = pathname.replace("/sv", "");
+    return NextResponse.redirect(new URL(newPath || "/", request.url));
+  }
 
-  if (!hasLocalePrefix) {
-    if (hostname.includes("bridgelys.com")) {
-      return NextResponse.redirect(new URL(`/en${pathname}`, request.url));
-    }
-
-    if (hostname.includes("bridgelys.se")) {
-      return NextResponse.redirect(new URL(`/sv${pathname}`, request.url));
-    }
+  if (hostname.includes("bridgelys.se") && pathname.startsWith("/en")) {
+    const newPath = pathname.replace("/en", "");
+    return NextResponse.redirect(new URL(newPath || "/", request.url));
   }
 
   return intlMiddleware(request);

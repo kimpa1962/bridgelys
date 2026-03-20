@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { Link, usePathname } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
@@ -144,9 +145,11 @@ export default function Navbar() {
               {t("contact")}
             </Link>
 
-            <Link
-              href={pathname}
-              locale={otherLocale}
+            <a
+              href={`${locale === "sv"
+                  ? `https://bridgelys.com${pathname.replace(/^\/sv/, "")}`
+                  : `https://bridgelys.se${pathname.replace(/^\/en/, "")}`
+                }`}
               aria-label={otherLabel}
               title={otherLabel}
             >
@@ -157,7 +160,7 @@ export default function Navbar() {
                 height={20}
                 className="rounded-sm"
               />
-            </Link>
+            </a>
 
             <Link
               href="/join-network"
@@ -236,22 +239,23 @@ export default function Navbar() {
             {t("contact")}
           </Link>
 
-          <Link
-            href={pathname}
-            locale={otherLocale}
-            aria-label={otherLabel}
-            title={otherLabel}
-            className="block rounded-lg px-3 py-3 hover:bg-slate-50"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            <Image
-              src={locale === "sv" ? "/flags/gb.svg" : "/flags/se.svg"}
-              alt={locale === "sv" ? "English" : "Svenska"}
-              width={32}
-              height={20}
-              className="rounded-sm"
-            />
-          </Link>
+            <a
+              href={`${locale === "sv"
+                  ? `https://bridgelys.com${pathname.replace(/^\/sv/, "")}`
+                  : `https://bridgelys.se${pathname.replace(/^\/en/, "")}`
+                }`}
+              aria-label={otherLabel}
+              title={otherLabel}
+            >
+              <Image
+                src={locale === "sv" ? "/flags/gb.svg" : "/flags/se.svg"}
+                alt={locale === "sv" ? "English" : "Svenska"}
+                width={32}
+                height={20}
+                className="rounded-sm"
+              />
+
+          </a>
 
           <Link
             href="/join-network"
