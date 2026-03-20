@@ -20,12 +20,12 @@ export async function generateMetadata({
   return {
     alternates: {
       canonical: isSv
-        ? "https://bridgelys.se/sv"
-        : "https://bridgelys.com/en",
+        ? "https://bridgelys.se"
+        : "https://bridgelys.com",
       languages: {
-        sv: "https://bridgelys.se/sv",
-        en: "https://bridgelys.com/en",
-        "x-default": "https://bridgelys.se/sv"
+        sv: "https://bridgelys.se",
+        en: "https://bridgelys.com",
+        "x-default": "https://bridgelys.se"
       }
     }
   };
