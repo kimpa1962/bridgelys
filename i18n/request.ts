@@ -1,11 +1,13 @@
 import {getRequestConfig} from "next-intl/server";
-import {routing} from "./routing";
+import {headers} from "next/headers";
 
-export default getRequestConfig(async ({requestLocale}) => {
-  let locale = await requestLocale;
+export default getRequestConfig(async () => {
+  const host = headers().get("host") || "";
 
-  if (!locale || !routing.locales.includes(locale as "sv" | "en")) {
-    locale = routing.defaultLocale;
+  let locale = "sv";
+
+  if (host.includes("bridgelys.com")) {
+    locale = "en";
   }
 
   return {
