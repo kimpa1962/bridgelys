@@ -11,7 +11,6 @@ export default function Navbar() {
   const ts = useTranslations("services");
   const locale = useLocale();
   const pathname = usePathname();
-  const otherLocale = locale === "sv" ? "en" : "sv";
   const otherLabel = locale === "sv" ? "Switch to English" : "Byt till svenska";
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -137,12 +136,12 @@ export default function Navbar() {
               {t("about")}
             </Link>
 
-            <Link
+{/*             <Link
               href="/guides"
               className="text-slate-700 hover:text-brand-navy font-medium"
             >
               {t("guides")}
-            </Link>
+            </Link> */}
 
             <Link
               href="/contact"
@@ -239,13 +238,13 @@ export default function Navbar() {
             {t("about")}
           </Link>
 
-          <Link
+{/*           <Link
             href="/guides"
             className="block rounded-lg px-3 py-3 text-slate-900 font-medium hover:bg-slate-50"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             {t("guides")}
-          </Link>
+          </Link> */}
 
           <Link
             href="/contact"
