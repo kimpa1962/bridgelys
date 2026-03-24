@@ -144,6 +144,69 @@
       "button": "Contact me"
     }
   },
+  "guides": {
+    "header": {
+      "eyebrow": "Knowledge & guidance",
+      "title": "Guides & <highlight>insights</highlight>",
+      "description": "Here we share practical guides and insights on web, SEO, accessibility and digital development."
+    },
+    "featured": {
+      "title": "Featured guides",
+      "description": "Practical articles that help you make better decisions about websites, visibility and requirements.",
+      "readMore": "Read guide"
+    },
+    "featuredGuides": [
+      {
+        "slug": "what-does-a-website-cost",
+        "title": "What does a website cost in 2026?",
+        "description": "A clear overview of what affects pricing, the common price ranges and what to consider before you buy.",
+        "category": "Web development"
+      },
+      {
+        "slug": "what-is-seo",
+        "title": "What is SEO and how does it work?",
+        "description": "An introduction to search engine optimization and what actually matters if you want to rank in Google.",
+        "category": "SEO"
+      },
+      {
+        "slug": "wcag-requirements-for-web",
+        "title": "WCAG – what is required for an accessible website?",
+        "description": "Understand the basics of accessibility, common issues and what is important to get right from the start.",
+        "category": "Accessibility"
+      }
+    ],
+    "topicsSection": {
+      "title": "Topics we write about",
+      "description": "Content that helps both decision-makers and organisations understand technology, requirements and opportunities."
+    },
+    "topics": [
+      "Web development",
+      "SEO",
+      "WCAG",
+      "Procurement",
+      "Project management",
+      "Digital strategy"
+    ],
+    "benefits": {
+      "seo": {
+        "title": "Build visibility",
+        "text": "The guides help you understand how content, structure and technology affect your visibility in search engines."
+      },
+      "clarity": {
+        "title": "Make complexity clearer",
+        "text": "We make technical and strategic questions easier to understand, so you can make more confident decisions."
+      },
+      "decisions": {
+        "title": "Support better decisions",
+        "text": "Whether you are procuring, improving or building from scratch, you get a stronger basis for your decisions."
+      }
+    },
+    "cta": {
+      "title": "Need support for your next web project?",
+      "description": "We help organisations and companies with web, SEO, accessibility and digital development.",
+      "button": "Contact Bridgelys"
+    }
+  },
   "contactPage": {
     "hero": {
       "title": "Start a <highlight>conversation</highlight>",

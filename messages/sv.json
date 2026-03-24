@@ -157,6 +157,69 @@
       "button": "Kontakta mig"
     }
   },
+  "guides": {
+    "header": {
+      "eyebrow": "Kunskap & vägledning",
+      "title": "Guider & <highlight>insikter</highlight>",
+      "description": "Här delar vi praktiska guider och insikter inom webb, SEO, tillgänglighet och digital utveckling."
+    },
+    "featured": {
+      "title": "Utvalda guider",
+      "description": "Konkreta artiklar som hjälper dig att fatta bättre beslut kring webbplats, synlighet och kravställning.",
+      "readMore": "Läs guiden"
+    },
+    "featuredGuides": [
+      {
+        "slug": "vad-kostar-en-hemsida",
+        "title": "Vad kostar en hemsida 2026?",
+        "description": "En tydlig genomgång av vad som påverkar priset, vilka nivåer som finns och vad du bör tänka på innan du beställer.",
+        "category": "Webbutveckling"
+      },
+      {
+        "slug": "vad-ar-seo",
+        "title": "Vad är SEO och hur fungerar det?",
+        "description": "En introduktion till sökmotoroptimering och vad som faktiskt gör skillnad för att synas i Google.",
+        "category": "SEO"
+      },
+      {
+        "slug": "wcag-krav-for-webb",
+        "title": "WCAG – vad krävs för en tillgänglig webbplats?",
+        "description": "Förstå grunderna i tillgänglighet, vanliga brister och vad som är viktigt att få rätt från början.",
+        "category": "Tillgänglighet"
+      }
+    ],
+    "topicsSection": {
+      "title": "Ämnen vi skriver om",
+      "description": "Innehåll som hjälper både beställare och verksamheter att förstå teknik, krav och möjligheter."
+    },
+    "topics": [
+      "Webbutveckling",
+      "SEO",
+      "WCAG",
+      "Upphandling",
+      "Projektledning",
+      "Digital strategi"
+    ],
+    "benefits": {
+      "seo": {
+        "title": "Bygg synlighet",
+        "text": "Guiderna hjälper dig att förstå hur innehåll, struktur och teknik påverkar din synlighet i sökmotorer."
+      },
+      "clarity": {
+        "title": "Förenkla det komplexa",
+        "text": "Vi gör tekniska och strategiska frågor mer begripliga, så att du kan fatta tryggare beslut."
+      },
+      "decisions": {
+        "title": "Stöd i rätt val",
+        "text": "Oavsett om du ska upphandla, förbättra eller bygga nytt får du bättre underlag att utgå från."
+      }
+    },
+    "cta": {
+      "title": "Behöver du stöd i ditt nästa webbprojekt?",
+      "description": "Vi hjälper organisationer och företag med webb, SEO, tillgänglighet och digital utveckling.",
+      "button": "Kontakta Bridgelys"
+    }
+  },
   "contactPage": {
     "hero": {
       "title": "Starta en <highlight>konversation</highlight>",
