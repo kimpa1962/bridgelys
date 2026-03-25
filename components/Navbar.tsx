@@ -136,12 +136,12 @@ export default function Navbar() {
               {t("about")}
             </Link>
 
-{/*             <Link
+             <Link
               href="/guides"
               className="text-slate-700 hover:text-brand-navy font-medium"
             >
               {t("guides")}
-            </Link> */}
+            </Link> 
 
             <Link
               href="/contact"
@@ -238,13 +238,13 @@ export default function Navbar() {
             {t("about")}
           </Link>
 
-{/*           <Link
+         <Link
             href="/guides"
             className="block rounded-lg px-3 py-3 text-slate-900 font-medium hover:bg-slate-50"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             {t("guides")}
-          </Link> */}
+          </Link> 
 
           <Link
             href="/contact"

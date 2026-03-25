@@ -1,31 +1,78 @@
 import React from "react";
 import { Link } from "@/i18n/navigation";
-import { FileText, Search, Accessibility, ArrowRight } from "lucide-react";
+import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { FileText, ArrowRight, Search, Accessibility } from "lucide-react";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "guides.seo",
+  });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 export default async function GuidesPage() {
   const t = await getTranslations("guides");
 
-  const featuredGuides = t.raw("featuredGuides") as {
-    slug: string;
-    title: string;
-    description: string;
-    category: string;
-  }[];
+  const items = t.raw("featured.items") as {
+    procurement: {
+      title: string;
+      description: string;
+      category: string;
+    };
+    seo: {
+      title: string;
+      description: string;
+      category: string;
+    };
+    wcag: {
+      title: string;
+      description: string;
+      category: string;
+    };
+  };
+
+  const guides = [
+    {
+      key: "web-procurement-checklist",
+      title: items.procurement.title,
+      description: items.procurement.description,
+      category: items.procurement.category,
+    },
+    {
+      key: "what-is-seo",
+      title: items.seo.title,
+      description: items.seo.description,
+      category: items.seo.category,
+    },
+    {
+      key: "wcag-accessible-website",
+      title: items.wcag.title,
+      description: items.wcag.description,
+      category: items.wcag.category,
+    },
+  ];
 
   const topics = t.raw("topics") as string[];
 
   return (
-    <>
-      <section className="bg-brand-navy pt-32 pb-20" aria-labelledby="guides-title">
-        <div className="container mx-auto px-6 text-center">
-          <span className="text-brand-green-on-dark font-bold tracking-widest uppercase text-sm mb-4 block">
-            {t("header.eyebrow")}
-          </span>
-
+    <div className="min-h-screen bg-white">
+      <section className="pt-24 pb-16 bg-brand-navy text-white text-center" aria-labelledby="guides-title">
+        <div className="container mx-auto px-6">
           <h1
             id="guides-title"
-            className="font-display text-4xl md:text-6xl font-bold text-white mb-6"
+            className="font-display text-4xl md:text-6xl font-bold mb-4 text-brand-green-on-dark"
           >
             {t.rich("header.title", {
               highlight: (chunks) => (
@@ -34,30 +81,29 @@ export default async function GuidesPage() {
             })}
           </h1>
 
-          <p className="text-slate-200 text-xl max-w-3xl mx-auto font-sans leading-relaxed">
+          <p className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto">
             {t("header.description")}
           </p>
         </div>
       </section>
 
-      <section className="py-24 bg-white" aria-labelledby="featured-guides-title">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mb-14">
-            <h2
-              id="featured-guides-title"
-              className="font-display text-3xl md:text-4xl font-bold text-brand-navy mb-4"
-            >
-              {t("featured.title")}
-            </h2>
-            <p className="text-slate-600 text-lg leading-relaxed">
-              {t("featured.description")}
-            </p>
-          </div>
+      <section className="py-20" aria-labelledby="guides-featured-title">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <h2
+            id="guides-featured-title"
+            className="font-display text-3xl md:text-4xl font-bold text-brand-navy mb-6"
+          >
+            {t("featured.title")}
+          </h2>
+
+          <p className="text-slate-600 text-lg mb-12 max-w-2xl">
+            {t("featured.description")}
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {featuredGuides.map((guide) => (
+            {guides.map((guide) => (
               <article
-                key={guide.slug}
+                key={guide.key}
                 className="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-xl transition-all"
               >
                 <div className="flex items-center justify-between mb-6">
@@ -76,7 +122,7 @@ export default async function GuidesPage() {
                 </p>
 
                 <Link
-                  href={`/guides/${guide.slug}`}
+                  href={`/guides/${guide.key}`}
                   className="inline-flex items-center gap-2 font-bold text-brand-navy hover:text-brand-green transition-colors"
                 >
                   {t("featured.readMore")}
@@ -88,19 +134,18 @@ export default async function GuidesPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-slate-50" aria-labelledby="topics-title">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2
-              id="topics-title"
-              className="font-display text-3xl md:text-4xl font-bold text-brand-navy mb-4"
-            >
-              {t("topicsSection.title")}
-            </h2>
-            <p className="text-slate-600 text-lg leading-relaxed">
-              {t("topicsSection.description")}
-            </p>
-          </div>
+      <section className="py-20 bg-slate-50" aria-labelledby="guides-topics-title">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <h2
+            id="guides-topics-title"
+            className="font-display text-3xl md:text-4xl font-bold text-brand-navy mb-4"
+          >
+            {t("topicsSection.title")}
+          </h2>
+
+          <p className="text-slate-600 text-lg mb-10">
+            {t("topicsSection.description")}
+          </p>
 
           <div className="flex flex-wrap justify-center gap-4">
             {topics.map((topic) => (
@@ -115,72 +160,66 @@ export default async function GuidesPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-white" aria-labelledby="why-guides-title">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="text-center">
+      <section className="py-24 bg-white" aria-labelledby="guides-benefits-title">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+            <div>
               <div className="w-16 h-16 bg-brand-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <Search className="w-8 h-8 text-brand-green-on-dark" aria-hidden="true" />
               </div>
-              <h2 className="font-display text-xl font-bold text-brand-navy mb-4">
+              <h3 className="font-display text-xl font-bold text-brand-navy mb-4">
                 {t("benefits.seo.title")}
-              </h2>
-              <p className="text-slate-700 leading-relaxed">
-                {t("benefits.seo.text")}
-              </p>
+              </h3>
+              <p className="text-slate-700">{t("benefits.seo.text")}</p>
             </div>
 
-            <div className="text-center">
+            <div>
               <div className="w-16 h-16 bg-brand-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <Accessibility className="w-8 h-8 text-brand-green-on-dark" aria-hidden="true" />
               </div>
-              <h2 className="font-display text-xl font-bold text-brand-navy mb-4">
+              <h3 className="font-display text-xl font-bold text-brand-navy mb-4">
                 {t("benefits.clarity.title")}
-              </h2>
-              <p className="text-slate-700 leading-relaxed">
-                {t("benefits.clarity.text")}
-              </p>
+              </h3>
+              <p className="text-slate-700">{t("benefits.clarity.text")}</p>
             </div>
 
-            <div className="text-center">
+            <div>
               <div className="w-16 h-16 bg-brand-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <FileText className="w-8 h-8 text-brand-green-on-dark" aria-hidden="true" />
               </div>
-              <h2 className="font-display text-xl font-bold text-brand-navy mb-4">
+              <h3 className="font-display text-xl font-bold text-brand-navy mb-4">
                 {t("benefits.decisions.title")}
-              </h2>
-              <p className="text-slate-700 leading-relaxed">
-                {t("benefits.decisions.text")}
-              </p>
+              </h3>
+              <p className="text-slate-700">{t("benefits.decisions.text")}</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section
-        className="py-24 bg-brand-navy text-white border-t border-white/10 text-center"
-        aria-labelledby="guides-cta-title"
-      >
-        <div className="container mx-auto px-6 max-w-3xl">
-          <h2
-            id="guides-cta-title"
-            className="font-display text-2xl md:text-3xl font-bold mb-6"
-          >
-            {t("cta.title")}
-          </h2>
+      <section className="pb-24 pt-10" aria-labelledby="guides-cta-title">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="bg-brand-navy p-12 rounded-[3rem] text-center">
+            <h3
+              id="guides-cta-title"
+              className="text-2xl md:text-3xl font-bold text-white mb-4"
+            >
+              {t("cta.title")}
+            </h3>
 
-          <p className="text-slate-200 text-lg mb-10 leading-relaxed">
-            {t("cta.description")}
-          </p>
+            <p className="text-slate-300 mb-8 max-w-lg mx-auto">
+              {t("cta.description")}
+            </p>
 
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center bg-white text-brand-navy font-bold px-12 py-5 rounded-full hover:bg-slate-100 transition-all shadow-lg"
-          >
-            {t("cta.button")}
-          </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-brand-green-on-dark text-brand-navy px-10 py-4 rounded-full font-bold hover:scale-105 transition-all"
+            >
+              {t("cta.button")}{" "}
+              <ArrowRight className="w-5 h-5" aria-hidden="true" />
+            </Link>
+          </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
