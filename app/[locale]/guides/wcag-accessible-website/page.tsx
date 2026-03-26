@@ -61,6 +61,67 @@ export default async function WcagAccessibleWebsitePage() {
         </div>
       </section>
 
+      <section className="pb-20" aria-labelledby="wcag-synergy-title">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="prose prose-lg max-w-none text-slate-600">
+            <h2
+              id="wcag-synergy-title"
+              className="text-3xl font-bold text-brand-navy mb-6"
+            >
+              {t("synergy.title")}
+            </h2>
+
+            <p>{t("synergy.intro")}</p>
+
+            <p>
+              <strong>{t("synergy.altTextsLabel")}</strong> {t("synergy.altTextsText")}
+            </p>
+
+            <p>
+              <strong>{t("synergy.headingStructureLabel")}</strong> {t("synergy.headingStructureText")}
+            </p>
+
+            <p>
+              <strong>{t("synergy.semanticStructureLabel")}</strong> {t("synergy.semanticStructureText")}
+            </p>
+
+            <h3 className="text-2xl font-bold text-brand-navy mt-10 mb-4">
+              {t("synergy.procurementTitle")}
+            </h3>
+
+            <p>{t("synergy.procurementIntro")}</p>
+
+            <p>
+              <strong>{t("synergy.requirementsLabel")}</strong> {t("synergy.requirementsText")}
+            </p>
+
+            <p>
+              <strong>{t("synergy.analysisLabel")}</strong> {t("synergy.analysisText")}
+            </p>
+
+            <p>
+              <strong>{t("synergy.educationLabel")}</strong> {t("synergy.educationText")}
+            </p>
+
+            <h3 className="text-2xl font-bold text-brand-navy mt-10 mb-4">
+              {t("synergy.maintenanceTitle")}
+            </h3>
+
+            <p>{t("synergy.maintenanceIntro")}</p>
+
+            <p>
+              <strong>{t("synergy.toolsLabel")}</strong> {t("synergy.toolsText")}
+            </p>
+
+            <p>
+              <strong>{t("synergy.futureProofLabel")}</strong> {t("synergy.futureProofText")}
+            </p>
+
+            <p className="mt-8">{t("synergy.conclusion")}</p>
+          </div>
+        </div>
+      </section>
+
       <section className="pb-20" aria-labelledby="wcag-checklist-title">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="bg-slate-50 border border-slate-100 rounded-4xl p-8 md:p-10">

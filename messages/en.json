@@ -310,6 +310,31 @@
   "seo": {
     "title": "WCAG – what is required for an accessible website? | Bridgelys",
     "description": "Learn the basics of WCAG and what is required to create an accessible website with better usability for more people."
+  },
+  "synergy": {
+  "title": "WCAG 2025, SEO and web development – how it all connects",
+  "intro": "As of 28 June 2025, the requirements under the European Accessibility Act (EAA) were strengthened. This means that most websites, e-commerce solutions and digital services need to comply with WCAG 2.1 level AA.",
+  "altTextsLabel": "Alt texts.",
+  "altTextsText": "Help both screen readers and search engines understand content.",
+  "headingStructureLabel": "Heading structure (H1–H3).",
+  "headingStructureText": "Makes navigation easier for users and improves indexing.",
+  "semanticStructureLabel": "Semantic structure in the code.",
+  "semanticStructureText": "The code behind the website should be structured in a way that helps search engines and different types of assistive technologies for visitors with disabilities, for example screen readers.",
+  "procurementTitle": "Procurement of web development",
+  "procurementIntro": "If accessibility is not specified from the start, it becomes more expensive, more difficult and sometimes legally risky.",
+  "requirementsLabel": "Requirements specification.",
+  "requirementsText": "WCAG 2.1 AA should be a clear requirement.",
+  "analysisLabel": "Accessibility analyses.",
+  "analysisText": "Should be carried out before delivery.",
+  "educationLabel": "Training.",
+  "educationText": "Editors should learn how to structure content, layout and graphic elements so they do not negatively affect accessibility.",
+  "maintenanceTitle": "Web development and long-term maintenance",
+  "maintenanceIntro": "Accessibility is not something that is finished at launch.",
+  "toolsLabel": "Testing tools.",
+  "toolsText": "Use tools such as AXE or Siteimprove to monitor accessibility over time.",
+  "futureProofLabel": "Future-proofing.",
+  "futureProofText": "Build with the future in mind, for example WCAG 2.2 and upcoming standards.",
+  "conclusion": "When you integrate accessibility into web development, SEO and procurement, you do not just meet legal requirements, you build a website that works better for everyone."
   }
 },
   "contactPage": {

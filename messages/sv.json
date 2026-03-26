@@ -323,6 +323,31 @@
   "seo": {
     "title": "WCAG – vad krävs för en tillgänglig webbplats? | Bridgelys",
     "description": "Lär dig grunderna i WCAG och vad som krävs för att skapa en tillgänglig webbplats med bättre användbarhet för fler."
+  },
+  "synergy": {
+  "title": "WCAG 2025, SEO och webbutveckling – så hänger allt ihop",
+  "intro": "Från och med den 28 juni 2025 skärptes kraven enligt European Accessibility Act (EAA). Det innebär att de flesta webbplatser, e-handelslösningar och digitala tjänster behöver uppfylla WCAG 2.1 nivå AA.",
+  "altTextsLabel": "Alt-texter.",
+  "altTextsText": "Hjälper både skärmläsare och sökmotorer att förstå innehåll.",
+  "headingStructureLabel": "Rubrikstruktur (H1–H3).",
+  "headingStructureText": "Underlättar navigering för användare och förbättrar indexering.",
+  "semanticStructureLabel": "Semantisk struktur i koden.",
+  "semanticStructureText": "Koden bakom webbsidan ska vara uppbyggd enligt en struktur som hjälper sökmotorerna och olika typer av hjälpmedel för funktionsbegränsade besökare, till exempel uppläsningshjälpmedel.",
+  "procurementTitle": "Upphandling av webbutveckling",
+  "procurementIntro": "Om tillgänglighet inte kravställs från början blir det dyrare, svårare och ibland juridiskt riskfyllt.",
+  "requirementsLabel": "Kravspecifikation.",
+  "requirementsText": "WCAG 2.1 AA ska vara ett tydligt krav.",
+  "analysisLabel": "Tillgänglighetsanalyser.",
+  "analysisText": "Ska genomföras före leverans.",
+  "educationLabel": "Utbildning.",
+  "educationText": "Redaktörer får lära sig att strukturera innehåll, disposition och grafiska element så de inte påverkar tillgänglighet negativt.",
+  "maintenanceTitle": "Webbutveckling och långsiktigt underhåll",
+  "maintenanceIntro": "Tillgänglighet är inget som blir klart vid lansering.",
+  "toolsLabel": "Testverktyg.",
+  "toolsText": "Använd verktyg som AXE eller Siteimprove för att följa upp tillgängligheten över tid.",
+  "futureProofLabel": "Framtidssäkring.",
+  "futureProofText": "Bygg med framtiden i åtanke, till exempel WCAG 2.2 och kommande standarder.",
+  "conclusion": "När du integrerar tillgänglighet i webbutveckling, SEO och upphandling uppfyller du inte bara lagkrav, du bygger en webbplats som fungerar bättre för alla användare."
   }
 },
   "contactPage": {
