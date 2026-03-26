@@ -2,32 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bridgelys.com/</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://bridgelys.com/about-us</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://bridgelys.com/contact</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://bridgelys.com/join-network</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://bridgelys.com/services/procurement</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://bridgelys.com/services/project-management</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://bridgelys.com/services/accessibility</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://bridgelys.com/services/seo</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://bridgelys.com/services/educations</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
   <url>
     <loc>https://bridgelys.com/services/web-development</loc>
+    <lastmod>2026-03-20</lastmod>
   </url>
+    <url>
+  <loc>https://bridgelys.com/guides</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>https://bridgelys.com/guides/web-procurement-checklist</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>https://bridgelys.com/guides/what-is-seo</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>https://bridgelys.com/guides/wcag-accessible-website</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
 </urlset>
