@@ -329,7 +329,7 @@
   "educationLabel": "Training.",
   "educationText": "Editors should learn how to structure content, layout and graphic elements so they do not negatively affect accessibility.",
   "maintenanceTitle": "Web development and long-term maintenance",
-  "maintenanceIntro": "Accessibility is not something that is finished at launch.",
+  "maintenanceIntro": "Tillgänglighetsarbetet är inget som slutar efter lansering.",
   "toolsLabel": "Testing tools.",
   "toolsText": "Use tools such as AXE or Siteimprove to monitor accessibility over time.",
   "futureProofLabel": "Future-proofing.",

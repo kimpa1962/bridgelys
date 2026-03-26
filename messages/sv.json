@@ -342,7 +342,7 @@
   "educationLabel": "Utbildning.",
   "educationText": "Redaktörer får lära sig att strukturera innehåll, disposition och grafiska element så de inte påverkar tillgänglighet negativt.",
   "maintenanceTitle": "Webbutveckling och långsiktigt underhåll",
-  "maintenanceIntro": "Tillgänglighet är inget som blir klart vid lansering.",
+  "maintenanceIntro": "Tillgänglighetsarbetet är inget som slutar efter lansering.",
   "toolsLabel": "Testverktyg.",
   "toolsText": "Använd verktyg som AXE eller Siteimprove för att följa upp tillgängligheten över tid.",
   "futureProofLabel": "Framtidssäkring.",
