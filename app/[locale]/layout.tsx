@@ -29,12 +29,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function LocaleLayout({
   children,
-  params
+
 }: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
+  
   const messages = await getMessages();
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
 

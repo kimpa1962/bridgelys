@@ -62,7 +62,7 @@ export default async function WebProcurementChecklistPage() {
 
       <section className="pb-20" aria-labelledby="procurement-checklist-title">
         <div className="container mx-auto px-6 max-w-4xl">
-          <div className="bg-slate-50 border border-slate-100 rounded-[2rem] p-8 md:p-10">
+          <div className="bg-slate-50 border border-slate-100 rounded-4xl p-8 md:p-10">
             <h2
               id="procurement-checklist-title"
               className="font-display text-2xl md:text-3xl font-bold text-brand-navy mb-8"
@@ -90,7 +90,7 @@ export default async function WebProcurementChecklistPage() {
 
       <section className="pb-10" aria-labelledby="related-service-title">
         <div className="container mx-auto px-6 max-w-4xl">
-          <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8 md:p-10">
+          <div className="rounded-4xl border border-slate-200 bg-slate-50 p-8 md:p-10">
             <h2
               id="related-service-title"
               className="font-display text-2xl md:text-3xl font-bold text-brand-navy mb-4"
