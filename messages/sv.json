@@ -182,6 +182,11 @@
           "title": "WCAG – vad krävs för en tillgänglig webbplats?",
           "description": "Förstå grunderna i tillgänglighet, vanliga brister och vad som är viktigt att få rätt från början.",
           "category": "Tillgänglighet"
+        },
+        "cost": {
+          "title": "Vad kostar en hemsida 2026?",
+          "description": "Vad påverkar priset på en webbplats och hur förändrar AI kostnaderna i moderna webbprojekt?",
+          "category": "Webbutveckling"
         }
       }
     },
@@ -221,135 +226,166 @@
     }
   },
   "guideProcurement": {
-  "eyebrow": "Guide",
-  "title": "Upphandling av webb",
-  "intro": "Att upphandla en webbplats eller digital lösning kräver rätt kravställning från början. Här är en checklista som hjälper dig undvika vanliga fallgropar.",
-  "content": {
-    "title": "Så lyckas du med din upphandling",
-    "paragraph1": "En vanlig orsak till misslyckade webbprojekt är otydliga krav. Det leder till missförstånd, ökade kostnader och lösningar som inte motsvarar verksamhetens behov.",
-    "paragraph2": "Genom att vara tydlig i upphandlingen kan du säkerställa att du får rätt lösning, rätt teknik och rätt partner från början."
-  },
-  "checklistTitle": "Checklista",
-  "checklistAria": "Checklista för upphandling av webb",
-  "checklist": [
-    "Definiera syfte och mål med webbplatsen",
-    "Beskriv målgrupper och användarbehov",
-    "Ställ krav på tillgänglighet (WCAG)",
-    "Undvik tekniska inlåsningar",
-    "Säkerställ ägande av kod och data",
-    "Definiera tydlig budget och omfattning",
-    "Ställ krav på SEO och prestanda"
-  ],
-  "cta": {
-    "title": "Behöver du stöd i en upphandling?",
-    "description": "Vi hjälper organisationer att formulera krav och välja rätt lösning från början.",
-    "button": "Kontakta oss"
-  },
+    "eyebrow": "Guide",
+    "title": "Upphandling av webb",
+    "intro": "Att upphandla en webbplats eller digital lösning kräver rätt kravställning från början. Här är en checklista som hjälper dig undvika vanliga fallgropar.",
+    "content": {
+      "title": "Så lyckas du med din upphandling",
+      "paragraph1": "En vanlig orsak till misslyckade webbprojekt är otydliga krav. Det leder till missförstånd, ökade kostnader och lösningar som inte motsvarar verksamhetens behov.",
+      "paragraph2": "Genom att vara tydlig i upphandlingen kan du säkerställa att du får rätt lösning, rätt teknik och rätt partner från början."
+    },
+    "checklistTitle": "Checklista",
+    "checklistAria": "Checklista för upphandling av webb",
+    "checklist": [
+      "Definiera syfte och mål med webbplatsen",
+      "Beskriv målgrupper och användarbehov",
+      "Ställ krav på tillgänglighet (WCAG)",
+      "Undvik tekniska inlåsningar",
+      "Säkerställ ägande av kod och data",
+      "Definiera tydlig budget och omfattning",
+      "Ställ krav på SEO och prestanda"
+    ],
+    "cta": {
+      "title": "Behöver du stöd i en upphandling?",
+      "description": "Vi hjälper organisationer att formulera krav och välja rätt lösning från början.",
+      "button": "Kontakta oss"
+    },
     "seo": {
       "title": "Upphandling-checklista | Bridgelys",
       "description": "Vad du bör tänka på när du upphandlar webbplats, teknisk lösning eller extern leverantör."
+    },
+    "relatedService": {
+      "title": "Så arbetar vi med upphandling",
+      "description": "Få en tydligare bild av hur vi hjälper organisationer genom hela upphandlingsprocessen.",
+      "link": "Läs mer under våra tjänster inom upphandling"
+    }
   },
-  "relatedService": {
-  "title": "Så arbetar vi med upphandling",
-  "description": "Få en tydligare bild av hur vi hjälper organisationer genom hela upphandlingsprocessen.",
-  "link": "Läs mer under våra tjänster inom upphandling"
-  }
-},
-"guideSeo": {
-  "title": "Vad är SEO och hur fungerar det?",
-  "intro": "SEO hjälper din webbplats att synas när rätt personer söker efter det du erbjuder. Här går vi igenom grunderna och vad som faktiskt gör skillnad.",
-  "content": {
-    "title": "SEO handlar om att bli hittad av rätt målgrupp",
-    "paragraph1": "SEO står för sökmotoroptimering och handlar om att göra din webbplats begriplig, relevant och tekniskt stark för både användare och sökmotorer. Målet är inte bara att få mer trafik, utan att få rätt trafik.",
-    "paragraph2": "Ett bra SEO-arbete bygger på flera delar samtidigt: teknisk struktur, laddtider, mobilvänlighet, tydliga sidtitlar, relevant innehåll och en webbplats som är lätt att använda. Det är kombinationen som avgör hur väl du syns över tid.",
-    "paragraph3": "För många verksamheter är SEO en långsiktig investering. När innehåll och teknik samspelar bättre ökar chansen att bli hittad av personer som redan letar efter dina tjänster eller din kompetens."
+  "guideSeo": {
+    "title": "Vad är SEO och hur fungerar det?",
+    "intro": "SEO hjälper din webbplats att synas när rätt personer söker efter det du erbjuder. Här går vi igenom grunderna och vad som faktiskt gör skillnad.",
+    "content": {
+      "title": "SEO handlar om att bli hittad av rätt målgrupp",
+      "paragraph1": "SEO står för sökmotoroptimering och handlar om att göra din webbplats begriplig, relevant och tekniskt stark för både användare och sökmotorer. Målet är inte bara att få mer trafik, utan att få rätt trafik.",
+      "paragraph2": "Ett bra SEO-arbete bygger på flera delar samtidigt: teknisk struktur, laddtider, mobilvänlighet, tydliga sidtitlar, relevant innehåll och en webbplats som är lätt att använda. Det är kombinationen som avgör hur väl du syns över tid.",
+      "paragraph3": "För många verksamheter är SEO en långsiktig investering. När innehåll och teknik samspelar bättre ökar chansen att bli hittad av personer som redan letar efter dina tjänster eller din kompetens."
+    },
+    "checklistTitle": "Grunderna i SEO",
+    "checklistAria": "Checklista för grunderna i SEO",
+    "checklist": [
+      "Ha tydliga sidtitlar och meta descriptions",
+      "Skapa relevant innehåll utifrån vad målgruppen söker efter",
+      "Säkerställ att webbplatsen fungerar bra i mobil",
+      "Förbättra laddtider och teknisk prestanda",
+      "Använd tydliga rubriker och en logisk sidstruktur",
+      "Internlänka mellan relaterade sidor och guider",
+      "Följ upp synlighet och beteende över tid"
+    ],
+    "relatedService": {
+      "title": "Vill du fördjupa dig i SEO?",
+      "description": "Läs mer om hur vi arbetar med teknisk SEO, innehåll, struktur och synlighet för att hjälpa rätt kunder att hitta dig.",
+      "link": "Läs mer om våra SEO-tjänster"
+    },
+    "cta": {
+      "title": "Vill du förbättra din synlighet?",
+      "description": "Vi hjälper organisationer och företag att bygga långsiktig synlighet med SEO som fungerar i praktiken.",
+      "button": "Kontakta oss"
+    },
+    "seo": {
+      "title": "Vad är SEO och hur fungerar det? | Bridgelys",
+      "description": "Lär dig grunderna i SEO och hur teknisk struktur, innehåll och användarupplevelse hjälper din webbplats att synas bättre."
+    }
   },
-  "checklistTitle": "Grunderna i SEO",
-  "checklistAria": "Checklista för grunderna i SEO",
-  "checklist": [
-    "Ha tydliga sidtitlar och meta descriptions",
-    "Skapa relevant innehåll utifrån vad målgruppen söker efter",
-    "Säkerställ att webbplatsen fungerar bra i mobil",
-    "Förbättra laddtider och teknisk prestanda",
-    "Använd tydliga rubriker och en logisk sidstruktur",
-    "Internlänka mellan relaterade sidor och guider",
-    "Följ upp synlighet och beteende över tid"
-  ],
-  "relatedService": {
-    "title": "Vill du fördjupa dig i SEO?",
-    "description": "Läs mer om hur vi arbetar med teknisk SEO, innehåll, struktur och synlighet för att hjälpa rätt kunder att hitta dig.",
-    "link": "Läs mer om våra SEO-tjänster"
+  "guideWcag": {
+    "title": "WCAG – vad krävs för en tillgänglig webbplats?",
+    "intro": "En tillgänglig webbplats gör det enklare för fler att använda dina digitala tjänster. Här går vi igenom grunderna i WCAG och vad som är viktigt att få rätt från början.",
+    "content": {
+      "title": "Tillgänglighet handlar om både användbarhet och ansvar",
+      "paragraph1": "WCAG är riktlinjer för hur digitala tjänster kan göras mer tillgängliga för personer med olika behov och förutsättningar. Det handlar bland annat om att innehåll ska gå att uppfatta, förstå och använda, oavsett om användaren navigerar med tangentbord, skärmläsare eller andra hjälpmedel.",
+      "paragraph2": "Vanliga brister är låg kontrast, otydliga formulär, saknade alt-texter, felaktig rubrikstruktur och funktioner som inte går att använda utan mus. Många av dessa problem påverkar inte bara tillgängligheten, utan också användarupplevelsen för alla besökare.",
+      "paragraph3": "Att arbeta med tillgänglighet tidigt i projektet sparar både tid och kostnader. Det minskar behovet av sena korrigeringar och ger en mer hållbar webbplats som fungerar bättre för fler."
+    },
+    "checklistTitle": "Grunderna i tillgänglig webb",
+    "checklistAria": "Checklista för grunderna i tillgänglig webb",
+    "checklist": [
+      "Säkerställ tillräcklig färgkontrast mellan text och bakgrund",
+      "Använd tydliga rubriker i en logisk struktur",
+      "Skriv alt-texter för meningsbärande bilder",
+      "Se till att hela webbplatsen går att använda med tangentbord",
+      "Märk upp formulärfält och felmeddelanden tydligt",
+      "Undvik länkar och knappar med otydlig funktion",
+      "Testa innehållet med skärmläsare och andra hjälpmedel"
+    ],
+    "relatedService": {
+      "title": "Vill du fördjupa dig i tillgänglighet?",
+      "description": "Läs mer om hur vi arbetar med WCAG, granskningar och rådgivning för att göra digitala tjänster mer inkluderande och användbara.",
+      "link": "Läs mer om våra tjänster inom tillgänglighet"
+    },
+    "cta": {
+      "title": "Behöver du stöd med tillgänglighet?",
+      "description": "Vi hjälper organisationer och företag att förstå krav, prioritera rätt åtgärder och bygga mer tillgängliga webbplatser.",
+      "button": "Kontakta oss"
+    },
+    "seo": {
+      "title": "WCAG – vad krävs för en tillgänglig webbplats? | Bridgelys",
+      "description": "Lär dig grunderna i WCAG och vad som krävs för att skapa en tillgänglig webbplats med bättre användbarhet för fler."
+    },
+    "synergy": {
+      "title": "WCAG 2025, SEO och webbutveckling – så hänger allt ihop",
+      "intro": "Från och med den 28 juni 2025 skärptes kraven enligt European Accessibility Act (EAA). Det innebär att de flesta webbplatser, e-handelslösningar och digitala tjänster behöver uppfylla WCAG 2.1 nivå AA.",
+      "altTextsLabel": "Alt-texter.",
+      "altTextsText": "Hjälper både skärmläsare och sökmotorer att förstå innehåll.",
+      "headingStructureLabel": "Rubrikstruktur (H1–H3).",
+      "headingStructureText": "Underlättar navigering för användare och förbättrar indexering.",
+      "semanticStructureLabel": "Semantisk struktur i koden.",
+      "semanticStructureText": "Koden bakom webbsidan ska vara uppbyggd enligt en struktur som hjälper sökmotorerna och olika typer av hjälpmedel för funktionsbegränsade besökare, till exempel uppläsningshjälpmedel.",
+      "procurementTitle": "Upphandling av webbutveckling",
+      "procurementIntro": "Om tillgänglighet inte kravställs från början blir det dyrare, svårare och ibland juridiskt riskfyllt.",
+      "requirementsLabel": "Kravspecifikation.",
+      "requirementsText": "WCAG 2.1 AA ska vara ett tydligt krav.",
+      "analysisLabel": "Tillgänglighetsanalyser.",
+      "analysisText": "Ska genomföras före leverans.",
+      "educationLabel": "Utbildning.",
+      "educationText": "Redaktörer får lära sig att strukturera innehåll, disposition och grafiska element så de inte påverkar tillgänglighet negativt.",
+      "maintenanceTitle": "Webbutveckling och långsiktigt underhåll",
+      "maintenanceIntro": "Tillgänglighetsarbetet är inget som slutar efter lansering.",
+      "toolsLabel": "Testverktyg.",
+      "toolsText": "Använd verktyg som AXE eller Siteimprove för att följa upp tillgängligheten över tid.",
+      "futureProofLabel": "Framtidssäkring.",
+      "futureProofText": "Bygg med framtiden i åtanke, till exempel WCAG 2.2 och kommande standarder.",
+      "conclusion": "När du integrerar tillgänglighet i webbutveckling, SEO och upphandling uppfyller du inte bara lagkrav, du bygger en webbplats som fungerar bättre för alla användare."
+    }
   },
-  "cta": {
-    "title": "Vill du förbättra din synlighet?",
-    "description": "Vi hjälper organisationer och företag att bygga långsiktig synlighet med SEO som fungerar i praktiken.",
-    "button": "Kontakta oss"
+  "guideCost": {
+    "seo": {
+      "title": "Vad kostar en hemsida 2026? | Bridgelys",
+      "description": "Vad påverkar priset på en webbplats och hur förändrar AI kostnaderna i moderna webbprojekt?"
+    },
+    "title": "Vad kostar en hemsida 2026?",
+    "intro": "AI förändrar hur vi bygger webb. Vissa delar går snabbare, men det som avgör priset är fortfarande kravställning, prioritering och rätt beslut från början.",
+    "section1": {
+      "text": "Att ta fram en webbplats har alltid varit en balans mellan kostnad, kvalitet och rätt lösning. Med AI förändras spelplanen, men det betyder inte att hela projektet automatiskt blir billigt."
+    },
+    "section2": {
+      "title": "Det som går snabbare med AI",
+      "item1": "Kodgenerering",
+      "item2": "Struktur och analys",
+      "item3": "Innehållsutkast"
+    },
+    "section3": {
+      "title": "Det som fortfarande påverkar kostnaden mest",
+      "item1": "Att förstå verksamheten och behoven",
+      "item2": "Att fatta rätt beslut tidigt",
+      "item3": "Att prioritera rätt funktioner och nivå"
+    },
+    "section4": {
+      "title": "AI kan också höja kvaliteten",
+      "text": "Rätt använt gör AI det enklare att arbeta med tillgänglighet enligt WCAG och teknisk SEO. Det kan alltså både effektivisera arbetet och förbättra resultatet."
+    },
+    "section5": {
+      "title": "Slutsats",
+      "text": "Det som avgör vad en hemsida kostar är inte bara tekniken, utan hur väl projektet planeras och genomförs. Målet bör inte vara att göra det så billigt som möjligt, utan att göra rätt från början."
+    }
   },
-  "seo": {
-    "title": "Vad är SEO och hur fungerar det? | Bridgelys",
-    "description": "Lär dig grunderna i SEO och hur teknisk struktur, innehåll och användarupplevelse hjälper din webbplats att synas bättre."
-  }
-},
-"guideWcag": {
-  "title": "WCAG – vad krävs för en tillgänglig webbplats?",
-  "intro": "En tillgänglig webbplats gör det enklare för fler att använda dina digitala tjänster. Här går vi igenom grunderna i WCAG och vad som är viktigt att få rätt från början.",
-  "content": {
-    "title": "Tillgänglighet handlar om både användbarhet och ansvar",
-    "paragraph1": "WCAG är riktlinjer för hur digitala tjänster kan göras mer tillgängliga för personer med olika behov och förutsättningar. Det handlar bland annat om att innehåll ska gå att uppfatta, förstå och använda, oavsett om användaren navigerar med tangentbord, skärmläsare eller andra hjälpmedel.",
-    "paragraph2": "Vanliga brister är låg kontrast, otydliga formulär, saknade alt-texter, felaktig rubrikstruktur och funktioner som inte går att använda utan mus. Många av dessa problem påverkar inte bara tillgängligheten, utan också användarupplevelsen för alla besökare.",
-    "paragraph3": "Att arbeta med tillgänglighet tidigt i projektet sparar både tid och kostnader. Det minskar behovet av sena korrigeringar och ger en mer hållbar webbplats som fungerar bättre för fler."
-  },
-  "checklistTitle": "Grunderna i tillgänglig webb",
-  "checklistAria": "Checklista för grunderna i tillgänglig webb",
-  "checklist": [
-    "Säkerställ tillräcklig färgkontrast mellan text och bakgrund",
-    "Använd tydliga rubriker i en logisk struktur",
-    "Skriv alt-texter för meningsbärande bilder",
-    "Se till att hela webbplatsen går att använda med tangentbord",
-    "Märk upp formulärfält och felmeddelanden tydligt",
-    "Undvik länkar och knappar med otydlig funktion",
-    "Testa innehållet med skärmläsare och andra hjälpmedel"
-  ],
-  "relatedService": {
-    "title": "Vill du fördjupa dig i tillgänglighet?",
-    "description": "Läs mer om hur vi arbetar med WCAG, granskningar och rådgivning för att göra digitala tjänster mer inkluderande och användbara.",
-    "link": "Läs mer om våra tjänster inom tillgänglighet"
-  },
-  "cta": {
-    "title": "Behöver du stöd med tillgänglighet?",
-    "description": "Vi hjälper organisationer och företag att förstå krav, prioritera rätt åtgärder och bygga mer tillgängliga webbplatser.",
-    "button": "Kontakta oss"
-  },
-  "seo": {
-    "title": "WCAG – vad krävs för en tillgänglig webbplats? | Bridgelys",
-    "description": "Lär dig grunderna i WCAG och vad som krävs för att skapa en tillgänglig webbplats med bättre användbarhet för fler."
-  },
-  "synergy": {
-  "title": "WCAG 2025, SEO och webbutveckling – så hänger allt ihop",
-  "intro": "Från och med den 28 juni 2025 skärptes kraven enligt European Accessibility Act (EAA). Det innebär att de flesta webbplatser, e-handelslösningar och digitala tjänster behöver uppfylla WCAG 2.1 nivå AA.",
-  "altTextsLabel": "Alt-texter.",
-  "altTextsText": "Hjälper både skärmläsare och sökmotorer att förstå innehåll.",
-  "headingStructureLabel": "Rubrikstruktur (H1–H3).",
-  "headingStructureText": "Underlättar navigering för användare och förbättrar indexering.",
-  "semanticStructureLabel": "Semantisk struktur i koden.",
-  "semanticStructureText": "Koden bakom webbsidan ska vara uppbyggd enligt en struktur som hjälper sökmotorerna och olika typer av hjälpmedel för funktionsbegränsade besökare, till exempel uppläsningshjälpmedel.",
-  "procurementTitle": "Upphandling av webbutveckling",
-  "procurementIntro": "Om tillgänglighet inte kravställs från början blir det dyrare, svårare och ibland juridiskt riskfyllt.",
-  "requirementsLabel": "Kravspecifikation.",
-  "requirementsText": "WCAG 2.1 AA ska vara ett tydligt krav.",
-  "analysisLabel": "Tillgänglighetsanalyser.",
-  "analysisText": "Ska genomföras före leverans.",
-  "educationLabel": "Utbildning.",
-  "educationText": "Redaktörer får lära sig att strukturera innehåll, disposition och grafiska element så de inte påverkar tillgänglighet negativt.",
-  "maintenanceTitle": "Webbutveckling och långsiktigt underhåll",
-  "maintenanceIntro": "Tillgänglighetsarbetet är inget som slutar efter lansering.",
-  "toolsLabel": "Testverktyg.",
-  "toolsText": "Använd verktyg som AXE eller Siteimprove för att följa upp tillgängligheten över tid.",
-  "futureProofLabel": "Framtidssäkring.",
-  "futureProofText": "Bygg med framtiden i åtanke, till exempel WCAG 2.2 och kommande standarder.",
-  "conclusion": "När du integrerar tillgänglighet i webbutveckling, SEO och upphandling uppfyller du inte bara lagkrav, du bygger en webbplats som fungerar bättre för alla användare."
-  }
-},
   "contactPage": {
     "hero": {
       "title": "Starta en <highlight>konversation</highlight>",

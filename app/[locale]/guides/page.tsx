@@ -41,6 +41,11 @@ export default async function GuidesPage() {
       description: string;
       category: string;
     };
+    cost: {
+      title: string;
+      description: string;
+      category: string;
+    };
   };
 
   const guides = [
@@ -61,6 +66,12 @@ export default async function GuidesPage() {
       title: items.wcag.title,
       description: items.wcag.description,
       category: items.wcag.category,
+    },
+    {
+      key: "how-much-does-a-website-cost",
+      title: items.cost.title,
+      description: items.cost.description,
+      category: items.cost.category,
     },
   ];
 

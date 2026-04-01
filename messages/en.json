@@ -169,6 +169,11 @@
           "title": "WCAG – what is required for an accessible website?",
           "description": "Understand the basics of accessibility, common issues and what is important to get right from the start.",
           "category": "Accessibility"
+        },
+        "cost": {
+          "title": "How much does a website cost in 2026?",
+          "description": "What affects the cost of a website and how is AI changing pricing in modern web projects?",
+          "category": "Web development"
         }
       }
     },
@@ -202,141 +207,172 @@
       "description": "We help organisations and companies with web, SEO, accessibility and digital development.",
       "button": "Contact Bridgelys"
     },
-      "seo": {
+    "seo": {
       "title": "Guides & insights | Bridgelys",
       "description": "Here we regularly publish guides and tips based on our expertise in web, SEO, and accessibility."
     }
   },
   "guideProcurement": {
-  "eyebrow": "Guide",
-  "title": "Web procurement",
-  "intro": "Procuring a website or digital solution requires clear requirements from the start. Here is a checklist to help you avoid common pitfalls.",
-  "content": {
-    "title": "How to succeed with your procurement",
-    "paragraph1": "A common reason for failed web projects is unclear requirements. This leads to misunderstandings, increased costs and solutions that do not meet business needs.",
-    "paragraph2": "By being clear in your procurement, you can ensure you get the right solution, the right technology and the right partner from the beginning."
-  },
-  "checklistTitle": "Checklist",
-  "checklistAria": "Checklist for web procurement",
-  "checklist": [
-    "Define purpose and goals of the website",
-    "Describe target groups and user needs",
-    "Set accessibility requirements (WCAG)",
-    "Avoid technical lock-in",
-    "Ensure ownership of code and data",
-    "Define clear budget and scope",
-    "Include SEO and performance requirements"
-  ],
-  "cta": {
-    "title": "Need support in a procurement?",
-    "description": "We help organisations define requirements and choose the right solution from the start.",
-    "button": "Contact us"
-  },
-  "seo": {
+    "eyebrow": "Guide",
+    "title": "Web procurement",
+    "intro": "Procuring a website or digital solution requires clear requirements from the start. Here is a checklist to help you avoid common pitfalls.",
+    "content": {
+      "title": "How to succeed with your procurement",
+      "paragraph1": "A common reason for failed web projects is unclear requirements. This leads to misunderstandings, increased costs and solutions that do not meet business needs.",
+      "paragraph2": "By being clear in your procurement, you can ensure you get the right solution, the right technology and the right partner from the beginning."
+    },
+    "checklistTitle": "Checklist",
+    "checklistAria": "Checklist for web procurement",
+    "checklist": [
+      "Define purpose and goals of the website",
+      "Describe target groups and user needs",
+      "Set accessibility requirements (WCAG)",
+      "Avoid technical lock-in",
+      "Ensure ownership of code and data",
+      "Define clear budget and scope",
+      "Include SEO and performance requirements"
+    ],
+    "cta": {
+      "title": "Need support in a procurement?",
+      "description": "We help organisations define requirements and choose the right solution from the start.",
+      "button": "Contact us"
+    },
+    "seo": {
       "title": "Procurement-checklist | Bridgelys",
       "description": "What you should consider when purchasing a website, technical solution or external supplier."
+    },
+    "relatedService": {
+      "title": "How we work with procurement",
+      "description": "Get a clearer picture of how we help organizations throughout the procurement process.",
+      "link": "Learn more about our procurement services"
+    }
   },
-  "relatedService": {
-  "title": "How we work with procurement",
-  "description": "Get a clearer picture of how we help organizations throughout the procurement process.",
-  "link": "Learn more about our procurement services"
-}
-},
-"guideSeo": {
-  "title": "What is SEO and how does it work?",
-  "intro": "SEO helps your website get discovered when the right people search for what you offer. Here we explain the basics and what actually makes a difference.",
-  "content": {
-    "title": "SEO is about being found by the right audience",
-    "paragraph1": "SEO stands for search engine optimization and is about making your website clear, relevant and technically strong for both users and search engines. The goal is not just to get more traffic, but to get the right traffic.",
-    "paragraph2": "Good SEO work depends on several parts working together: technical structure, loading speed, mobile usability, clear page titles, relevant content and a website that is easy to use. It is the combination that determines how visible you become over time.",
-    "paragraph3": "For many organisations, SEO is a long-term investment. When content and technology work better together, your chances increase of being found by people already looking for your services or expertise."
+  "guideSeo": {
+    "title": "What is SEO and how does it work?",
+    "intro": "SEO helps your website get discovered when the right people search for what you offer. Here we explain the basics and what actually makes a difference.",
+    "content": {
+      "title": "SEO is about being found by the right audience",
+      "paragraph1": "SEO stands for search engine optimization and is about making your website clear, relevant and technically strong for both users and search engines. The goal is not just to get more traffic, but to get the right traffic.",
+      "paragraph2": "Good SEO work depends on several parts working together: technical structure, loading speed, mobile usability, clear page titles, relevant content and a website that is easy to use. It is the combination that determines how visible you become over time.",
+      "paragraph3": "For many organisations, SEO is a long-term investment. When content and technology work better together, your chances increase of being found by people already looking for your services or expertise."
+    },
+    "checklistTitle": "SEO basics",
+    "checklistAria": "Checklist for SEO basics",
+    "checklist": [
+      "Use clear page titles and meta descriptions",
+      "Create relevant content based on what your audience is searching for",
+      "Make sure the website works well on mobile devices",
+      "Improve loading speed and technical performance",
+      "Use clear headings and a logical page structure",
+      "Add internal links between related pages and guides",
+      "Track visibility and user behaviour over time"
+    ],
+    "relatedService": {
+      "title": "Want to go deeper into SEO?",
+      "description": "Learn more about how we work with technical SEO, content, structure and visibility to help the right customers find you.",
+      "link": "Learn more about our SEO services"
+    },
+    "cta": {
+      "title": "Want to improve your visibility?",
+      "description": "We help organisations and companies build long-term visibility with SEO that works in practice.",
+      "button": "Contact us"
+    },
+    "seo": {
+      "title": "What is SEO and how does it work? | Bridgelys",
+      "description": "Learn the basics of SEO and how technical structure, content and user experience help your website become more visible."
+    }
   },
-  "checklistTitle": "SEO basics",
-  "checklistAria": "Checklist for SEO basics",
-  "checklist": [
-    "Use clear page titles and meta descriptions",
-    "Create relevant content based on what your audience is searching for",
-    "Make sure the website works well on mobile devices",
-    "Improve loading speed and technical performance",
-    "Use clear headings and a logical page structure",
-    "Add internal links between related pages and guides",
-    "Track visibility and user behaviour over time"
-  ],
-  "relatedService": {
-    "title": "Want to go deeper into SEO?",
-    "description": "Learn more about how we work with technical SEO, content, structure and visibility to help the right customers find you.",
-    "link": "Learn more about our SEO services"
+  "guideWcag": {
+    "title": "WCAG – what is required for an accessible website?",
+    "intro": "An accessible website makes it easier for more people to use your digital services. Here we explain the basics of WCAG and what is important to get right from the start.",
+    "content": {
+      "title": "Accessibility is about both usability and responsibility",
+      "paragraph1": "WCAG is a set of guidelines for making digital services more accessible to people with different needs and abilities. This includes making content perceivable, understandable and usable, whether the user navigates with a keyboard, screen reader or other assistive technologies.",
+      "paragraph2": "Common issues include low contrast, unclear forms, missing alt text, incorrect heading structure and functions that cannot be used without a mouse. Many of these problems affect not only accessibility, but also the overall user experience for all visitors.",
+      "paragraph3": "Working with accessibility early in a project saves both time and money. It reduces the need for late fixes and creates a more sustainable website that works better for more people."
+    },
+    "checklistTitle": "Accessible web basics",
+    "checklistAria": "Checklist for accessible web basics",
+    "checklist": [
+      "Ensure sufficient colour contrast between text and background",
+      "Use clear headings in a logical structure",
+      "Write alt text for meaningful images",
+      "Make sure the entire website can be used with a keyboard",
+      "Label form fields and error messages clearly",
+      "Avoid links and buttons with unclear purpose",
+      "Test content with screen readers and other assistive technologies"
+    ],
+    "relatedService": {
+      "title": "Want to go deeper into accessibility?",
+      "description": "Learn more about how we work with WCAG, audits and advisory services to make digital services more inclusive and usable.",
+      "link": "Learn more about our accessibility services"
+    },
+    "cta": {
+      "title": "Need support with accessibility?",
+      "description": "We help organisations and companies understand requirements, prioritise the right actions and build more accessible websites.",
+      "button": "Contact us"
+    },
+    "seo": {
+      "title": "WCAG – what is required for an accessible website? | Bridgelys",
+      "description": "Learn the basics of WCAG and what is required to create an accessible website with better usability for more people."
+    },
+    "synergy": {
+      "title": "WCAG 2025, SEO and web development – how it all connects",
+      "intro": "As of 28 June 2025, the requirements under the European Accessibility Act (EAA) were strengthened. This means that most websites, e-commerce solutions and digital services need to comply with WCAG 2.1 level AA.",
+      "altTextsLabel": "Alt texts.",
+      "altTextsText": "Help both screen readers and search engines understand content.",
+      "headingStructureLabel": "Heading structure (H1–H3).",
+      "headingStructureText": "Makes navigation easier for users and improves indexing.",
+      "semanticStructureLabel": "Semantic structure in the code.",
+      "semanticStructureText": "The code behind the website should be structured in a way that helps search engines and different types of assistive technologies for visitors with disabilities, for example screen readers.",
+      "procurementTitle": "Procurement of web development",
+      "procurementIntro": "If accessibility is not specified from the start, it becomes more expensive, more difficult and sometimes legally risky.",
+      "requirementsLabel": "Requirements specification.",
+      "requirementsText": "WCAG 2.1 AA should be a clear requirement.",
+      "analysisLabel": "Accessibility analyses.",
+      "analysisText": "Should be carried out before delivery.",
+      "educationLabel": "Training.",
+      "educationText": "Editors should learn how to structure content, layout and graphic elements so they do not negatively affect accessibility.",
+      "maintenanceTitle": "Web development and long-term maintenance",
+      "maintenanceIntro": "Tillgänglighetsarbetet är inget som slutar efter lansering.",
+      "toolsLabel": "Testing tools.",
+      "toolsText": "Use tools such as AXE or Siteimprove to monitor accessibility over time.",
+      "futureProofLabel": "Future-proofing.",
+      "futureProofText": "Build with the future in mind, for example WCAG 2.2 and upcoming standards.",
+      "conclusion": "When you integrate accessibility into web development, SEO and procurement, you do not just meet legal requirements, you build a website that works better for everyone."
+    }
   },
-  "cta": {
-    "title": "Want to improve your visibility?",
-    "description": "We help organisations and companies build long-term visibility with SEO that works in practice.",
-    "button": "Contact us"
+  "guideCost": {
+    "seo": {
+      "title": "How much does a website cost in 2026? | Bridgelys",
+      "description": "What affects the cost of a website and how is AI changing pricing in modern web projects?"
+    },
+    "title": "How much does a website cost in 2026?",
+    "intro": "AI is changing how we build websites. Some parts are faster, but what really determines the cost is still planning, prioritization and making the right decisions from the start.",
+    "section1": {
+      "text": "Building a website has always been a balance between cost, quality and the right solution. With AI, the landscape is changing, but that does not mean the entire project automatically becomes cheap."
+    },
+    "section2": {
+      "title": "What gets faster with AI",
+      "item1": "Code generation",
+      "item2": "Structure and analysis",
+      "item3": "Content drafts"
+    },
+    "section3": {
+      "title": "What still drives the cost",
+      "item1": "Understanding the business and its needs",
+      "item2": "Making the right decisions early",
+      "item3": "Prioritizing the right features and level"
+    },
+    "section4": {
+      "title": "AI can also improve quality",
+      "text": "When used correctly, AI makes it easier to work with accessibility (WCAG) and technical SEO. It can both speed up the process and improve the final result."
+    },
+    "section5": {
+      "title": "Conclusion",
+      "text": "The cost of a website is not just about technology, but how well the project is planned and executed. The goal should not be to make it as cheap as possible, but to get it right from the start."
+    }
   },
-  "seo": {
-    "title": "What is SEO and how does it work? | Bridgelys",
-    "description": "Learn the basics of SEO and how technical structure, content and user experience help your website become more visible."
-  }
-},
-"guideWcag": {
-  "title": "WCAG – what is required for an accessible website?",
-  "intro": "An accessible website makes it easier for more people to use your digital services. Here we explain the basics of WCAG and what is important to get right from the start.",
-  "content": {
-    "title": "Accessibility is about both usability and responsibility",
-    "paragraph1": "WCAG is a set of guidelines for making digital services more accessible to people with different needs and abilities. This includes making content perceivable, understandable and usable, whether the user navigates with a keyboard, screen reader or other assistive technologies.",
-    "paragraph2": "Common issues include low contrast, unclear forms, missing alt text, incorrect heading structure and functions that cannot be used without a mouse. Many of these problems affect not only accessibility, but also the overall user experience for all visitors.",
-    "paragraph3": "Working with accessibility early in a project saves both time and money. It reduces the need for late fixes and creates a more sustainable website that works better for more people."
-  },
-  "checklistTitle": "Accessible web basics",
-  "checklistAria": "Checklist for accessible web basics",
-  "checklist": [
-    "Ensure sufficient colour contrast between text and background",
-    "Use clear headings in a logical structure",
-    "Write alt text for meaningful images",
-    "Make sure the entire website can be used with a keyboard",
-    "Label form fields and error messages clearly",
-    "Avoid links and buttons with unclear purpose",
-    "Test content with screen readers and other assistive technologies"
-  ],
-  "relatedService": {
-    "title": "Want to go deeper into accessibility?",
-    "description": "Learn more about how we work with WCAG, audits and advisory services to make digital services more inclusive and usable.",
-    "link": "Learn more about our accessibility services"
-  },
-  "cta": {
-    "title": "Need support with accessibility?",
-    "description": "We help organisations and companies understand requirements, prioritise the right actions and build more accessible websites.",
-    "button": "Contact us"
-  },
-  "seo": {
-    "title": "WCAG – what is required for an accessible website? | Bridgelys",
-    "description": "Learn the basics of WCAG and what is required to create an accessible website with better usability for more people."
-  },
-  "synergy": {
-  "title": "WCAG 2025, SEO and web development – how it all connects",
-  "intro": "As of 28 June 2025, the requirements under the European Accessibility Act (EAA) were strengthened. This means that most websites, e-commerce solutions and digital services need to comply with WCAG 2.1 level AA.",
-  "altTextsLabel": "Alt texts.",
-  "altTextsText": "Help both screen readers and search engines understand content.",
-  "headingStructureLabel": "Heading structure (H1–H3).",
-  "headingStructureText": "Makes navigation easier for users and improves indexing.",
-  "semanticStructureLabel": "Semantic structure in the code.",
-  "semanticStructureText": "The code behind the website should be structured in a way that helps search engines and different types of assistive technologies for visitors with disabilities, for example screen readers.",
-  "procurementTitle": "Procurement of web development",
-  "procurementIntro": "If accessibility is not specified from the start, it becomes more expensive, more difficult and sometimes legally risky.",
-  "requirementsLabel": "Requirements specification.",
-  "requirementsText": "WCAG 2.1 AA should be a clear requirement.",
-  "analysisLabel": "Accessibility analyses.",
-  "analysisText": "Should be carried out before delivery.",
-  "educationLabel": "Training.",
-  "educationText": "Editors should learn how to structure content, layout and graphic elements so they do not negatively affect accessibility.",
-  "maintenanceTitle": "Web development and long-term maintenance",
-  "maintenanceIntro": "Tillgänglighetsarbetet är inget som slutar efter lansering.",
-  "toolsLabel": "Testing tools.",
-  "toolsText": "Use tools such as AXE or Siteimprove to monitor accessibility over time.",
-  "futureProofLabel": "Future-proofing.",
-  "futureProofText": "Build with the future in mind, for example WCAG 2.2 and upcoming standards.",
-  "conclusion": "When you integrate accessibility into web development, SEO and procurement, you do not just meet legal requirements, you build a website that works better for everyone."
-  }
-},
   "contactPage": {
     "hero": {
       "title": "Start a <highlight>conversation</highlight>",
