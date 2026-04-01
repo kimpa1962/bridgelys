@@ -363,27 +363,52 @@
     "title": "Vad kostar en hemsida 2026?",
     "intro": "AI förändrar hur vi bygger webb. Vissa delar går snabbare, men det som avgör priset är fortfarande kravställning, prioritering och rätt beslut från början.",
     "section1": {
-      "text": "Att ta fram en webbplats har alltid varit en balans mellan kostnad, kvalitet och rätt lösning. Med AI förändras spelplanen, men det betyder inte att hela projektet automatiskt blir billigt."
+      "title": "Vad påverkar priset på en hemsida?",
+      "text": "Att ta fram en webbplats har alltid varit en balans mellan kostnad, kvalitet och rätt lösning.",
+      "paragraph2": "Med AI förändras spelplanen. Vissa delar av arbetet går snabbare än tidigare, men det betyder inte att hela projektet automatiskt blir billigt.",
+      "paragraph3": "Den största skillnaden ligger ofta inte i själva tekniken, utan i hur väl projektet planeras, struktureras och genomförs från början."
     },
     "section2": {
       "title": "Det som går snabbare med AI",
+      "ariaLabel": "Lista över delar som går snabbare med AI",
       "item1": "Kodgenerering",
       "item2": "Struktur och analys",
       "item3": "Innehållsutkast"
     },
     "section3": {
       "title": "Det som fortfarande påverkar kostnaden mest",
-      "item1": "Att förstå verksamheten och behoven",
-      "item2": "Att fatta rätt beslut tidigt",
-      "item3": "Att prioritera rätt funktioner och nivå"
+      "intro": "Det som ofta driver kostnaden i ett webbprojekt är fortfarande sådant som kräver erfarenhet, dialog och rätt prioriteringar.",
+      "item1Label": "Förstå verksamheten:",
+      "item1Text": "Att sätta sig in i mål, målgrupp, processer och verkliga behov är ofta avgörande för resultatet.",
+      "item2Label": "Fatta rätt beslut tidigt:",
+      "item2Text": "Fel beslut i början kan bli dyra längre fram, både tekniskt och affärsmässigt.",
+      "item3Label": "Prioritera rätt nivå:",
+      "item3Text": "Alla projekt behöver inte allt. Att välja rätt funktioner och ambitionsnivå påverkar både kostnad och nytta.",
+      "conclusion": "Det är ofta här skillnaden mellan ett dyrt projekt och en klok investering uppstår."
     },
     "section4": {
       "title": "AI kan också höja kvaliteten",
-      "text": "Rätt använt gör AI det enklare att arbeta med tillgänglighet enligt WCAG och teknisk SEO. Det kan alltså både effektivisera arbetet och förbättra resultatet."
+      "intro": "AI handlar inte bara om att sänka kostnader.",
+      "textBeforeLinks": "Rätt använt kan det också göra det enklare att arbeta med",
+      "middleText": "och",
+      "textAfterLinks": ".",
+      "conclusion": "Det betyder att AI i många fall både kan effektivisera arbetet och förbättra slutresultatet."
     },
     "section5": {
       "title": "Slutsats",
-      "text": "Det som avgör vad en hemsida kostar är inte bara tekniken, utan hur väl projektet planeras och genomförs. Målet bör inte vara att göra det så billigt som möjligt, utan att göra rätt från början."
+      "text": "Det som avgör vad en hemsida kostar är inte bara tekniken, utan hur väl projektet planeras och genomförs.",
+      "linkTextBefore": "Målet bör inte vara att göra det så billigt som möjligt, utan att göra rätt från början med rätt nivå av",
+      "linkLabel": "webbutveckling"
+    },
+    "relatedService": {
+      "title": "Behöver du stöd i ett webbprojekt?",
+      "description": "Bridgelys hjälper företag att planera, strukturera och genomföra webbprojekt med fokus på affärsnytta, tydlighet och rätt lösning från början.",
+      "link": "Läs mer om webbutveckling"
+    },
+    "cta": {
+      "title": "Vill du få en bild av vad ditt projekt kan kosta?",
+      "description": "Hör av dig så tittar vi på behov, nivå och vad som är en rimlig väg framåt för just din webbplats.",
+      "button": "Kontakta oss"
     }
   },
   "contactPage": {

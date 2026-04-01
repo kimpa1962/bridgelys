@@ -350,27 +350,52 @@
     "title": "How much does a website cost in 2026?",
     "intro": "AI is changing how we build websites. Some parts are faster, but what really determines the cost is still planning, prioritization and making the right decisions from the start.",
     "section1": {
-      "text": "Building a website has always been a balance between cost, quality and the right solution. With AI, the landscape is changing, but that does not mean the entire project automatically becomes cheap."
+      "title": "What affects the cost of a website?",
+      "text": "Building a website has always been a balance between cost, quality and the right solution.",
+      "paragraph2": "With AI, the landscape is changing. Some parts of the work are faster than before, but that does not mean the entire project automatically becomes cheap.",
+      "paragraph3": "The biggest difference is often not in the technology itself, but in how well the project is planned, structured and executed from the start."
     },
     "section2": {
       "title": "What gets faster with AI",
+      "ariaLabel": "List of tasks that become faster with AI",
       "item1": "Code generation",
       "item2": "Structure and analysis",
       "item3": "Content drafts"
     },
     "section3": {
-      "title": "What still drives the cost",
-      "item1": "Understanding the business and its needs",
-      "item2": "Making the right decisions early",
-      "item3": "Prioritizing the right features and level"
+      "title": "What still drives the cost the most",
+      "intro": "What often drives cost in a web project is still the work that requires experience, dialogue and the right priorities.",
+      "item1Label": "Understanding the business:",
+      "item1Text": "Taking the time to understand goals, audiences, processes and real needs is often crucial to the outcome.",
+      "item2Label": "Making the right decisions early:",
+      "item2Text": "Wrong decisions at the beginning can become expensive later, both technically and commercially.",
+      "item3Label": "Choosing the right level:",
+      "item3Text": "Not every project needs everything. Choosing the right features and scope affects both cost and value.",
+      "conclusion": "This is often where the difference between an expensive project and a smart investment becomes clear."
     },
     "section4": {
       "title": "AI can also improve quality",
-      "text": "When used correctly, AI makes it easier to work with accessibility (WCAG) and technical SEO. It can both speed up the process and improve the final result."
+      "intro": "AI is not only about reducing costs.",
+      "textBeforeLinks": "Used correctly, it can also make it easier to work with",
+      "middleText": "and",
+      "textAfterLinks": ".",
+      "conclusion": "In many cases, AI can both streamline the work and improve the final result."
     },
     "section5": {
       "title": "Conclusion",
-      "text": "The cost of a website is not just about technology, but how well the project is planned and executed. The goal should not be to make it as cheap as possible, but to get it right from the start."
+      "text": "What determines the cost of a website is not only the technology, but how well the project is planned and executed.",
+      "linkTextBefore": "The goal should not be to make it as cheap as possible, but to get it right from the start with the right level of",
+      "linkLabel": "web development"
+    },
+    "relatedService": {
+      "title": "Need support with a web project?",
+      "description": "Bridgelys helps companies plan, structure and deliver web projects with a focus on business value, clarity and making the right decisions from the start.",
+      "link": "Learn more about web development"
+    },
+    "cta": {
+      "title": "Would you like an estimate for your project?",
+      "description": "Get in touch and we can look at your needs, the right scope and a reasonable path forward for your website.",
+      "button": "Contact us"
     }
   },
   "contactPage": {
