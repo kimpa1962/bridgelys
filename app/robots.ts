@@ -10,6 +10,10 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
     ? "https://bridgelys.com"
     : "https://bridgelys.se";
 
+  const sitemap = isCom
+    ? `${baseUrl}/sitemap-com.xml`
+    : `${baseUrl}/sitemap.xml`;
+
   return {
     rules: [
       {
@@ -17,6 +21,6 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
         allow: "/",
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap,
   };
 }
