@@ -105,8 +105,8 @@ export async function POST(req: Request) {
 
     if (type === "partner") {
       await resend.emails.send({
-        from: "Nätverksformulär-webb <hello@bridgelys.se>",
-        to: "kim@bridgelys.se",
+        from: "Nätverksformulär-webb <webform@bridgelys.se>",
+        to: "hello@bridgelys.se",
         replyTo: safeEmail,
         subject: `Ny nätverkspartner: ${safeName}${safeRole ? ` (${safeRole})` : ""}`,
         text:
@@ -116,7 +116,7 @@ export async function POST(req: Request) {
           `LinkedIn: ${safeLinkedIn || "Ej angiven"}\n\n` +
           `Erfarenhet:\n${safeMessage}`,
       });
-
+      
       const partnerSubject = messages.email.partnerConfirmation.subject;
       const partnerHeading = replaceVars(messages.email.partnerConfirmation.heading, {
         name: safeName,
