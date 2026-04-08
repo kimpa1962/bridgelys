@@ -116,7 +116,7 @@ export async function POST(req: Request) {
           `LinkedIn: ${safeLinkedIn || "Ej angiven"}\n\n` +
           `Erfarenhet:\n${safeMessage}`,
       });
-      
+
       const partnerSubject = messages.email.partnerConfirmation.subject;
       const partnerHeading = replaceVars(messages.email.partnerConfirmation.heading, {
         name: safeName,
@@ -148,8 +148,8 @@ export async function POST(req: Request) {
       });
     } else {
       await resend.emails.send({
-        from: "Bridgelys Kontakt <hello@bridgelys.se>",
-        to: "kim@bridgelys.se",
+        from: "Bridgelys Kontakt <webform@bridgelys.se>",
+        to: "hello@bridgelys.se",
         replyTo: safeEmail,
         subject: `Nytt meddelande från ${safeName}`,
         text: `Namn: ${safeName}\nE-post: ${safeEmail}\n\nMeddelande:\n${safeMessage}`,
@@ -170,7 +170,7 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json({ success: true });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Contact API Error:", error);
     return serverError(
       "SERVER_ERROR",
