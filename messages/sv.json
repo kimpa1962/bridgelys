@@ -187,6 +187,11 @@
           "title": "Vad kostar en hemsida 2026?",
           "description": "Vad påverkar priset på en webbplats och hur förändrar AI kostnaderna i moderna webbprojekt?",
           "category": "Webbutveckling"
+        },
+        "agency": {
+          "title": "Hur väljer man rätt webbyrå?",
+          "description": "En praktisk guide för att välja rätt partner för ditt webbprojekt – och undvika dyra misstag.",
+          "category": "Webbutveckling"
         }
       }
     },
@@ -408,6 +413,56 @@
     "cta": {
       "title": "Vill du få en bild av vad ditt projekt kan kosta?",
       "description": "Hör av dig så tittar vi på behov, nivå och vad som är en rimlig väg framåt för just din webbplats.",
+      "button": "Kontakta oss"
+    }
+  },
+  "guideAgency": {
+    "seo": {
+      "title": "Hur väljer man rätt webbyrå? | Bridgelys",
+      "description": "Guide för att välja rätt webbyrå, undvika vanliga misstag och fatta bättre beslut i webbprojekt."
+    },
+    "title": "Hur väljer man rätt webbyrå?",
+    "intro": "Att välja webbyrå är ett av de viktigaste besluten i ett webbprojekt. Fel val kan bli dyrt, både tekniskt och affärsmässigt.",
+    "section1": {
+      "title": "Varför är det svårt att välja rätt?",
+      "text": "Många byråer kan bygga en webbplats, men få kan översätta verksamhetens behov till rätt lösning.",
+      "paragraph2": "Skillnaden ligger ofta i förståelse, struktur och prioriteringar – inte bara i tekniken.",
+      "paragraph3": "Det är därför viktigt att titta bortom design och pris."
+    },
+    "section2": {
+      "title": "Checklista – så väljer du rätt webbyrå",
+      "ariaLabel": "Checklista för att välja webbyrå",
+      "item1": "Förstår de din verksamhet och dina mål?",
+      "item2": "Kan de förklara tekniska val på ett begripligt sätt?",
+      "item3": "Arbetar de strukturerat med krav, scope och prioritering?",
+      "item4": "Tar de hänsyn till SEO och tillgänglighet från start?",
+      "item5": "Äger du lösningen (kod, data och plattform)?"
+    },
+    "section3": {
+      "title": "Vanliga misstag",
+      "intro": "Många organisationer gör liknande misstag när de väljer webbyrå.",
+      "item1Label": "Fokus på pris:",
+      "item1Text": "Lågt pris kan leda till fel lösning och högre kostnader senare.",
+      "item2Label": "Fokus på design:",
+      "item2Text": "En snygg webbplats utan strategi skapar sällan affärsnytta.",
+      "item3Label": "Otydliga krav:",
+      "item3Text": "Brist på tydlighet i början leder ofta till problem senare.",
+      "conclusion": "De bästa projekten börjar med rätt frågor, inte rätt verktyg."
+    },
+    "section4": {
+      "title": "Slutsats",
+      "text": "Rätt webbyrå är inte den som bygger snabbast eller billigast, utan den som hjälper dig fatta rätt beslut från början.",
+      "linkTextBefore": "Vill du få stöd i att välja rätt nivå av",
+      "linkLabel": "webbutveckling"
+    },
+    "relatedService": {
+      "title": "Så arbetar vi med webbprojekt",
+      "description": "Vi hjälper organisationer att planera, strukturera och genomföra webbprojekt med fokus på rätt lösning från början.",
+      "link": "Läs mer om webbutveckling"
+    },
+    "cta": {
+      "title": "Behöver du hjälp att välja rätt väg?",
+      "description": "Vi hjälper dig förstå behov, prioritera rätt och undvika dyra misstag.",
       "button": "Kontakta oss"
     }
   },

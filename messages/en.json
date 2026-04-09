@@ -174,7 +174,13 @@
           "title": "How much does a website cost in 2026?",
           "description": "What affects the cost of a website and how is AI changing pricing in modern web projects?",
           "category": "Web development"
+        },
+        "agency": {
+          "title": "How do you choose the right web agency?",
+          "description": "A practical guide to choosing the right partner for your web project and avoiding costly mistakes.",
+          "category": "Web development"
         }
+
       }
     },
     "topicsSection": {
@@ -395,6 +401,56 @@
     "cta": {
       "title": "Would you like an estimate for your project?",
       "description": "Get in touch and we can look at your needs, the right scope and a reasonable path forward for your website.",
+      "button": "Contact us"
+    }
+  },
+  "guideAgency": {
+    "seo": {
+      "title": "How do you choose the right web agency? | Bridgelys",
+      "description": "A guide to choosing the right web agency, avoiding common mistakes, and making better decisions in web projects."
+    },
+    "title": "How do you choose the right web agency?",
+    "intro": "Choosing a web agency is one of the most important decisions in a web project. The wrong choice can become costly, both technically and commercially.",
+    "section1": {
+      "title": "Why is it difficult to choose the right one?",
+      "text": "Many agencies can build a website, but few can translate business needs into the right solution.",
+      "paragraph2": "The difference often lies in understanding, structure and priorities — not just in the technology.",
+      "paragraph3": "That is why it is important to look beyond design and price."
+    },
+    "section2": {
+      "title": "Checklist – how to choose the right web agency",
+      "ariaLabel": "Checklist for choosing a web agency",
+      "item1": "Do they understand your business and your goals?",
+      "item2": "Can they explain technical choices in a clear and understandable way?",
+      "item3": "Do they work in a structured way with requirements, scope and prioritization?",
+      "item4": "Do they take SEO and accessibility into account from the start?",
+      "item5": "Do you own the solution (code, data and platform)?"
+    },
+    "section3": {
+      "title": "Common mistakes",
+      "intro": "Many organisations make similar mistakes when choosing a web agency.",
+      "item1Label": "Focusing on price:",
+      "item1Text": "A low price can lead to the wrong solution and higher costs later.",
+      "item2Label": "Focusing on design:",
+      "item2Text": "A visually attractive website without strategy rarely creates business value.",
+      "item3Label": "Unclear requirements:",
+      "item3Text": "Lack of clarity at the beginning often leads to problems later.",
+      "conclusion": "The best projects start with the right questions, not the right tools."
+    },
+    "section4": {
+      "title": "Conclusion",
+      "text": "The right web agency is not the one that builds the fastest or cheapest, but the one that helps you make the right decisions from the start.",
+      "linkTextBefore": "Do you want support in choosing the right level of",
+      "linkLabel": "web development"
+    },
+    "relatedService": {
+      "title": "How we work with web projects",
+      "description": "We help organisations plan, structure and deliver web projects with a focus on getting the right solution from the start.",
+      "link": "Learn more about web development"
+    },
+    "cta": {
+      "title": "Do you need help choosing the right path?",
+      "description": "We help you understand your needs, prioritize correctly and avoid costly mistakes.",
       "button": "Contact us"
     }
   },

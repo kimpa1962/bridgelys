@@ -46,6 +46,11 @@ export default async function GuidesPage() {
       description: string;
       category: string;
     };
+    agency: {
+      title: string;
+      description: string;
+      category: string;
+    };
   };
 
   const guides = [
@@ -73,6 +78,13 @@ export default async function GuidesPage() {
       description: items.cost.description,
       category: items.cost.category,
     },
+    {
+      key: "how-to-choose-web-agency",
+      title: items.agency.title,
+      description: items.agency.description,
+      category: items.agency.category,
+    },
+    
   ];
 
   const topics = t.raw("topics") as string[];
