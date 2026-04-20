@@ -100,25 +100,40 @@ export default async function ProcurementPage() {
           </div>
         </div>
       </section>
-
-      <section className="pb-24 pt-10" aria-labelledby="procurement-cta-title">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <div className="bg-brand-navy p-12 rounded-[3rem] text-center">
-            <h3 id="procurement-cta-title" className="text-2xl md:text-3xl font-bold text-white mb-4">
-              {t("cta.title")}
-            </h3>
-            <p className="text-slate-300 mb-8 max-w-lg mx-auto italic">
-              {t("cta.quote")}
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-brand-green-on-dark text-brand-navy px-10 py-4 rounded-full font-bold hover:scale-105 transition-all"
-            >
-              {t("cta.button")} <ArrowRight className="w-5 h-5" aria-hidden="true" />
-            </Link>
-          </div>
+<section className="pb-24 pt-10" aria-labelledby="procurement-cta-title">
+  <div className="container mx-auto px-6 max-w-4xl">
+    <div className="mb-10">
+      <div className="mx-auto max-w-3xl">
+        <div className="relative w-full overflow-hidden rounded-2xl shadow-xl aspect-video">
+          <iframe
+            className="absolute inset-0 h-full w-full"
+            src="https://www.youtube.com/embed/tyd0-DLHhws?modestbranding=1&rel=0&controls=1"
+            title="Video about why SEO and accessibility should be planned from day one"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{ border: 0 }}
+          />
         </div>
-      </section>
+      </div>
+    </div>
+
+    <div className="bg-brand-navy p-12 rounded-[3rem] text-center">
+      <h3 id="procurement-cta-title" className="text-2xl md:text-3xl font-bold text-white mb-4">
+        {t("cta.title")}
+      </h3>
+      <p className="text-slate-300 mb-8 max-w-lg mx-auto italic">
+        {t("cta.quote")}
+      </p>
+      <Link
+        href="/contact"
+        className="inline-flex items-center gap-2 bg-brand-green-on-dark text-brand-navy px-10 py-4 rounded-full font-bold hover:scale-105 transition-all"
+      >
+        {t("cta.button")} <ArrowRight className="w-5 h-5" aria-hidden="true" />
+      </Link>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 }
