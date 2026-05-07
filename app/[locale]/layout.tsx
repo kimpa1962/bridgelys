@@ -10,20 +10,29 @@ import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const host = (await headers()).get("host") || "";
+  const headersList = await headers();
+  const host = headersList.get("host") || "";
+  const pathname = headersList.get("x-pathname") || "";
+
   const isSv = host.includes("bridgelys.se");
+
+  const currentPath = pathname
+    .replace(/^\/sv/, "")
+    .replace(/^\/en/, "")
+    || "";
+
+  const svUrl = `https://bridgelys.se${currentPath}`;
+  const enUrl = `https://bridgelys.com${currentPath}`;
 
   return {
     alternates: {
-      canonical: isSv
-        ? "https://bridgelys.se"
-        : "https://bridgelys.com",
+      canonical: isSv ? svUrl : enUrl,
       languages: {
-        sv: "https://bridgelys.se",
-        en: "https://bridgelys.com",
-        "x-default": "https://bridgelys.se"
-      }
-    }
+        sv: svUrl,
+        en: enUrl,
+        "x-default": svUrl,
+      },
+    },
   };
 }
 
