@@ -180,7 +180,6 @@
           "description": "A practical guide to choosing the right partner for your web project and avoiding costly mistakes.",
           "category": "Web development"
         }
-
       }
     },
     "topicsSection": {
@@ -738,5 +737,29 @@
         "description": "Modern, fast and secure web solutions focused on performance, usability and sustainable architecture."
       }
     }
+  },
+  "webbCareHome": {
+    "eyebrow": "WebbCare",
+    "title": "Your website. Checked, improved and cared for – every month.",
+    "description": "WebbCare is ongoing quality assurance for your website. We monitor visibility, accessibility, performance and technology – and help you prioritise what needs attention.",
+    "cta": "Talk to us about WebbCare",
+    "areas": {
+      "seo": {
+        "title": "SEO",
+        "text": "We monitor technical SEO, visibility and issues that may prevent customers from finding you."
+      },
+      "accessibility": {
+        "title": "Accessibility",
+        "text": "We keep track of common WCAG issues and changes that may create new barriers."
+      },
+      "performance": {
+        "title": "Performance",
+        "text": "We monitor loading speed, user experience and technical bottlenecks."
+      },
+      "technology": {
+        "title": "Technology",
+        "text": "We detect technical errors, broken links and other issues before they grow."
+      }
+    }
   }
-}
+}\n
