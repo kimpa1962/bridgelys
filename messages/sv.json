@@ -736,5 +736,29 @@
         "description": "Moderna, snabba och säkra webblösningar med fokus på prestanda, användarvänlighet och hållbar arkitektur."
       }
     }
+  },
+  "webbCareHome": {
+    "eyebrow": "WebbCare",
+    "title": "Din webbplats. Kontrollerad, förbättrad och omhändertagen – varje månad.",
+    "description": "WebbCare är löpande kvalitetssäkring av din webbplats. Vi följer upp synlighet, tillgänglighet, prestanda och teknik – och hjälper dig prioritera det som behöver åtgärdas.",
+    "cta": "Prata med oss om WebbCare",
+    "areas": {
+      "seo": {
+        "title": "SEO",
+        "text": "Vi följer upp teknisk SEO, synlighet och sådant som kan hindra dig från att hittas."
+      },
+      "accessibility": {
+        "title": "Tillgänglighet",
+        "text": "Vi håller koll på vanliga WCAG-problem och förändringar som kan skapa nya hinder."
+      },
+      "performance": {
+        "title": "Prestanda",
+        "text": "Vi bevakar laddningstid, användarupplevelse och tekniska flaskhalsar."
+      },
+      "technology": {
+        "title": "Teknik",
+        "text": "Vi upptäcker tekniska fel, brutna länkar och andra problem innan de växer."
+      }
+    }
   }
-}
+}\n
