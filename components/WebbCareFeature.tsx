@@ -24,23 +24,24 @@ export default function WebbCareFeature() {
             className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-brand-green-on-dark/15 blur-3xl"
             aria-hidden="true"
           />
-
-          <div className="absolute right-6 top-6 z-20 rounded-full bg-brand-green-on-dark px-5 py-3 text-lg font-extrabold text-brand-navy shadow-lg md:right-8 md:top-8 md:text-xl">
-            {t("price")}
-          </div>
-
-          <div className="relative z-10 grid gap-12 pt-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pt-0">
+          <div className="relative z-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-brand-green-on-dark">
                 {t("eyebrow")}
               </p>
 
-              <h2
-                id="webbcare-title"
-                className="font-display text-5xl font-bold leading-tight md:text-6xl"
-              >
-                {t("title")}
-              </h2>
+              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <h2
+                  id="webbcare-title"
+                  className="font-display text-5xl font-bold leading-tight md:text-6xl"
+                >
+                  {t("title")}
+                </h2>
+
+                <div className="w-fit shrink-0 rounded-full bg-brand-green-on-dark px-5 py-3 text-lg font-extrabold text-brand-navy shadow-lg md:text-xl">
+                  {t("price")}
+                </div>
+              </div>
 
               <p className="mt-4 max-w-2xl text-xl font-semibold leading-relaxed text-white md:text-2xl">
                 {t("subtitle")}
