@@ -25,26 +25,34 @@ export default function WebbCareFeature() {
             aria-hidden="true"
           />
 
-          <div className="relative z-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div className="absolute right-6 top-6 z-20 rounded-full bg-brand-green-on-dark px-5 py-3 text-lg font-extrabold text-brand-navy shadow-lg md:right-8 md:top-8 md:text-xl">
+            {t("price")}
+          </div>
+
+          <div className="relative z-10 grid gap-12 pt-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pt-0">
             <div>
-              <p className="mb-4 inline-flex rounded-full border border-brand-green-on-dark/40 bg-brand-green-on-dark/10 px-4 py-2 text-sm font-bold uppercase tracking-wider text-brand-green-on-dark">
+              <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-brand-green-on-dark">
                 {t("eyebrow")}
               </p>
 
               <h2
                 id="webbcare-title"
-                className="font-display text-4xl font-bold leading-tight md:text-5xl"
+                className="font-display text-5xl font-bold leading-tight md:text-6xl"
               >
                 {t("title")}
               </h2>
 
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-200 md:text-xl">
+              <p className="mt-4 max-w-2xl text-xl font-semibold leading-relaxed text-white md:text-2xl">
+                {t("subtitle")}
+              </p>
+
+              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-200">
                 {t("description")}
               </p>
 
               <div className="mt-8">
                 <Link
-                  href="/contact"
+                  href="/services/webbcare"
                   className="inline-flex items-center gap-2 rounded-full bg-brand-green-on-dark px-7 py-4 font-bold text-brand-navy transition hover:brightness-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-on-dark focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
                 >
                   {t("cta")}
