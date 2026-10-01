@@ -740,9 +740,9 @@
   },
   "webbCareHome": {
     "eyebrow": "WebbCare",
-    "title": "Your website. Checked, improved and cared for – every month.",
-    "description": "WebbCare is ongoing quality assurance for your website. We monitor visibility, accessibility, performance and technology – and help you prioritise what needs attention.",
-    "cta": "Talk to us about WebbCare",
+    "title": "WebbCare subscription",
+    "description": "We review your website every month, detect issues early and help you prioritise what needs attention.",
+    "cta": "Learn more about WebbCare",
     "areas": {
       "seo": {
         "title": "SEO",
@@ -760,6 +760,8 @@
         "title": "Technology",
         "text": "We detect technical errors, broken links and other issues before they grow."
       }
-    }
+    },
+    "subtitle": "Ongoing quality assurance: SEO, WCAG, performance and technology",
+    "price": "From SEK 1,495/month"
   }
 }
