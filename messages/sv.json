@@ -739,9 +739,9 @@
   },
   "webbCareHome": {
     "eyebrow": "WebbCare",
-    "title": "Din webbplats. Kontrollerad, förbättrad och omhändertagen – varje månad.",
-    "description": "WebbCare är löpande kvalitetssäkring av din webbplats. Vi följer upp synlighet, tillgänglighet, prestanda och teknik – och hjälper dig prioritera det som behöver åtgärdas.",
-    "cta": "Prata med oss om WebbCare",
+    "title": "WebbCare abonnemang",
+    "description": "Vi följer upp din webbplats varje månad, upptäcker problem i tid och hjälper dig prioritera vad som behöver åtgärdas.",
+    "cta": "Läs mer om WebbCare",
     "areas": {
       "seo": {
         "title": "SEO",
@@ -759,6 +759,8 @@
         "title": "Teknik",
         "text": "Vi upptäcker tekniska fel, brutna länkar och andra problem innan de växer."
       }
-    }
+    },
+    "subtitle": "Löpande kvalitetssäkring: SEO, WCAG, prestanda och teknik",
+    "price": "Från 1 495 kr/mån"
   }
 }
