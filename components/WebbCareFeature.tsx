@@ -30,18 +30,16 @@ export default function WebbCareFeature() {
                 {t("eyebrow")}
               </p>
 
-              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                <h2
-                  id="webbcare-title"
-                  className="font-display text-5xl font-bold leading-tight md:text-6xl"
-                >
-                  {t("title")}
-                </h2>
-
-                <div className="w-fit shrink-0 rounded-full bg-brand-green-on-dark px-5 py-3 text-lg font-extrabold text-brand-navy shadow-lg md:text-xl">
-                  {t("price")}
-                </div>
+              <div className="mb-4 w-fit rounded-full bg-brand-green-on-dark px-5 py-3 text-lg font-extrabold text-brand-navy shadow-lg md:text-xl">
+                {t("price")}
               </div>
+
+              <h2
+                id="webbcare-title"
+                className="font-display text-5xl font-bold leading-tight md:text-6xl"
+              >
+                {t("title")}
+              </h2>
 
               <p className="mt-4 max-w-2xl text-xl font-semibold leading-relaxed text-white md:text-2xl">
                 {t("subtitle")}
