@@ -762,5 +762,124 @@
     },
     "subtitle": "Löpande kvalitetssäkring: SEO, WCAG, prestanda och teknik",
     "price": "Från 1 495 kr/mån"
+  },
+  "webbCarePage": {
+    "seo": {
+      "title": "WebbCare – löpande kvalitetssäkring av din webbplats | Bridgelys",
+      "description": "WebbCare ger löpande kontroll av SEO, WCAG, prestanda och teknik. Välj Bas, Plus eller Pro och få tydlig uppföljning varje månad."
+    },
+    "hero": {
+      "eyebrow": "WebbCare abonnemang",
+      "title": "En webbplats som fortsätter fungera, synas och utvecklas",
+      "description": "Löpande kvalitetssäkring av SEO, WCAG, prestanda och teknik. Vi följer upp din webbplats varje månad och hjälper dig prioritera rätt åtgärder.",
+      "ctaPackages": "Se paketen",
+      "ctaContact": "Kontakta oss"
+    },
+    "focus": {
+      "title": "Fyra områden vi håller koll på",
+      "description": "WebbCare samlar de viktigaste kvalitetsområdena i en återkommande kontroll, så att problem upptäcks innan de hinner växa.",
+      "items": {
+        "seo": {
+          "title": "SEO",
+          "text": "Teknisk SEO, synlighet och hinder som påverkar hur sökmotorer hittar och förstår webbplatsen."
+        },
+        "accessibility": {
+          "title": "WCAG",
+          "text": "Återkommande kontroll av vanliga tillgänglighetsproblem som kan skapa hinder för besökare."
+        },
+        "performance": {
+          "title": "Prestanda",
+          "text": "Laddningstid, Core Web Vitals och tekniska flaskhalsar som påverkar användarupplevelsen."
+        },
+        "technology": {
+          "title": "Teknik",
+          "text": "Brutna länkar, fel, formulär och andra tekniska problem som behöver fångas upp i tid."
+        }
+      }
+    },
+    "start": {
+      "eyebrow": "För nya kunder",
+      "title": "WebbCare Start",
+      "description": "För att kunna följa utvecklingen behöver vi först veta nuläget. WebbCare Start är en engångsinsats där vi går igenom mätning, konverteringar och webbplatsens tekniska utgångsläge.",
+      "price": "Engångsinsats – pris efter omfattning",
+      "items": {
+        "item1": "Kontroll eller installation av Google Analytics 4",
+        "item2": "Kontroll eller uppsättning av Google Tag Manager",
+        "item3": "Grundläggande konverteringsmätning för formulär och viktiga kontaktvägar",
+        "item4": "Kontroll och konfigurering av Google Search Console",
+        "item5": "Nulägesmätning för SEO, WCAG, prestanda och teknik",
+        "item6": "Dokumentation av mätning och första prioriteringslista"
+      }
+    },
+    "packages": {
+      "eyebrow": "WebbCare-paket",
+      "title": "Välj den nivå som passar er",
+      "description": "Alla paket bygger på samma grund: löpande kontroll, tydliga rekommendationer och ett mänskligt bollplank.",
+      "recommended": "Mest vald",
+      "perMonth": " / mån",
+      "cta": "Prata med oss",
+      "base": {
+        "title": "Bas",
+        "tagline": "För mindre företag och organisationer som vill veta att webbplatsen mår bra.",
+        "price": "1 495 kr",
+        "items": {
+          "item1": "Månatlig kontroll av teknisk SEO",
+          "item2": "Grundläggande kontroll av WCAG och tillgänglighet",
+          "item3": "Kontroll av prestanda och Core Web Vitals",
+          "item4": "Kontroll av brutna länkar och tekniska fel",
+          "item5": "Kontroll av viktiga sidor och funktioner",
+          "item6": "Kort månadsrapport med prioriterade rekommendationer",
+          "item7": "Upp till 30 min enklare åtgärder eller rådgivning per månad"
+        }
+      },
+      "plus": {
+        "title": "Plus",
+        "tagline": "För verksamheter som vill att webbplatsen inte bara ska fungera, utan förbättras löpande.",
+        "price": "2 495 kr",
+        "items": {
+          "item1": "Allt i Bas",
+          "item2": "Djupare SEO-uppföljning",
+          "item3": "Mer omfattande kontroll av WCAG och tillgänglighet",
+          "item4": "Analys av prestanda och Core Web Vitals",
+          "item5": "Kontroll av viktiga formulär, länkar och användarflöden",
+          "item6": "Enklare innehålls- och SEO-justeringar",
+          "item7": "Upp till 1,5 timmes åtgärder eller rådgivning per månad",
+          "item8": "Kvartalsvis genomgång av webbplatsens utveckling"
+        }
+      },
+      "pro": {
+        "title": "Pro",
+        "tagline": "För organisationer som vill ha löpande förbättring och mer strategiskt stöd.",
+        "price": "4 495 kr",
+        "items": {
+          "item1": "Allt i Plus",
+          "item2": "Upp till 3 timmars åtgärder eller rådgivning per månad",
+          "item3": "Djupare SEO-analys och prioritering",
+          "item4": "Mer omfattande WCAG-kontroller",
+          "item5": "Regelbunden genomgång av prestanda och teknisk kvalitet",
+          "item6": "Genomgång av viktiga kundresor, formulär och kontaktvägar",
+          "item7": "Stöd vid mindre tekniska beslut och förändringar",
+          "item8": "Kvartalsvis strategimöte och handlingsplan",
+          "item9": "Prioriterad support"
+        }
+      }
+    },
+    "notIncluded": {
+      "title": "Tydliga gränser – inga överraskningar",
+      "description": "WebbCare är löpande kvalitetssäkring och mindre förbättringar. Större projekt och specialistinsatser offereras separat.",
+      "items": {
+        "item1": "Större kodändringar och ny funktionalitet",
+        "item2": "Omfattande nytt innehåll eller större innehållsprojekt",
+        "item3": "Google Ads och löpande annonsering",
+        "item4": "Fullständig tillgänglighetsrevision",
+        "item5": "Hosting, drift och backup som separat drifttjänst",
+        "item6": "Omfattande felsökning eller större akuta insatser"
+      }
+    },
+    "cta": {
+      "title": "Vill du slippa undra hur webbplatsen egentligen mår?",
+      "description": "Vi börjar med en kort genomgång och rekommenderar rätt WebbCare-nivå utifrån webbplatsens behov, storlek och nuvarande mätning.",
+      "button": "Kontakta Bridgelys"
+    }
   }
 }
