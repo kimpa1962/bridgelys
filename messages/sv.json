@@ -8,6 +8,7 @@
     "join": "Bli en del av nätverket"
   },
   "services": {
+    "webbcare": "WebbCare",
     "procurement": "Upphandlingar",
     "projectManagement": "Projektledning",
     "accessibility": "Tillgänglighet",
