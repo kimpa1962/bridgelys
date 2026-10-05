@@ -763,5 +763,124 @@
     },
     "subtitle": "Ongoing quality assurance: SEO, WCAG, performance and technology",
     "price": "From SEK 1,495/month"
+  },
+  "webbCarePage": {
+    "seo": {
+      "title": "WebbCare – ongoing website quality assurance | Bridgelys",
+      "description": "WebbCare provides ongoing checks of SEO, WCAG, performance and technology. Choose Base, Plus or Pro and get clear monthly follow-up."
+    },
+    "hero": {
+      "eyebrow": "WebbCare subscription",
+      "title": "A website that keeps working, performing and improving",
+      "description": "Ongoing quality assurance for SEO, WCAG, performance and technology. We review your website every month and help you prioritise the right actions.",
+      "ctaPackages": "See the packages",
+      "ctaContact": "Contact us"
+    },
+    "focus": {
+      "title": "Four areas we keep under review",
+      "description": "WebbCare brings the most important quality areas into one recurring review, so issues are found before they grow.",
+      "items": {
+        "seo": {
+          "title": "SEO",
+          "text": "Technical SEO, visibility and issues that affect how search engines find and understand your website."
+        },
+        "accessibility": {
+          "title": "WCAG",
+          "text": "Recurring checks for common accessibility issues that may create barriers for visitors."
+        },
+        "performance": {
+          "title": "Performance",
+          "text": "Loading speed, Core Web Vitals and technical bottlenecks that affect the user experience."
+        },
+        "technology": {
+          "title": "Technology",
+          "text": "Broken links, errors, forms and other technical issues that need to be caught early."
+        }
+      }
+    },
+    "start": {
+      "eyebrow": "For new customers",
+      "title": "WebbCare Start",
+      "description": "To track progress, we first need a clear baseline. WebbCare Start is a one-off setup where we review measurement, conversions and the website's technical starting point.",
+      "price": "One-off setup – priced by scope",
+      "items": {
+        "item1": "Review or installation of Google Analytics 4",
+        "item2": "Review or setup of Google Tag Manager",
+        "item3": "Basic conversion tracking for forms and key contact paths",
+        "item4": "Review and configuration of Google Search Console",
+        "item5": "Baseline review of SEO, WCAG, performance and technology",
+        "item6": "Measurement documentation and an initial priority list"
+      }
+    },
+    "packages": {
+      "eyebrow": "WebbCare packages",
+      "title": "Choose the level that fits your needs",
+      "description": "All packages share the same foundation: recurring checks, clear recommendations and a human point of contact.",
+      "recommended": "Most popular",
+      "perMonth": " / month",
+      "cta": "Talk to us",
+      "base": {
+        "title": "Base",
+        "tagline": "For smaller businesses and organisations that want confidence that their website is in good shape.",
+        "price": "SEK 1,495",
+        "items": {
+          "item1": "Monthly technical SEO check",
+          "item2": "Basic WCAG and accessibility check",
+          "item3": "Performance and Core Web Vitals check",
+          "item4": "Broken link and technical error checks",
+          "item5": "Checks of key pages and functions",
+          "item6": "Short monthly report with prioritised recommendations",
+          "item7": "Up to 30 minutes of minor fixes or advice per month"
+        }
+      },
+      "plus": {
+        "title": "Plus",
+        "tagline": "For organisations that want the website not only to work, but to improve continuously.",
+        "price": "SEK 2,495",
+        "items": {
+          "item1": "Everything in Base",
+          "item2": "Deeper SEO follow-up",
+          "item3": "More extensive WCAG and accessibility checks",
+          "item4": "Performance and Core Web Vitals analysis",
+          "item5": "Checks of important forms, links and user flows",
+          "item6": "Minor content and SEO adjustments",
+          "item7": "Up to 1.5 hours of fixes or advice per month",
+          "item8": "Quarterly review of website progress"
+        }
+      },
+      "pro": {
+        "title": "Pro",
+        "tagline": "For organisations that want ongoing improvement and more strategic support.",
+        "price": "SEK 4,495",
+        "items": {
+          "item1": "Everything in Plus",
+          "item2": "Up to 3 hours of fixes or advice per month",
+          "item3": "Deeper SEO analysis and prioritisation",
+          "item4": "More extensive WCAG checks",
+          "item5": "Regular review of performance and technical quality",
+          "item6": "Review of key customer journeys, forms and contact paths",
+          "item7": "Support for smaller technical decisions and changes",
+          "item8": "Quarterly strategy meeting and action plan",
+          "item9": "Priority support"
+        }
+      }
+    },
+    "notIncluded": {
+      "title": "Clear boundaries – no surprises",
+      "description": "WebbCare is ongoing quality assurance and minor improvements. Larger projects and specialist work are quoted separately.",
+      "items": {
+        "item1": "Larger code changes and new functionality",
+        "item2": "Extensive new content or larger content projects",
+        "item3": "Google Ads and ongoing advertising management",
+        "item4": "Full accessibility audit",
+        "item5": "Hosting, operations and backup as a separate managed service",
+        "item6": "Extensive troubleshooting or larger urgent interventions"
+      }
+    },
+    "cta": {
+      "title": "Want to stop wondering how your website is really doing?",
+      "description": "We start with a short review and recommend the right WebbCare level based on your website's needs, size and current measurement setup.",
+      "button": "Contact Bridgelys"
+    }
   }
 }
