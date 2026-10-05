@@ -8,6 +8,7 @@
     "join": "Join the network"
   },
   "services": {
+    "webbcare": "WebbCare",
     "procurement": "Procurement",
     "projectManagement": "Project management",
     "accessibility": "Accessibility",
