@@ -22,6 +22,7 @@ export default function Navbar() {
   const servicesMenuRef = useRef<HTMLDivElement | null>(null);
 
   const tjanster = [
+    { namn: ts("webbcare"), href: "/services/webbcare" },
     { namn: ts("procurement"), href: "/services/procurement" },
     { namn: ts("projectManagement"), href: "/services/project-management" },
     { namn: ts("accessibility"), href: "/services/accessibility" },

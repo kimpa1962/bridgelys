@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import WebbCareFeature from "@/components/WebbCareFeature";
 import Services from "@/components/Services";
 import Values from "@/components/Values";
 
@@ -6,6 +7,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <WebbCareFeature />
       <Services />
       <Values />
     </>
